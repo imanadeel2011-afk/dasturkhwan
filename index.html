@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dasturkhwan — Aaj Kia Pakana Hai</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0803;--card:#1A1108;--card2:#221609;--raised:#2E1E0C;
+  --gold:#C88C08;--gold2:#E8A818;--gold3:#FFD060;
+  --cream:#EEE4CE;--parch:#C0A070;--muted:#7A5E38;--dim:#3C280E;
+  --green:#22C55E;--red:#EF4444;--r:12px;--r2:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);min-height:100vh;overflow-x:hidden;background-image:radial-gradient(ellipse 100% 55% at 50% -5%,rgba(200,140,8,0.13),transparent 55%)}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--dim);border-radius:4px}
+::selection{background:rgba(200,140,8,0.25);color:var(--gold3)}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;height:56px;display:flex;align-items:center;padding:0 16px;gap:2px;background:rgba(12,8,3,0.93);backdrop-filter:blur(20px);border-bottom:1px solid rgba(200,140,8,0.11);overflow-x:auto}
+.nav::-webkit-scrollbar{display:none}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:700;color:var(--gold2);white-space:nowrap;margin-right:12px;font-style:italic}
+.ntab{flex-shrink:0;padding:6px 12px;border:none;background:transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;border-radius:8px;transition:all 0.18s;white-space:nowrap}
+.ntab:hover{color:var(--cream);background:rgba(255,255,255,0.04)}
+.ntab.active{color:var(--gold2);background:rgba(200,140,8,0.1)}
+
+.pg{display:none;padding-top:56px;min-height:100vh}
+.pg.active{display:block;animation:pgIn 0.3s ease}
+@keyframes pgIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+
+/* HERO */
+.hero{text-align:center;padding:56px 20px 46px;border-bottom:1px solid rgba(200,140,8,0.1);margin-bottom:22px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(200,140,8,0.022) 0% 25%,transparent 0% 50%);background-size:30px 30px;mask-image:radial-gradient(ellipse at 50% 0%,black,transparent 68%)}
+.hero-tag{display:inline-flex;background:rgba(200,140,8,0.09);border:1px solid rgba(200,140,8,0.2);color:var(--gold2);font-size:9.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:18px;position:relative}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,9.5vw,82px);font-weight:700;line-height:1.03;letter-spacing:-1px;margin-bottom:8px;position:relative}
+.hero h1 em{color:var(--gold2);font-style:italic}
+.hero-urdu{font-family:'Cormorant Garamond',serif;font-size:clamp(16px,3.5vw,24px);color:var(--parch);font-style:italic;margin-bottom:12px;opacity:0.75;position:relative}
+.hero-desc{color:var(--muted);font-size:13.5px;line-height:1.8;max-width:340px;margin:0 auto 24px;font-weight:300;position:relative}
+.hero-name{color:var(--gold3);font-weight:600}
+.spill{display:inline-flex;align-items:center;gap:7px;background:rgba(200,140,8,0.08);border:1px solid rgba(200,140,8,0.16);border-radius:20px;padding:6px 15px;font-size:11.5px;color:var(--gold2);font-weight:600;margin-bottom:24px;position:relative}
+.hero-stats{display:flex;background:rgba(255,255,255,0.025);border:1px solid rgba(200,140,8,0.09);border-radius:var(--r2);overflow:hidden;max-width:360px;margin:0 auto;position:relative}
+.hs{flex:1;padding:15px 10px;text-align:center;position:relative}
+.hs+.hs::before{content:'';position:absolute;left:0;top:11px;bottom:11px;width:1px;background:rgba(200,140,8,0.09)}
+.hsv{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--gold2);line-height:1;margin-bottom:3px}
+.hsl{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;font-weight:700}
+
+/* CARDS */
+.card{background:var(--card);border:1px solid rgba(200,140,8,0.11);border-radius:var(--r2);padding:19px;margin-bottom:11px;transition:border-color 0.18s;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(200,140,8,0.3),transparent);opacity:0;transition:opacity 0.18s}
+.card:hover{border-color:rgba(200,140,8,0.22)}
+.card:hover::before{opacity:1}
+.cn{position:absolute;top:11px;right:14px;font-family:'Cormorant Garamond',serif;font-size:50px;font-weight:700;color:rgba(200,140,8,0.05);line-height:1;pointer-events:none}
+.clabel{font-size:9.5px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:12px}
+
+/* FORM */
+.lbl{font-size:9.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;display:block;margin-bottom:7px}
+.fi{width:100%;padding:11px 13px;background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);color:var(--cream);font-family:'DM Sans',sans-serif;font-size:13px;outline:none;transition:all 0.18s;appearance:none}
+.fi:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,140,8,0.1)}
+.fi::placeholder{color:var(--dim)}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.fg{grid-template-columns:1fr}}
+.fgrp{margin-bottom:13px}
+
+/* RADIO */
+.rg{display:flex;flex-wrap:wrap;gap:6px}
+.ri{display:none}
+.rl{padding:7px 13px;border:1px solid rgba(255,255,255,0.09);border-radius:20px;cursor:pointer;font-size:12px;font-weight:500;color:var(--muted);transition:all 0.16s;user-select:none;font-family:'DM Sans',sans-serif}
+.rl:hover{border-color:var(--gold);color:var(--gold2)}
+.ri:checked+.rl{background:var(--gold2);border-color:var(--gold2);color:#0C0803;font-weight:700;box-shadow:0 2px 10px rgba(200,140,8,0.3)}
+
+/* CHECKBOXES */
+.ci{display:none}
+.cl{padding:9px 7px;border:1px solid rgba(255,255,255,0.07);border-radius:var(--r);cursor:pointer;font-size:11px;font-weight:500;color:var(--muted);transition:all 0.16s;user-select:none;font-family:'DM Sans',sans-serif;text-align:center;background:rgba(255,255,255,0.015)}
+.cl:hover{border-color:rgba(200,140,8,0.28);color:var(--cream)}
+.ci:checked+.cl{background:var(--gold2);border-color:var(--gold2);color:#0C0803;font-weight:700}
+.ig{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+@media(max-width:500px){.ig{grid-template-columns:repeat(3,1fr)}}
+.sh{font-size:9px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin:18px 0 9px;display:flex;align-items:center;gap:7px}
+.sh::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(200,140,8,0.18),transparent)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:700;transition:all 0.18s;border-radius:var(--r)}
+.btn-gold{width:100%;padding:15px;font-size:14.5px;background:linear-gradient(135deg,var(--gold2),#9A6C04);color:#0C0803;box-shadow:0 5px 22px rgba(200,140,8,0.32);margin-top:10px;font-weight:800}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,140,8,0.48)}
+.btn-gold:disabled{background:var(--raised);color:var(--dim);box-shadow:none;transform:none;cursor:not-allowed}
+.btn-wa{width:100%;padding:13px;font-size:14px;background:linear-gradient(135deg,#22C55E,#16A34A);color:white;margin-top:8px;box-shadow:0 4px 16px rgba(34,197,94,0.25)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 7px 22px rgba(34,197,94,0.4)}
+.btn-ghost{padding:9px 16px;font-size:12px;background:transparent;border:1px solid rgba(200,140,8,0.25);color:var(--cream);margin-top:8px}
+.btn-ghost:hover{background:rgba(200,140,8,0.08)}
+.btn-danger{padding:8px 14px;font-size:12px;background:transparent;border:1px solid rgba(239,68,68,0.25);color:var(--red);margin-top:8px}
+.btn-danger:hover{background:rgba(239,68,68,0.07)}
+
+/* HOME TILES */
+.qa-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.qat{padding:17px 14px;background:var(--card);border:1px solid rgba(200,140,8,0.1);border-radius:var(--r2);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:var(--muted);transition:all 0.2s;text-align:center;position:relative;overflow:hidden}
+.qat::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold2),#9A6C04);opacity:0;transition:opacity 0.2s}
+.qat:hover::before{opacity:1}
+.qat:hover{border-color:var(--gold);color:white;transform:translateY(-2px)}
+.qat span{position:relative;z-index:1}
+.qat.wa{border-color:rgba(34,197,94,0.16);color:var(--green)}
+.qat.wa:hover{background:var(--green);color:white}
+.qat.wa:hover::before{opacity:0}
+
+/* BANNER */
+.tban{padding:12px 15px;border-radius:var(--r);display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500;margin-top:11px}
+.tban.yes{background:rgba(34,197,94,0.07);border:1px solid rgba(34,197,94,0.15)}
+.tban.no{background:rgba(200,140,8,0.07);border:1px solid rgba(200,140,8,0.13);color:var(--parch)}
+.tdot{width:7px;height:7px;border-radius:50%;flex-shrink:0;animation:bl 2s ease infinite}
+.tban.yes .tdot{background:var(--green)}
+.tban.no .tdot{background:var(--gold)}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:0.3}}
+.mr{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(200,140,8,0.08)}
+.mr:last-child{border-bottom:none}
+.mn{font-size:13px;color:var(--cream);font-weight:500}
+.md{font-size:11px;color:var(--muted)}
+
+/* LOADER */
+.loader{display:none;text-align:center;padding:42px 20px}
+.spw{position:relative;width:48px;height:48px;margin:0 auto 13px}
+.spo{width:48px;height:48px;border:2px solid rgba(200,140,8,0.1);border-top-color:var(--gold2);border-radius:50%;animation:sp 0.8s linear infinite;position:absolute;inset:0}
+.spi{width:30px;height:30px;border:2px solid rgba(200,140,8,0.06);border-bottom-color:var(--gold);border-radius:50%;animation:sp 0.6s linear infinite reverse;position:absolute;top:9px;left:9px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.loader p{font-size:13px;color:var(--muted)}
+
+/* DISH SUGGESTION CARDS */
+.result{display:none;margin-top:16px}
+.dcard{background:var(--card);border:1px solid rgba(200,140,8,0.18);border-radius:var(--r2);padding:20px 20px 16px;margin-bottom:11px;position:relative;overflow:hidden}
+.dcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+.dnum{font-size:9.5px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:7px}
+.dname{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--cream);margin-bottom:6px;letter-spacing:-0.2px;line-height:1.15}
+.dwhy{font-size:13px;color:var(--parch);line-height:1.7;font-weight:300}
+.dtags{display:flex;flex-wrap:wrap;gap:5px;margin-top:11px}
+.dtag{padding:3px 9px;background:rgba(200,140,8,0.08);border:1px solid rgba(200,140,8,0.15);border-radius:20px;font-size:11px;color:var(--gold2);font-weight:600}
+.overall-box{background:rgba(200,140,8,0.05);border:1px solid rgba(200,140,8,0.12);border-radius:var(--r);padding:12px 14px;font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:5px}
+.ract{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}
+
+/* CHAT */
+.cwin{height:380px;overflow-y:auto;background:rgba(0,0,0,0.35);border:1px solid rgba(200,140,8,0.1);border-radius:var(--r2);padding:14px;margin-bottom:11px;display:flex;flex-direction:column;gap:10px}
+.cwin::-webkit-scrollbar{width:3px}
+.cmsg{max-width:87%;padding:11px 14px;border-radius:13px;font-size:12.5px;line-height:1.72;animation:mIn 0.22s ease}
+@keyframes mIn{from{opacity:0;transform:translateY(7px)}}
+.cmsg.user{background:linear-gradient(135deg,var(--gold2),#9A6C04);color:#0C0803;font-weight:600;align-self:flex-end;border-bottom-right-radius:3px}
+.cmsg.bot{background:var(--card2);color:var(--cream);align-self:flex-start;border:1px solid rgba(200,140,8,0.09);border-bottom-left-radius:3px;white-space:pre-wrap}
+.cmsg.typing{color:var(--muted);font-style:italic}
+.crow{display:flex;gap:8px}
+.csend{padding:11px 15px;background:linear-gradient(135deg,var(--gold2),#9A6C04);color:#0C0803;border:none;border-radius:var(--r);cursor:pointer;font-size:16px;font-weight:900;flex-shrink:0;transition:all 0.18s}
+.csend:hover{transform:translateY(-1px)}
+.csend:disabled{background:var(--raised);color:var(--dim);cursor:not-allowed;transform:none}
+.qcs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:11px}
+.qc{padding:5px 11px;background:rgba(200,140,8,0.07);border:1px solid rgba(200,140,8,0.17);border-radius:20px;color:var(--gold2);font-size:11px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.16s}
+.qc:hover{background:rgba(200,140,8,0.15);color:var(--gold3)}
+
+/* HISTORY */
+.hi{background:var(--card2);border:1px solid rgba(200,140,8,0.09);border-radius:var(--r);padding:12px;margin-bottom:8px;transition:border-color 0.16s}
+.hi:hover{border-color:rgba(200,140,8,0.2)}
+.hdt{font-size:9px;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.hm{font-size:13px;color:var(--cream);font-weight:500}
+.hdel{background:none;border:none;color:var(--dim);cursor:pointer;font-size:14px;padding:3px 7px;border-radius:5px;transition:color 0.16s}
+.hdel:hover{color:var(--red)}
+
+/* PROFILE */
+.ph{position:relative;overflow:hidden;border-radius:var(--r2);margin-bottom:12px;border:1px solid rgba(200,140,8,0.15)}
+.ph-bg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% -10%,rgba(200,140,8,0.18),transparent 58%),linear-gradient(160deg,#1C1008,#0C0803)}
+.ph-pat{position:absolute;inset:0;opacity:0.022;background-image:repeating-conic-gradient(var(--gold) 0% 25%,transparent 0% 50%);background-size:16px 16px;mask-image:radial-gradient(ellipse at 50% 0%,black,transparent 62%)}
+.ph-body{position:relative;z-index:1;text-align:center;padding:36px 22px 28px}
+.ph-ring{width:84px;height:84px;border-radius:50%;background:conic-gradient(from 0deg,var(--gold),var(--gold3),var(--gold2),var(--gold));padding:3px;margin:0 auto 13px;animation:rr 4s linear infinite}
+@keyframes rr{to{transform:rotate(360deg)}}
+.ph-av{width:100%;height:100%;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--gold);animation:rr 4s linear infinite reverse}
+.ph-name{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:700;color:var(--cream);margin-bottom:3px}
+.ph-tag{font-size:9.5px;color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:15px}
+.ph-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.ph-pill{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:4px 11px;font-size:11px;color:var(--parch)}
+.ps{display:flex;background:var(--card);border:1px solid rgba(200,140,8,0.09);border-radius:var(--r2);margin-bottom:12px;overflow:hidden}
+.pst{flex:1;padding:17px 10px;text-align:center;position:relative}
+.pst+.pst::before{content:'';position:absolute;left:0;top:11px;bottom:11px;width:1px;background:rgba(200,140,8,0.09)}
+.pstv{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--gold2);line-height:1;margin-bottom:3px}
+.pstl{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:700}
+.frow{display:flex;align-items:flex-start;gap:11px;margin-bottom:13px}
+.fic{width:36px;height:36px;background:var(--raised);border:1px solid rgba(200,140,8,0.09);border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;margin-top:20px;color:var(--gold)}
+.fb{flex:1;min-width:0}
+.asbar{display:flex;align-items:center;gap:7px;padding:8px 13px;margin-bottom:12px;border-radius:var(--r);font-size:11.5px;color:var(--muted);transition:all 0.22s;background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.11)}
+.asbar.sv{background:rgba(200,140,8,0.05);border-color:rgba(200,140,8,0.13);color:var(--gold)}
+.asdot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;animation:bl 2s ease infinite}
+.asbar.sv .asdot{background:var(--gold)}
+
+/* REMINDER / AUTO WA */
+.rrow{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(200,140,8,0.07)}
+.rrow:last-child{border-bottom:none}
+.rlbl{font-size:12.5px;color:var(--cream);font-weight:500}
+.rsub{font-size:10.5px;color:var(--muted);margin-top:1px}
+.rbdg{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;text-transform:uppercase;letter-spacing:1px}
+.rbdg.on{background:rgba(34,197,94,0.1);color:var(--green);border:1px solid rgba(34,197,94,0.16)}
+.rbdg.off{background:rgba(46,30,12,0.5);color:var(--muted);border:1px solid rgba(200,140,8,0.09)}
+
+/* PY SCRIPT BOX */
+.py-box{background:rgba(0,0,0,0.5);border:1px solid rgba(200,140,8,0.15);border-radius:var(--r);padding:13px 15px;font-family:monospace;font-size:12px;color:var(--gold2);margin:10px 0;line-height:1.8}
+.py-step{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(200,140,8,0.07)}
+.py-step:last-child{border-bottom:none}
+.py-num{width:22px;height:22px;border-radius:50%;background:rgba(200,140,8,0.12);border:1px solid rgba(200,140,8,0.2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--gold2);flex-shrink:0;margin-top:1px}
+.py-txt{font-size:12.5px;color:var(--cream);line-height:1.6}
+.py-txt small{color:var(--muted);font-size:11px}
+
+/* WA FAB */
+.wafab{position:fixed;bottom:22px;right:18px;z-index:300;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#22C55E,#16A34A);border:none;cursor:pointer;font-size:20px;box-shadow:0 5px 20px rgba(34,197,94,0.4);transition:all 0.28s;display:flex;align-items:center;justify-content:center;animation:fabP 0.4s cubic-bezier(0.34,1.56,0.64,1) 0.5s both}
+@keyframes fabP{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
+.wafab:hover{transform:scale(1.1) translateY(-2px)}
+.fring{position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(34,197,94,0.32);animation:fr 2.5s ease infinite}
+@keyframes fr{0%{transform:scale(1);opacity:0.7}100%{transform:scale(1.5);opacity:0}}
+
+.pgh{padding:24px 0 15px;text-align:center}
+.pgh h2{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:700;color:var(--cream);margin-bottom:4px}
+.pgh p{font-size:12.5px;color:var(--muted);font-weight:300}
+.div{display:flex;align-items:center;gap:11px;margin:5px 0 19px}
+.divl{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(200,140,8,0.22),transparent)}
+.divd{color:var(--gold);font-size:11px;opacity:0.45}
+
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(17px);background:var(--green);color:white;padding:10px 20px;border-radius:20px;font-size:12.5px;font-weight:700;z-index:999;opacity:0;pointer-events:none;transition:all 0.26s;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.err{background:var(--red)}
+
+@media(max-width:480px){.hero{padding:48px 14px 40px}.wrap{padding:0 13px}.card{padding:16px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">Dasturkhwan</div>
+  <button class="ntab active" id="nt-home" onclick="goTab('home',this)">Home</button>
+  <button class="ntab" id="nt-suggest" onclick="goTab('suggest',this)">Suggest</button>
+  <button class="ntab" id="nt-chat" onclick="goTab('chat',this)">Chef Chat</button>
+  <button class="ntab" id="nt-history" onclick="goTab('history',this)">History</button>
+  <button class="ntab" id="nt-wa" onclick="goTab('wa',this)">Auto WhatsApp</button>
+  <button class="ntab" id="nt-profile" onclick="goTab('profile',this)">Profile</button>
+</nav>
+
+<!-- HOME -->
+<div class="pg active" id="pg-home">
+  <div class="hero">
+    <div class="hero-tag">AI Pakistani Kitchen</div>
+    <h1>Aaj Kia<br><em>Pakana</em> Hai?</h1>
+    <p class="hero-urdu">آپ کا ذاتی شیف — دسترخوان</p>
+    <div class="spill" id="seasonPill">Season detect ho raha hai...</div>
+    <p class="hero-desc">Assalam o Alaikum <span class="hero-name" id="heroName"></span><br>Ingredients select karo — AI batayega aaj kia pakana chahiye</p>
+    <div class="hero-stats">
+      <div class="hs"><div class="hsv" id="hsMeals">0</div><div class="hsl">Meals</div></div>
+      <div class="hs"><div class="hsv" id="hsStreak">0</div><div class="hsl">Streak</div></div>
+      <div class="hs"><div class="hsv" id="hsFamily">--</div><div class="hsl">Family</div></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div id="todayEl"></div>
+    <div class="card" style="margin-top:14px">
+      <div class="clabel">Quick Actions</div>
+      <div class="qa-grid">
+        <button class="qat" onclick="goTab('suggest')"><span>Khana Suggest Karo</span></button>
+        <button class="qat" onclick="goTab('chat')"><span>Recipe Poocho</span></button>
+        <button class="qat" onclick="goTab('history')"><span>Meal History</span></button>
+        <button class="qat wa" onclick="goTab('wa')">Auto WhatsApp</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="clabel">Recent Meals</div>
+      <div id="homeRecent" style="font-size:13px;color:var(--muted)">Koi history nahi abhi</div>
+    </div>
+  </div>
+</div>
+
+<!-- SUGGEST -->
+<div class="pg" id="pg-suggest">
+<div class="wrap">
+  <div class="pgh"><h2>Aaj Kia Pakana Hai?</h2><p>Ingredients select karo — AI batayega kia banao, koi recipe nahi</p></div>
+  <div class="div"><div class="divl"></div><div class="divd">✦</div><div class="divl"></div></div>
+
+  <div class="card"><div class="cn">1</div>
+    <div class="clabel">Occasion</div>
+    <div class="rg">
+      <input class="ri" type="radio" name="occ" id="o1" value="ghar" checked><label class="rl" for="o1">Ghar Ka Khana</label>
+      <input class="ri" type="radio" name="occ" id="o2" value="mehman"><label class="rl" for="o2">Normal Mehman</label>
+      <input class="ri" type="radio" name="occ" id="o3" value="khaas"><label class="rl" for="o3">Khaas Dawat</label>
+    </div>
+  </div>
+
+  <div class="card"><div class="cn">2</div>
+    <div class="clabel">Kitni Dishes aur Kitna Time</div>
+    <div class="fg">
+      <div><label class="lbl">Dishes</label>
+        <div class="rg">
+          <input class="ri" type="radio" name="dc" id="dc1" value="1"><label class="rl" for="dc1">1 Dish</label>
+          <input class="ri" type="radio" name="dc" id="dc2" value="2" checked><label class="rl" for="dc2">2 Dishes</label>
+          <input class="ri" type="radio" name="dc" id="dc3" value="3"><label class="rl" for="dc3">3 Dishes</label>
+        </div>
+      </div>
+      <div><label class="lbl">Time</label>
+        <div class="rg">
+          <input class="ri" type="radio" name="tm" id="tm1" value="15-25 minute"><label class="rl" for="tm1">15-25 min</label>
+          <input class="ri" type="radio" name="tm" id="tm2" value="30-45 minute" checked><label class="rl" for="tm2">30-45 min</label>
+          <input class="ri" type="radio" name="tm" id="tm3" value="45-60 minute"><label class="rl" for="tm3">45-60 min</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card"><div class="cn">3</div>
+    <div class="clabel">Jo Ghar Mein Hai — Woh Check Karo</div>
+
+    <div class="sh">Gosht aur Murgh</div>
+    <div class="ig">
+      <input class="ci" type="checkbox" name="ing" id="i_ck" value="Chicken"><label class="cl" for="i_ck">Chicken</label>
+      <input class="ci" type="checkbox" name="ing" id="i_mt" value="Mutton"><label class="cl" for="i_mt">Mutton</label>
+      <input class="ci" type="checkbox" name="ing" id="i_bf" value="Beef"><label class="cl" for="i_bf">Beef</label>
+      <input class="ci" type="checkbox" name="ing" id="i_km" value="Keema"><label class="cl" for="i_km">Keema</label>
+      <input class="ci" type="checkbox" name="ing" id="i_bt" value="Boti"><label class="cl" for="i_bt">Boti</label>
+      <input class="ci" type="checkbox" name="ing" id="i_eg" value="Anday"><label class="cl" for="i_eg">Anday</label>
+      <input class="ci" type="checkbox" name="ing" id="i_mk" value="Machli"><label class="cl" for="i_mk">Machli</label>
+    </div>
+
+    <div class="sh">Sabziyan</div>
+    <div class="ig">
+      <input class="ci" type="checkbox" name="ing" id="i_al" value="Aalu"><label class="cl" for="i_al">Aalu</label>
+      <input class="ci" type="checkbox" name="ing" id="i_py" value="Pyaz"><label class="cl" for="i_py">Pyaz</label>
+      <input class="ci" type="checkbox" name="ing" id="i_tm" value="Tamatar"><label class="cl" for="i_tm">Tamatar</label>
+      <input class="ci" type="checkbox" name="ing" id="i_ad" value="Adrak"><label class="cl" for="i_ad">Adrak</label>
+      <input class="ci" type="checkbox" name="ing" id="i_ls" value="Lahsan"><label class="cl" for="i_ls">Lahsan</label>
+      <input class="ci" type="checkbox" name="ing" id="i_bh" value="Bhindi"><label class="cl" for="i_bh">Bhindi</label>
+      <input class="ci" type="checkbox" name="ing" id="i_bg" value="Baingan"><label class="cl" for="i_bg">Baingan</label>
+      <input class="ci" type="checkbox" name="ing" id="i_kd" value="Kaddu"><label class="cl" for="i_kd">Kaddu</label>
+      <input class="ci" type="checkbox" name="ing" id="i_pl" value="Palak"><label class="cl" for="i_pl">Palak</label>
+      <input class="ci" type="checkbox" name="ing" id="i_me" value="Methi"><label class="cl" for="i_me">Methi</label>
+      <input class="ci" type="checkbox" name="ing" id="i_gj" value="Gajar"><label class="cl" for="i_gj">Gajar</label>
+      <input class="ci" type="checkbox" name="ing" id="i_mr" value="Matar"><label class="cl" for="i_mr">Matar</label>
+      <input class="ci" type="checkbox" name="ing" id="i_gb" value="Gobhi"><label class="cl" for="i_gb">Gobhi</label>
+      <input class="ci" type="checkbox" name="ing" id="i_bd" value="Band Gobhi"><label class="cl" for="i_bd">Band Gobhi</label>
+      <input class="ci" type="checkbox" name="ing" id="i_sm" value="Shimla Mirch"><label class="cl" for="i_sm">Shimla Mirch</label>
+      <input class="ci" type="checkbox" name="ing" id="i_lk" value="Loki"><label class="cl" for="i_lk">Loki</label>
+      <input class="ci" type="checkbox" name="ing" id="i_kr" value="Karela"><label class="cl" for="i_kr">Karela</label>
+      <input class="ci" type="checkbox" name="ing" id="i_to" value="Torai"><label class="cl" for="i_to">Torai</label>
+      <input class="ci" type="checkbox" name="ing" id="i_av" value="Arvi"><label class="cl" for="i_av">Arvi</label>
+      <input class="ci" type="checkbox" name="ing" id="i_td" value="Tinda"><label class="cl" for="i_td">Tinda</label>
+      <input class="ci" type="checkbox" name="ing" id="i_mo" value="Mooli"><label class="cl" for="i_mo">Mooli</label>
+      <input class="ci" type="checkbox" name="ing" id="i_se" value="Sem"><label class="cl" for="i_se">Sem</label>
+      <input class="ci" type="checkbox" name="ing" id="i_sw" value="Sawanjhna"><label class="cl" for="i_sw">Sawanjhna</label>
+    </div>
+
+    <div class="sh">Sardi Ki Khaas Sabziyan <span id="winterNote" style="font-size:9px;color:var(--muted);background:rgba(200,140,8,0.07);border:1px solid rgba(200,140,8,0.14);border-radius:5px;padding:2px 7px;margin-left:4px"></span></div>
+    <div class="ig">
+      <input class="ci" type="checkbox" name="ing" id="i_sg" value="Sarson Ka Saag"><label class="cl" for="i_sg">Sarson Saag</label>
+      <input class="ci" type="checkbox" name="ing" id="i_psg" value="Palak Saag"><label class="cl" for="i_psg">Palak Saag</label>
+      <input class="ci" type="checkbox" name="ing" id="i_msg" value="Methi Saag"><label class="cl" for="i_msg">Methi Saag</label>
+      <input class="ci" type="checkbox" name="ing" id="i_slg" value="Shalgam"><label class="cl" for="i_slg">Shalgam</label>
+      <input class="ci" type="checkbox" name="ing" id="i_gnt" value="Gaanth Gobhi"><label class="cl" for="i_gnt">Gaanth Gobhi</label>
+    </div>
+
+    <div class="sh">Daalen</div>
+    <div class="ig">
+      <input class="ci" type="checkbox" name="ing" id="i_dm" value="Daal Mash"><label class="cl" for="i_dm">Daal Mash</label>
+      <input class="ci" type="checkbox" name="ing" id="i_ds" value="Daal Masoor"><label class="cl" for="i_ds">Daal Masoor</label>
+      <input class="ci" type="checkbox" name="ing" id="i_dc" value="Daal Chana"><label class="cl" for="i_dc">Daal Chana</label>
+      <input class="ci" type="checkbox" name="ing" id="i_dmo" value="Daal Moong"><label class="cl" for="i_dmo">Daal Moong</label>
+      <input class="ci" type="checkbox" name="ing" id="i_mxd" value="Mix Daal"><label class="cl" for="i_mxd">Mix Daal</label>
+      <input class="ci" type="checkbox" name="ing" id="i_rjm" value="Rajma"><label class="cl" for="i_rjm">Rajma</label>
+      <input class="ci" type="checkbox" name="ing" id="i_lb" value="Lobia"><label class="cl" for="i_lb">Lobia</label>
+    </div>
+
+    <div class="sh">Anaj aur Dry Items</div>
+    <div class="ig">
+      <input class="ci" type="checkbox" name="ing" id="i_cw" value="Basmati Chawal"><label class="cl" for="i_cw">Basmati Chawal</label>
+      <input class="ci" type="checkbox" name="ing" id="i_at" value="Atta"><label class="cl" for="i_at">Atta</label>
+      <input class="ci" type="checkbox" name="ing" id="i_ma" value="Maida"><label class="cl" for="i_ma">Maida</label>
+      <input class="ci" type="checkbox" name="ing" id="i_bs" value="Besan"><label class="cl" for="i_bs">Besan</label>
+      <input class="ci" type="checkbox" name="ing" id="i_sj" value="Suji"><label class="cl" for="i_sj">Suji</label>
+      <input class="ci" type="checkbox" name="ing" id="i_kbc" value="Kabuli Chana"><label class="cl" for="i_kbc">Kabuli Chana</label>
+    </div>
+
+    <div class="sh">Meetha Ingredients</div>
+    <div class="ig">
+      <input class="ci" type="checkbox" name="ing" id="i_dd" value="Doodh"><label class="cl" for="i_dd">Doodh</label>
+      <input class="ci" type="checkbox" name="ing" id="i_cn" value="Cheeni"><label class="cl" for="i_cn">Cheeni</label>
+      <input class="ci" type="checkbox" name="ing" id="i_kh" value="Khoya"><label class="cl" for="i_kh">Khoya</label>
+      <input class="ci" type="checkbox" name="ing" id="i_sv" value="Seviyan"><label class="cl" for="i_sv">Seviyan</label>
+      <input class="ci" type="checkbox" name="ing" id="i_gh" value="Ghee"><label class="cl" for="i_gh">Ghee</label>
+      <input class="ci" type="checkbox" name="ing" id="i_cr" value="Cream Malai"><label class="cl" for="i_cr">Cream Malai</label>
+    </div>
+  </div>
+
+  <div class="card"><div class="cn">4</div>
+    <div class="clabel">Dessert Chahiye?</div>
+    <div class="rg">
+      <input class="ri" type="radio" name="dst" id="ds0" value="nahi" checked><label class="rl" for="ds0">Nahi</label>
+      <input class="ri" type="radio" name="dst" id="ds1" value="haan"><label class="rl" for="ds1">Haan Chahiye</label>
+    </div>
+  </div>
+
+  <div class="fgrp" style="margin-top:4px">
+    <label class="lbl">Kal Kya Khaya Tha — Repeat Nahi Karega</label>
+    <input class="fi" id="lastMeal" placeholder="Jaise: Biryani, Daal Chawal, Karahi...">
+  </div>
+
+  <button class="btn btn-gold" id="sugBtn" onclick="doSuggest()">Aaj Ka Khana Suggest Karo</button>
+
+  <div class="loader" id="sugLoader">
+    <div class="spw"><div class="spo"></div><div class="spi"></div></div>
+    <p>AI soch raha hai — mausam, location aur ingredients ke hisaab se...</p>
+  </div>
+
+  <div class="result" id="sugResult">
+    <div id="dishCards"></div>
+    <div class="ract">
+      <button class="btn btn-ghost" onclick="saveMeal()" style="margin-top:0">History Mein Save Karo</button>
+      <button class="btn btn-wa" onclick="shareWA()" style="margin-top:0">WhatsApp Bhejo</button>
+    </div>
+    <button class="btn btn-ghost" onclick="resetSug()" style="width:100%;margin-top:8px;justify-content:center">Dobara Poocho</button>
+  </div>
+</div>
+</div>
+
+<!-- CHEF CHAT -->
+<div class="pg" id="pg-chat">
+<div class="wrap">
+  <div class="pgh"><h2>Chef Ka Corner</h2><p>Kisi bhi dish ki recipe ya cooking tip poocho</p></div>
+  <div class="div"><div class="divl"></div><div class="divd">✦</div><div class="divl"></div></div>
+  <div class="qcs">
+    <button class="qc" onclick="qAsk('Chicken Karahi ki authentic recipe with exact measurements')">Chicken Karahi</button>
+    <button class="qc" onclick="qAsk('Biryani dum wali step by step recipe')">Biryani</button>
+    <button class="qc" onclick="qAsk('Sarson Ka Saag aur Makki Di Roti kaise banain')">Sarson Saag</button>
+    <button class="qc" onclick="qAsk('Daal Mash restaurant jaisi recipe')">Daal Mash</button>
+    <button class="qc" onclick="qAsk('Rajma Chawal ki recipe with measurements')">Rajma Chawal</button>
+    <button class="qc" onclick="qAsk('Mutton Qorma recipe mehman ke liye')">Mutton Qorma</button>
+    <button class="qc" onclick="qAsk('Kheer perfect kaise banain')">Kheer</button>
+    <button class="qc" onclick="qAsk('Manchurian Chawal restaurant style')">Manchurian Chawal</button>
+  </div>
+  <div class="cwin" id="chatWin">
+    <div class="cmsg bot">Assalam o Alaikum! Kisi bhi dish ki recipe, cooking tips ya food sawaal poocho. Jawab aapki pasandida zubaan mein dunga!</div>
+  </div>
+  <div class="crow">
+    <input class="fi" id="chatInp" placeholder="Recipe ya cooking sawaal..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();doChat()}">
+    <button class="csend" id="chatBtn" onclick="doChat()">&#9658;</button>
+  </div>
+</div>
+</div>
+
+<!-- HISTORY -->
+<div class="pg" id="pg-history">
+<div class="wrap">
+  <div class="pgh"><h2>Meal History</h2><p>AI in meals ko repeat nahi karega</p></div>
+  <div class="div"><div class="divl"></div><div class="divd">✦</div><div class="divl"></div></div>
+  <div class="card">
+    <div class="clabel">Manually Add Karo</div>
+    <div style="display:flex;gap:8px">
+      <input class="fi" id="manualMeal" placeholder="Aaj ka khana..." style="flex:1">
+      <button class="btn btn-ghost" onclick="addManual()" style="margin-top:0;white-space:nowrap;padding:10px 15px">Add</button>
+    </div>
+  </div>
+  <div id="histList"><div style="text-align:center;color:var(--muted);padding:28px;font-size:13px">Koi history nahi abhi</div></div>
+  <button class="btn btn-danger" onclick="clearH()">Sab History Delete Karo</button>
+</div>
+</div>
+
+<!-- AUTO WHATSAPP -->
+<div class="pg" id="pg-wa">
+<div class="wrap">
+  <div class="pgh"><h2>Auto WhatsApp</h2><p>Roz automatic WhatsApp pe suggestion aayega</p></div>
+  <div class="div"><div class="divl"></div><div class="divd">✦</div><div class="divl"></div></div>
+
+  <div class="card" style="background:rgba(34,197,94,0.04);border-color:rgba(34,197,94,0.13)">
+    <div class="clabel" style="color:var(--green)">Settings</div>
+    <div class="fgrp">
+      <label class="lbl">WhatsApp Number</label>
+      <input class="fi" id="waNum" placeholder="03xxxxxxxxx" oninput="saveWANum()">
+    </div>
+    <div class="fgrp">
+      <label class="lbl">Kitne Baje Message Aaye</label>
+      <input class="fi" type="time" id="remTime" value="08:00" onchange="saveRemTime()">
+    </div>
+    <button class="btn btn-wa" onclick="sendTestWA()">Abhi Test Message Bhejo</button><button class="btn btn-gold" onclick="saveSettings()">
+Save Settings
+</button>
+  </div>
+
+  <div class="card">
+    <div class="clabel">Fully Automatic Setup — Python Script</div>
+    <p style="font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:14px">Yeh 3 steps karo aur roz automatically WhatsApp pe suggestion aayega — koi button nahi dabaana hoga:</p>
+    <div class="py-step">
+      <div class="py-num">1</div>
+      <div class="py-txt">Python install karo — <small>python.org se download karo agar nahi hai</small></div>
+    </div>
+    <div class="py-step">
+      <div class="py-num">2</div>
+      <div class="py-txt">Terminal mein yeh likho:<br><div class="py-box">pip install schedule pywhatkit requests</div></div>
+    </div>
+    <div class="py-step">
+      <div class="py-num">3</div>
+      <div class="py-txt">Script download karo aur run karo:<br><div class="py-box">python auto_wa.py</div><small>Terminal band mat karna — yeh background mein chalta rahega</small></div>
+    </div>
+    <button class="btn btn-gold" onclick="downloadScript()" style="margin-top:14px">auto_wa.py Download Karo</button>
+    <p style="font-size:11.5px;color:var(--dim);margin-top:10px;text-align:center">Note: WhatsApp Web browser mein logged in hona chahiye</p>
+  </div>
+
+  <div class="card">
+    <div class="clabel">Status</div>
+    <div class="rrow">
+      <div><div class="rlbl">WhatsApp Number</div><div class="rsub" id="waSub">Save nahi</div></div>
+      <div class="rbdg off" id="waBadge">--</div>
+    </div>
+    <div class="rrow">
+      <div><div class="rlbl">Browser Notification</div><div class="rsub" id="notifSub">Check ho raha hai...</div></div>
+      <div class="rbdg off" id="notifBadge">Off</div>
+    </div>
+    <button class="btn btn-ghost" onclick="enableNotif()" style="width:100%;margin-top:12px;justify-content:center">Browser Notifications On Karo</button>
+  </div>
+</div>
+</div>
+
+<!-- PROFILE -->
+<div class="pg" id="pg-profile">
+<div class="wrap">
+  <div class="ph">
+    <div class="ph-bg"></div><div class="ph-pat"></div>
+    <div class="ph-body">
+      <div class="ph-ring"><div class="ph-av" id="profAvt">P</div></div>
+      <div class="ph-name" id="profNm">--</div>
+      <div class="ph-tag">Dasturkhwan Member</div>
+      <div class="ph-pills">
+        <div class="ph-pill" id="profCity">📍 --</div>
+        <div class="ph-pill" id="profFamily">👨‍👩‍👧‍👦 --</div>
+        <div class="ph-pill" id="profSince">📅 Member</div>
+      </div>
+    </div>
+  </div>
+  <div class="ps">
+    <div class="pst"><div class="pstv" id="ps_m">0</div><div class="pstl">Meals</div></div>
+    <div class="pst"><div class="pstv" id="ps_s">0</div><div class="pstl">Streak</div></div>
+    <div class="pst"><div class="pstv" id="ps_f">--</div><div class="pstl">Top Dish</div></div>
+  </div>
+  <div class="card">
+    <div class="clabel">Personal Information</div>
+    <div class="frow">
+      <div class="fic">A</div>
+      <div class="fb"><label class="lbl">Naam</label><input class="fi" id="pName" placeholder="Aapka naam" oninput="autoSave()"></div>
+    </div>
+    <div class="frow">
+      <div class="fic">W</div>
+      <div class="fb"><label class="lbl">WhatsApp Number</label><input class="fi" id="pWA" placeholder="03xxxxxxxxx" oninput="autoSave()"></div>
+    </div>
+    <div class="fg">
+      <div>
+        <label class="lbl">Sheher</label>
+        <select class="fi" id="pCity" onchange="autoSave()">
+          <option value="">Select Karo</option>
+          <option value="Lahore">Lahore</option>
+          <option value="Karachi">Karachi</option>
+          <option value="Islamabad">Islamabad</option>
+          <option value="Rawalpindi">Rawalpindi</option>
+          <option value="Faisalabad">Faisalabad</option>
+          <option value="Multan">Multan</option>
+          <option value="Peshawar">Peshawar</option>
+          <option value="Quetta">Quetta</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Gujranwala">Gujranwala</option>
+          <option value="Sialkot">Sialkot</option>
+          <option value="Bahawalpur">Bahawalpur</option>
+          <option value="Abbottabad">Abbottabad</option>
+          <option value="UK">UK / Europe</option>
+          <option value="USA">USA / Canada</option>
+          <option value="Dubai">Dubai / Gulf</option>
+          <option value="Other">Doosra Sheher</option>
+        </select>
+      </div>
+      <div>
+        <label class="lbl">Ghar Mein Log</label>
+        <select class="fi" id="pFamily" onchange="autoSave()">
+          <option value="1-2 log">1-2 Log</option>
+          <option value="3-4 log" selected>3-4 Log</option>
+          <option value="5-6 log">5-6 Log</option>
+          <option value="7+ log">7+ Log</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="clabel">Food Preferences</div>
+    <label class="lbl" style="margin-bottom:7px">Khaane Ki Pasand</label>
+    <div class="rg" style="margin-bottom:15px">
+      <input class="ri" type="radio" name="ppref" id="pp1" value="sab kuch" checked onchange="autoSave()"><label class="rl" for="pp1">Sab Kuch</label>
+      <input class="ri" type="radio" name="ppref" id="pp2" value="vegetarian" onchange="autoSave()"><label class="rl" for="pp2">Vegetarian</label>
+      <input class="ri" type="radio" name="ppref" id="pp3" value="chicken" onchange="autoSave()"><label class="rl" for="pp3">Chicken</label>
+      <input class="ri" type="radio" name="ppref" id="pp4" value="mutton" onchange="autoSave()"><label class="rl" for="pp4">Mutton</label>
+    </div>
+    <label class="lbl" style="margin-bottom:7px">Mirch</label>
+    <div class="rg" style="margin-bottom:15px">
+      <input class="ri" type="radio" name="pspice" id="ps1" value="halki mirch" onchange="autoSave()"><label class="rl" for="ps1">Halki</label>
+      <input class="ri" type="radio" name="pspice" id="ps2" value="normal mirch" checked onchange="autoSave()"><label class="rl" for="ps2">Normal</label>
+      <input class="ri" type="radio" name="pspice" id="ps3" value="tez mirch" onchange="autoSave()"><label class="rl" for="ps3">Tez</label>
+      <input class="ri" type="radio" name="pspice" id="ps4" value="bahut tez" onchange="autoSave()"><label class="rl" for="ps4">Bahut Tez</label>
+    </div>
+    <label class="lbl" style="margin-bottom:7px">Budget</label>
+    <div class="rg" style="margin-bottom:15px">
+      <input class="ri" type="radio" name="pbudget" id="pb1" value="kam budget" onchange="autoSave()"><label class="rl" for="pb1">Kam</label>
+      <input class="ri" type="radio" name="pbudget" id="pb2" value="normal budget" checked onchange="autoSave()"><label class="rl" for="pb2">Normal</label>
+      <input class="ri" type="radio" name="pbudget" id="pb3" value="premium" onchange="autoSave()"><label class="rl" for="pb3">Premium</label>
+    </div>
+    <label class="lbl" style="margin-bottom:7px">Jawab Ki Zubaan</label>
+    <div class="rg">
+      <input class="ri" type="radio" name="plang" id="pl1" value="roman_urdu" checked onchange="autoSave()"><label class="rl" for="pl1">Roman Urdu</label>
+      <input class="ri" type="radio" name="plang" id="pl2" value="urdu" onchange="autoSave()"><label class="rl" for="pl2">Urdu</label>
+      <input class="ri" type="radio" name="plang" id="pl3" value="english" onchange="autoSave()"><label class="rl" for="pl3">English</label>
+    </div>
+  </div>
+  <div class="asbar" id="asBar"><div class="asdot"></div><span id="asTxt">Sab changes auto-save ho rahe hain</span></div>
+  <div class="card" style="background:rgba(34,197,94,0.04);border-color:rgba(34,197,94,0.11)">
+    <div class="clabel" style="color:var(--green)">Privacy</div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.75">Saari info <strong style="color:var(--cream)">sirf aapke device</strong> mein — koi server nahi, 100% private.</div>
+    <div style="font-size:10.5px;color:var(--dim);margin-top:8px" id="lastSaved"></div>
+    <button class="btn btn-danger" onclick="resetAll()">Sab Data Delete Karo</button>
+  </div>
+</div>
+</div>
+
+<button class="wafab" onclick="fabWA()"><div class="fring"></div>WA</button>
+<div class="toast" id="toast"></div>
+
+<script>
+// ============================================
+// GROQ API KEY — YAHAN PASTE KARO
+// console.groq.com → API Keys → Create
+// ============================================
+const GROQ = "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";
+
+const S={g:k=>{try{return JSON.parse(localStorage.getItem(k))}catch{return null}},s:(k,v)=>localStorage.setItem(k,JSON.stringify(v)),d:k=>localStorage.removeItem(k)};
+const LM={roman_urdu:'Roman Urdu (English letters — Hindi bilkul nahi)',urdu:'Pure Urdu script (اردو)',english:'English only'};
+
+function season(){const m=new Date().getMonth()+1;if(m>=11||m<=2)return{n:'Sardi',c:'winter'};if(m>=3&&m<=4)return{n:'Bahar',c:'spring'};if(m>=5&&m<=6)return{n:'Garmi',c:'summer'};if(m>=7&&m<=9)return{n:'Barsat',c:'monsoon'};return{n:'Late Garmi',c:'autumn'};}
+
+function cityCtx(city,s){
+  const cf={Lahore:'Lahori culture — Paye, Nihari, Karahi, Channay, tez masalay famous.',Karachi:'Karachi — Biryani, Haleem, Nihari, Sea Food.',Islamabad:'Islamabad — Karahi, BBQ, Sajji.',Peshawar:'Peshawar — Chapli Kebab, Karahi, Mantu, Sajji.',Quetta:'Quetta — Sajji, Dampukht, Karahi.',Multan:'Multan — Yakhni, Karahi, halka khana.',UK:'UK — halal Pakistani ingredients milte hain.',USA:'USA — South Asian grocery halal available.',Dubai:'Dubai — sab Pakistani ingredients milte hain.'};
+  const sf={winter:'SARDI hai — garam dishes zaroori hain. Nihari, Haleem, Paye, Sarson Ka Saag, Gajar Ka Halwa suggest karo. Gajar, Shalgam, Gobhi, Saag is waqt fresh hain.',summer:'GARMI hai — halka khana better. Bhindi, Tinda, Loki, Torai garmi ki sabziyan hain. Raita zaroori hai.',monsoon:'BARSAT — Pakore wala mausam. Daal aur fried cheezein garm chai ke saath.',spring:'BAHAR — Matar, Palak, Gobhi bilkul fresh.',autumn:'Moosam badal raha — gheedar warm khana.'};
+  return `Sheher context: ${cf[city]||'Pakistani food culture.'} Mausam: ${s.n}. ${sf[s.c]||''}`;
+}
+
+function goTab(t,btn){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ntab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pg-'+t).classList.add('active');
+  (btn||document.getElementById('nt-'+t)).classList.add('active');
+  if(t==='home')renderHome();
+  if(t==='history')renderHistory();
+  if(t==='profile')renderProfile();
+  if(t==='wa')renderWA();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toast(msg,err=false){const t=document.getElementById('toast');t.textContent=msg;t.className='toast show'+(err?' err':'');setTimeout(()=>t.className='toast',3000);}
+const gP=()=>S.g('dkh_p')||{};
+const gH=()=>S.g('dkh_h')||[];
+
+// AUTO SAVE
+let _pt=null;
+function autoSave(){
+  const bar=document.getElementById('asBar'),txt=document.getElementById('asTxt');
+  if(bar){bar.classList.add('sv');if(txt)txt.textContent='Saving...';}
+  clearTimeout(_pt);
+  _pt=setTimeout(()=>{
+    const p=gP();
+    const np={...p,
+      name:document.getElementById('pName').value.trim()||p.name,
+      wa:document.getElementById('pWA').value.trim(),
+      city:document.getElementById('pCity').value,
+      family:document.getElementById('pFamily').value,
+      pref:document.querySelector('input[name="ppref"]:checked')?.value||p.pref,
+      spice:document.querySelector('input[name="pspice"]:checked')?.value||p.spice,
+      budget:document.querySelector('input[name="pbudget"]:checked')?.value||p.budget,
+      lang:document.querySelector('input[name="plang"]:checked')?.value||p.lang||'roman_urdu',
+      savedAt:new Date().toISOString(),
+      memberSince:p.memberSince||new Date().toISOString()
+    };
+    S.s('dkh_p',np);renderPH();updateSeason();
+    if(bar){bar.classList.remove('sv');if(txt)txt.textContent='Save ho gaya!';}
+    setTimeout(()=>{if(txt)txt.textContent='Sab changes auto-save ho rahe hain';},2000);
+    const ls=document.getElementById('lastSaved');if(ls)ls.textContent='Last saved: '+new Date().toLocaleTimeString();
+    const wn=document.getElementById('waNum');if(wn&&np.wa)wn.value=np.wa;
+  },700);
+}
+
+function renderPH(){
+  const p=gP();if(!p.name)return;
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v;};
+  const q=id=>document.getElementById(id);
+  if(q('profAvt'))q('profAvt').textContent=p.name.charAt(0).toUpperCase();
+  set('profNm',p.name);
+  set('profCity','📍 '+(p.city||'--'));
+  set('profFamily','👨‍👩‍👧‍👦 '+(p.family||'--'));
+  if(q('profSince')&&p.memberSince){const d=new Date(p.memberSince);q('profSince').textContent='📅 '+d.toLocaleDateString('en-PK',{month:'short',year:'numeric'})+' se';}
+}
+
+function renderProfile(){
+  const p=gP();if(!p.name)return;
+  renderPH();
+  const h=gH();
+  document.getElementById('ps_m').textContent=h.length;
+  let s=0;const now=new Date();for(let i=0;i<h.length;i++){if(Math.floor((now-new Date(h[i].ts))/86400000)===i)s++;else break;}
+  document.getElementById('ps_s').textContent=s;
+  const freq={};h.forEach(x=>{freq[x.meal]=(freq[x.meal]||0)+1;});
+  const top=Object.entries(freq).sort((a,b)=>b[1]-a[1])[0];
+  document.getElementById('ps_f').textContent=top?top[0].split(' ').slice(0,2).join(' '):'--';
+  const f=id=>document.getElementById(id);
+  if(f('pName'))f('pName').value=p.name||'';
+  if(f('pWA'))f('pWA').value=p.wa||'';
+  if(f('pCity'))f('pCity').value=p.city||'';
+  if(f('pFamily'))f('pFamily').value=p.family||'3-4 log';
+  [['ppref',p.pref||'sab kuch'],['pspice',p.spice||'normal mirch'],['pbudget',p.budget||'normal budget'],['plang',p.lang||'roman_urdu']]
+    .forEach(([n,v])=>{const el=document.querySelector(`input[name="${n}"][value="${v}"]`);if(el)el.checked=true;});
+  const ls=document.getElementById('lastSaved');if(ls&&p.savedAt)ls.textContent='Last saved: '+new Date(p.savedAt).toLocaleString();
+}
+
+function updateSeason(){
+  const s=season();const p=gP();
+  const sp=document.getElementById('seasonPill');if(sp)sp.textContent=(p.city?p.city+' — ':'')+s.n;
+  const wn=document.getElementById('winterNote');if(wn){wn.textContent=s.c==='winter'?'Abhi sezon mein hain':'Is waqt season nahi';wn.style.display='inline';}
+}
+
+function renderHome(){
+  const p=gP();const h=gH();
+  const el=id=>document.getElementById(id);
+  if(el('heroName'))el('heroName').textContent=p.name?p.name+'!':'';
+  el('hsMeals').textContent=h.length;
+  el('hsFamily').textContent=p.family||'--';
+  let s=0;const now=new Date();for(let i=0;i<h.length;i++){if(Math.floor((now-new Date(h[i].ts))/86400000)===i)s++;else break;}
+  el('hsStreak').textContent=s;
+  const td=new Date().toLocaleDateString();
+  const tm=h.find(x=>new Date(x.ts).toLocaleDateString()===td);
+  const te=el('todayEl');
+  if(te)te.innerHTML=tm?`<div class="tban yes"><div class="tdot"></div><span><strong>Aaj:</strong> ${tm.meal}</span></div>`:`<div class="tban no"><div class="tdot"></div><span>Aaj ka khana abhi save nahi hua</span></div>`;
+  const rl=el('homeRecent');
+  if(rl){if(!h.length){rl.innerHTML='<span style="color:var(--muted)">Koi history nahi</span>';return;}rl.innerHTML=h.slice(0,4).map(x=>`<div class="mr"><div class="mn">${x.meal}</div><div class="md">${new Date(x.ts).toLocaleDateString()}</div></div>`).join('');}
+  updateSeason();
+}
+
+function renderHistory(){
+  const h=gH();const el=document.getElementById('histList');
+  if(!h.length){el.innerHTML='<div style="text-align:center;color:var(--muted);padding:28px;font-size:13px">Koi history nahi abhi</div>';return;}
+  el.innerHTML=h.map((x,i)=>`<div class="hi"><div style="display:flex;align-items:flex-start;justify-content:space-between"><div><div class="hdt">${new Date(x.ts).toLocaleDateString('en-PK',{weekday:'short',day:'numeric',month:'short'})}</div><div class="hm">${x.meal}</div></div><button class="hdel" onclick="delH(${i})">x</button></div></div>`).join('');
+}
+
+function addManual(){const v=document.getElementById('manualMeal').value.trim();if(!v)return;const h=gH();h.unshift({meal:v,ts:new Date().toISOString()});S.s('dkh_h',h);document.getElementById('manualMeal').value='';renderHistory();renderHome();toast('Add ho gaya!');}
+function delH(i){const h=gH();h.splice(i,1);S.s('dkh_h',h);renderHistory();renderHome();}
+function clearH(){if(!confirm('Puri history delete?'))return;S.d('dkh_h');renderHistory();renderHome();toast('Clear ho gayi');}
+
+// ── SUGGEST — ONLY DISH NAMES, NO RECIPES ──
+async function doSuggest(){
+  if(!GROQ||GROQ.includes('PASTE')){toast('Groq API key paste karo!',true);return;}
+  const ing=[...document.querySelectorAll('input[name="ing"]:checked')].map(i=>i.value);
+  if(!ing.length){toast('Kuch ingredients select karo!',true);return;}
+  const p=gP();const s=season();
+  const occ=document.querySelector('input[name="occ"]:checked')?.value||'ghar';
+  const dc=document.querySelector('input[name="dc"]:checked')?.value||'2';
+  const tm=document.querySelector('input[name="tm"]:checked')?.value||'30-45 minute';
+  const dst=document.querySelector('input[name="dst"]:checked')?.value||'nahi';
+  const last=document.getElementById('lastMeal').value.trim()||gH().slice(0,5).map(x=>x.meal).join(', ')||'kuch nahi';
+  const lang=LM[p.lang||'roman_urdu'];
+  const occT={ghar:'Ghar ka roz ka khana',mehman:'Normal mehman aayen ge',khaas:'KHAAS MEHMAN — achi shandar dish chahiye'};
+
+  // Tell AI about rice dish possibilities
+  const hasChawal=ing.some(x=>x.includes('Chawal'));
+  const hasRajma=ing.some(x=>x.includes('Rajma'));
+  const hasDaal=ing.some(x=>x.toLowerCase().includes('daal')||x.includes('Masoor')||x.includes('Mash'));
+  const hasAtta=ing.some(x=>x.includes('Atta'));
+  const hasMatar=ing.some(x=>x.includes('Matar'));
+  const hasKabuli=ing.some(x=>x.includes('Kabuli'));
+
+  let riceHint='';
+  if(hasChawal){
+    riceHint='Chawal available hai, toh rice dishes suggest karo jaise: ';
+    if(hasRajma)riceHint+='Rajma Chawal, ';
+    if(hasDaal)riceHint+='Daal Chawal, ';
+    if(hasMatar)riceHint+='Matar Pulao, ';
+    if(hasKabuli)riceHint+='Chanay Walay Chawal, ';
+    riceHint+='Yakhni Pulao, Zeera Rice, Biryani (agar gosht hai), Sabzi Pulao, Fried Rice. Mausam ke mutabiq koi bhi suggest karo.';
+  }
+
+  const prompt=`Tu expert Pakistani food advisor hai. SIRF suggest karo kia pakana chahiye — recipe bilkul mat do.
+
+JAWAB: ${lang}. Koi aur zubaan nahi.
+
+USER: ${p.name||'User'}, ${p.family||'3-4 log'} ke liye, ${p.city||'Pakistan'}
+Pasand: ${p.pref||'sab'}, Mirch: ${p.spice||'normal'}, Budget: ${p.budget||'normal'}
+${cityCtx(p.city,s)}
+
+SITUATION: ${occT[occ]}, ${dc} dish(es), Time: ${tm}
+Available ingredients: ${ing.join(', ')}
+Aaj REPEAT NAHI karna: ${last}
+Dessert: ${dst==='haan'?'Haan chahiye':'Nahi'}
+${riceHint}
+
+SAKHT RULES:
+1. SIRF available ingredients se jo ban sake woh suggest karo
+2. Mausam ke hisaab se sensible suggest karo — sardi mein garam, garmi mein halka
+3. Jo last meals mein tha woh bilkul repeat nahi karna
+4. ${lang} mein jawab do
+5. RECIPE BILKUL MAT DO — sirf dish naam aur 1-2 line kyun
+6. Kabuli Chana se: Cholay banao, Chanay Pulao, Cholay Bhature, etc.
+7. Agar Chawal + koi daal/rajma hai toh rice dish zaroor suggest karo
+
+FORMAT — SIRF VALID JSON, koi bhi extra text nahi:
+{
+  "dishes": [
+    {
+      "num": 1,
+      "name": "Dish Ka Naam",
+      "why": "Kyun — mausam, ingredients, family ka natural zikr",
+      "tags": ["tag1","tag2"]
+    }
+  ],
+  "overall": "Ek line — aaj ke poore menu ka reasoning"${dst==='haan'?`,
+  "dessert": {"name": "Meetha Dish", "why": "Kyun yeh sahi hai"}` : ''}
+}
+
+Tags: Mausam ke mutabiq, Jaldi ready, Mehman ke liye, Healthy, Budget friendly, Seasonal, Garam dish, Halka khana, Local favorite, Sardi special, Garmi mein best`;
+
+  const btn=document.getElementById('sugBtn');btn.disabled=true;
+  document.getElementById('sugLoader').style.display='block';
+  document.getElementById('sugResult').style.display='none';
+
+  try{
+    const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+      method:'POST',headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ}`},
+      body:JSON.stringify({model:'llama-3.3-70b-versatile',max_tokens:700,temperature:0.3,
+        messages:[{role:'system',content:`Tu Pakistani food advisor hai. SIRF ${lang} mein jawab. SIRF valid JSON do, koi text nahi, backtick nahi.`},{role:'user',content:prompt}]})
+    });
+    const data=await res.json();
+    if(data.error)throw new Error(data.error.message);
+    let raw=data.choices[0].message.content.trim().replace(/```json|```/g,'').trim();
+    // Extract JSON if surrounded by other text
+    const jStart=raw.indexOf('{');const jEnd=raw.lastIndexOf('}');
+    if(jStart!==-1&&jEnd!==-1)raw=raw.slice(jStart,jEnd+1);
+    const obj=JSON.parse(raw);
+    showDishes(obj);
+    S.s('dkh_lr',makeText(obj));
+    document.getElementById('sugResult').style.display='block';
+    document.getElementById('sugResult').scrollIntoView({behavior:'smooth'});
+  }catch(e){
+    // Fallback plain text
+    try{
+      const r2=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ}`},body:JSON.stringify({model:'llama-3.3-70b-versatile',max_tokens:400,temperature:0.3,messages:[{role:'system',content:`SIRF ${lang} mein. Short food suggestion, no recipe.`},{role:'user',content:`${ing.join(', ')} se ${p.family||'4 log'} ke liye aaj ${dc} dishes suggest karo. Mausam: ${s.n}. Repeat nahi: ${last}. Sirf naam aur ek line kyun.`}]})});
+      const d2=await r2.json();
+      const txt=d2.choices[0].message.content;
+      document.getElementById('dishCards').innerHTML=`<div class="dcard"><div class="dname">Aaj Ka Khana</div><div class="dwhy" style="white-space:pre-wrap">${txt}</div></div>`;
+      S.s('dkh_lr',txt);
+      document.getElementById('sugResult').style.display='block';
+    }catch(e2){toast('Error: '+e.message,true);}
+  }finally{btn.disabled=false;document.getElementById('sugLoader').style.display='none';}
+}
+
+function showDishes(obj){
+  const dc=document.getElementById('dishCards');
+  let html='';
+  (obj.dishes||[]).forEach((d,i)=>{
+    const tags=(d.tags||[]).map(t=>`<span class="dtag">${t}</span>`).join('');
+    html+=`<div class="dcard"><div class="dnum">Dish ${d.num||i+1}</div><div class="dname">${d.name}</div><div class="dwhy">${d.why}</div>${tags?`<div class="dtags">${tags}</div>`:''}</div>`;
+  });
+  if(obj.dessert)html+=`<div class="dcard" style="border-color:rgba(200,140,8,0.13)"><div class="dnum">Meetha</div><div class="dname">${obj.dessert.name}</div><div class="dwhy">${obj.dessert.why}</div></div>`;
+  if(obj.overall)html+=`<div class="overall-box">${obj.overall}</div>`;
+  dc.innerHTML=html;
+}
+
+function makeText(obj){
+  let t='';
+  (obj.dishes||[]).forEach(d=>{t+=`${d.name}\n${d.why}\n\n`;});
+  if(obj.dessert)t+=`Meetha: ${obj.dessert.name}\n${obj.dessert.why}\n\n`;
+  if(obj.overall)t+=obj.overall;
+  return t.trim();
+}
+
+function saveMeal(){
+  const cards=document.getElementById('dishCards').querySelectorAll('.dname');
+  const meal=[...cards].map(n=>n.textContent).filter(Boolean).join(' + ').substring(0,80);
+  if(!meal){toast('Pehle suggestion lo!',true);return;}
+  const h=gH();h.unshift({meal,ts:new Date().toISOString()});
+  if(h.length>30)h.pop();S.s('dkh_h',h);renderHome();toast('Save ho gaya!');
+}
+
+function resetSug(){document.getElementById('sugResult').style.display='none';window.scrollTo({top:0,behavior:'smooth'});}
+
+// ── CHAT (for recipes) ──
+let chatH=[];
+async function doChat(){
+  const inp=document.getElementById('chatInp');const msg=inp.value.trim();if(!msg)return;
+  if(!GROQ||GROQ.includes('PASTE')){toast('Groq key paste karo!',true);return;}
+  addMsg(msg,'user');inp.value='';
+  document.getElementById('chatBtn').disabled=true;
+  const tid='c'+Date.now();addMsg('Soch raha hoon...','bot typing',tid);
+  chatH.push({role:'user',content:msg});
+  const p=gP();const s=season();const lang=LM[p.lang||'roman_urdu'];
+  try{
+    const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':`Bearer ${GROQ}`},body:JSON.stringify({model:'llama-3.3-70b-versatile',max_tokens:1000,temperature:0.4,messages:[{role:'system',content:`Tu expert Pakistani chef hai. User: ${p.name||'User'}, ${p.city||'Pakistan'}, Mausam: ${s.n}. SIRF ${lang} mein jawab. Exact measurements ke saath recipe dena.`},...chatH.slice(-10)]})});
+    const d=await res.json();if(d.error)throw new Error(d.error.message);
+    const rep=d.choices[0].message.content;
+    chatH.push({role:'assistant',content:rep});
+    document.getElementById(tid)?.remove();addMsg(rep,'bot');
+  }catch(e){document.getElementById(tid)?.remove();addMsg('Error: '+e.message,'bot');}
+  document.getElementById('chatBtn').disabled=false;
+}
+function addMsg(t,c,id){const b=document.getElementById('chatWin');const d=document.createElement('div');d.className='cmsg '+c;d.innerText=t;if(id)d.id=id;b.appendChild(d);b.scrollTop=b.scrollHeight;}
+function qAsk(q){document.getElementById('chatInp').value=q;goTab('chat');setTimeout(doChat,100);}
+
+// ── WHATSAPP ──
+function fmtNum(n){const d=n.replace(/\D/g,'');return d.startsWith('92')?'+'+d:d.startsWith('0')?'+92'+d.substring(1):'+92'+d;}
+function waUrl(msg){const p=gP();const raw=(document.getElementById('waNum')?.value||p.wa||'').trim();const n=fmtNum(raw).replace('+','');return `https://wa.me/${n}?text=${encodeURIComponent(msg)}`;}
+function waMsg(type){
+  const p=gP();const h=gH();const s=season();
+  const today=new Date().toLocaleDateString('en-PK',{weekday:'long',day:'numeric',month:'long'});
+  if(type==='r'){const r=S.g('dkh_lr')||'';return `*Dasturkhwan — Aaj Ka Khana*\n${today} | ${s.n}\n\n${r.substring(0,800)}\n\n_Aapka Pakistani Food AI_`;}
+  return `*Dasturkhwan — Daily Reminder*\nAssalam o Alaikum *${p.name||''}*!\n${today} | ${s.n}\n\nAaj ka khana suggest karwain!`;
+}
+function ensureWA(cb){const p=gP();if(p.wa&&p.wa.length>=10){cb();return;}const n=prompt('WhatsApp number daalo:');if(!n||n.trim().length<10){toast('Valid number chahiye!',true);return;}S.s('dkh_p',{...p,wa:n.trim()});cb();}
+function shareWA(){const r=S.g('dkh_lr');if(!r){toast('Pehle suggestion lo!',true);return;}ensureWA(()=>window.open(waUrl(waMsg('r')),'_blank'));}
+function sendTestWA(){ensureWA(()=>window.open(waUrl(waMsg('d')),'_blank'));}
+function fabWA(){const r=S.g('dkh_lr');ensureWA(()=>window.open(waUrl(r?waMsg('r'):waMsg('d')),'_blank'));}
+function saveWANum(){const p=gP();p.wa=document.getElementById('waNum').value.trim();S.s('dkh_p',p);}
+function saveRemTime(){S.s('dkh_rt',document.getElementById('remTime').value);}
+
+function renderWA(){
+  const p=gP();
+  const wn=document.getElementById('waNum');if(wn&&p.wa)wn.value=p.wa;
+  const rt=document.getElementById('remTime');if(rt)rt.value=S.g('dkh_rt')||'08:00';
+  const nb=document.getElementById('notifBadge'),ns=document.getElementById('notifSub');
+  if(nb&&ns){if(!('Notification'in window))ns.textContent='Support nahi';else if(Notification.permission==='granted'){nb.textContent='On';nb.className='rbdg on';ns.textContent='Active';}else ns.textContent='Allow nahi ki gayi';}
+  const wb=document.getElementById('waBadge'),ws=document.getElementById('waSub');
+  if(wb&&ws){if(p.wa){wb.textContent=p.wa;wb.className='rbdg on';ws.textContent='Saved';}else ws.textContent='Number add karo';}
+}
+
+async function enableNotif(){if(!('Notification'in window)){toast('Support nahi',true);return;}const per=await Notification.requestPermission();if(per==='granted'){toast('Enabled!');S.s('dkh_notif',true);}else toast('Permission nahi mili',true);renderWA();}
+
+function schedCheck(){
+  if(!('Notification'in window)||Notification.permission!=='granted')return;
+  const p=gP();const now=new Date();
+  const[rh,rm]=(S.g('dkh_rt')||'08:00').split(':').map(Number);
+  const today=now.toLocaleDateString();
+  if(S.g('dkh_ln')===today)return;
+  if(now.getHours()>=rh&&now.getMinutes()>=rm){
+    const h=gH();const last=h[0]?'Kal: '+h[0].meal:'Aaj ka khana plan karein!';
+    new Notification('Dasturkhwan',{body:(p.name||'')+' — '+last});
+    S.s('dkh_ln',today);
+  }
+}
+
+// Python auto script download
+function downloadScript(){
+  const p=gP();const wa=p.wa||'03xxxxxxxxx';
+  const rt=S.g('dkh_rt')||'08:00';const[h,m]=rt.split(':');
+  const script=`#!/usr/bin/env python3
+"""
+Dasturkhwan — Fully Automatic WhatsApp Daily Message
+=====================================================
+Roz automatically set time pe WhatsApp pe food suggestion aayega.
+
+Install: pip install schedule pywhatkit requests
+Run:     python auto_wa.py
+Note:    WhatsApp Web browser mein logged in hona chahiye
+"""
+import schedule, time, requests, pywhatkit
+from datetime import datetime
+
+# ===== APNI SETTINGS YAHAN LIKHO =====
+GROQ_KEY  = "${GROQ}"
+WA_NUMBER = "${wa}"
+SEND_H    = ${h}
+SEND_M    = ${m}
+FAMILY    = "${p.family||'3-4 log'}"
+CITY      = "${p.city||'Pakistan'}"
+LANG      = "${p.lang||'roman_urdu'}"
+# =====================================
+
+LANG_INST = {
+    'roman_urdu': 'Roman Urdu (English letters — Hindi bilkul nahi)',
+    'urdu': 'Pure Urdu (اردو)',
+    'english': 'English'
+}.get(LANG, 'Roman Urdu')
+
+def get_season():
+    m = datetime.now().month
+    if m >= 11 or m <= 2: return 'Sardi (Winter) — garam dishes suggest karo'
+    if m <= 4:  return 'Bahar (Spring)'
+    if m <= 6:  return 'Garmi (Summer) — halka khana suggest karo'
+    if m <= 9:  return 'Barsat (Monsoon) — fried cheezein aur daal'
+    return 'Late Garmi'
+
+def get_suggestion():
+    prompt = f"""Tu Pakistani food advisor hai. SIRF {LANG_INST} mein jawab do.
+    
+Aaj: {datetime.now().strftime('%A, %d %B %Y')}
+Mausam: {get_season()}
+Family: {FAMILY}, Sheher: {CITY}
+
+Aaj ke liye 2 dishes suggest karo — sirf naam aur 1 line kyun, koi recipe nahi.
+Mausam ke hisaab se sensible suggestion do.
+Short aur friendly raho."""
+    try:
+        r = requests.post(
+            'https://api.groq.com/openai/v1/chat/completions',
+            headers={'Authorization': f'Bearer {GROQ_KEY}', 'Content-Type': 'application/json'},
+            json={'model': 'llama-3.3-70b-versatile', 'max_tokens': 250, 'temperature': 0.4,
+                  'messages': [{'role': 'user', 'content': prompt}]},
+            timeout=30
+        )
+        return r.json()['choices'][0]['message']['content']
+    except Exception as e:
+        return f"Aaj ka khana: Ghar ka simple khana banao! ({e})"
+
+def fmt_number(num):
+    d = ''.join(c for c in num if c.isdigit())
+    if d.startswith('92'): return '+' + d
+    if d.startswith('0'):  return '+92' + d[1:]
+    return '+92' + d
+
+def send_message():
+    print(f"[{datetime.now().strftime('%H:%M')}] Suggestion generate ho raha hai...")
+    suggestion = get_suggestion()
+    s = get_season()
+    today = datetime.now().strftime('%A, %d %B %Y')
+    msg = f"""*Dasturkhwan — Aaj Ka Khana*
+{today}
+{s.split('—')[0].strip()}
+
+{suggestion}
+
+_Aapka Pakistani Food AI_"""
+    num = fmt_number(WA_NUMBER)
+    now = datetime.now()
+    sm = now.minute + 2
+    sh = now.hour + (1 if sm >= 60 else 0)
+    sm = sm % 60
+    print(f"WhatsApp bhej raha hai: {num}")
+    try:
+        pywhatkit.sendwhatmsg(num, msg, sh % 24, sm, wait_time=20)
+        print(f"[OK] Message bhej diya!")
+    except Exception as e:
+        print(f"[ERROR] {e}")
+
+def main():
+    send_time = f"{int(SEND_H):02d}:{int(SEND_M):02d}"
+    print(f"Dasturkhwan Auto WhatsApp Shuru!")
+    print(f"Number: {WA_NUMBER}")
+    print(f"Roz {send_time} baje message aayega")
+    print(f"Terminal band mat karna | Ctrl+C se stop karo")
+    print("-" * 45)
+    schedule.every().day.at(send_time).do(send_message)
+    while True:
+        schedule.run_pending()
+        time.sleep(30)
+
+if __name__ == '__main__':
+    main()
+`;
+  const blob=new Blob([script],{type:'text/plain'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='auto_wa.py';a.click();
+  URL.revokeObjectURL(url);
+  toast('auto_wa.py download ho gaya!');
+}
+
+function resetAll(){if(!confirm('Sab data delete?'))return;localStorage.clear();location.reload();}
+
+window.onload=function(){
+  const p=gP();
+  const wn=document.getElementById('waNum');if(wn&&p.wa)wn.value=p.wa;
+  renderHome();updateSeason();schedCheck();setInterval(schedCheck,60000);
+};function saveSettings() {
+
+  function saveSettings() {
+  const phone = document.getElementById("waNum").value;
+  const time = document.getElementById("remTime").value;
+  
+  fetch('http://localhost:5000/save', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({phone: phone, time: time})
+  }).then(() => alert('Settings Save Ho Gayi!'))
+    .catch(() => alert('Server nahi chala — pehle server.py run karo'));
+}
+}
+</script>
+</body>
+</html>
