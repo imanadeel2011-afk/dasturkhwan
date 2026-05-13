@@ -57,7 +57,12 @@ def run_schedule():
         schedule.run_pending()
         time.sleep(30)
 
-@app.route('/')
+@app.route('/')return jsonify({'status': 'sent'})
+
+@app.route('/check', methods=['GET'])
+def check_and_send():
+    send_whatsapp()
+    return jsonify({'status': 'sent'})
 def home():
     return send_file('index.html')
 
@@ -68,13 +73,7 @@ def save():
         json.dump(data, f)
     return jsonify({'status': 'saved'})
 
-@app.route('/test', methods=['GET'])
-def test():
-    send_whatsapp()
-    return jsonify({'status': 'sent'})@app.route('/check', methods=['GET'])
-def check_and_send():
-    s = load_settings()
-    now = datetime.now()
+
     current_time = f"{now.hour:02d}:{now.minute:02d}"
     if current_time == s.get('time', '08:00'):
         send_whatsapp()
