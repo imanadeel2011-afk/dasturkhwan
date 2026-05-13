@@ -71,7 +71,15 @@ def save():
 @app.route('/test', methods=['GET'])
 def test():
     send_whatsapp()
-    return jsonify({'status': 'sent'})
+    return jsonify({'status': 'sent'})@app.route('/check', methods=['GET'])
+def check_and_send():
+    s = load_settings()
+    now = datetime.now()
+    current_time = f"{now.hour:02d}:{now.minute:02d}"
+    if current_time == s.get('time', '08:00'):
+        send_whatsapp()
+        return jsonify({'status': 'sent', 'time': current_time})
+    return jsonify({'status': 'skipped', 'time': current_time})
 
 if __name__ == '__main__':
     t = threading.Thread(target=run_schedule)
