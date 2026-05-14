@@ -1,36 +1,39 @@
 from flask import Flask, request, jsonify, send_file
-import json
-import os
-import requests
-import schedule
-import time
-import threading
+import requests, threading, time
 from datetime import datetime
 
 app = Flask(__name__)
 
 GROQ_KEY = "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"
-ID_INSTANCE = "7107616198"
+ID_INSTANCE = "a7107616198"
 API_TOKEN = "a8bd23b1c1c645ad8a565f055c341b31bdc535f268904fc095"
-DEFAULT_PHONE = "923054387261"
-DEFAULT_TIME = "08:00"
+SUPABASE_URL = "https://mpoxvwvbpjoenidfjdee.supabase.co"
+SUPABASE_KEY = "sb_publishable_gdyh83prdKxwsi3UGtreFA_RgDnn-tl
 
-def load_settings():
-    try:
-        with open('settings.json', 'r') as f:
-            return json.load(f)
-    except:
-        return {"phone": DEFAULT_PHONE, "time": DEFAULT_TIME}
+"
+
+def get_setting(key):
+    r = requests.get(
+        f"{SUPABASE_URL}/rest/v1/settings?key=eq.{key}&select=value",
+        headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}
+    )
+    data = r.json()
+    return data[0]['value'] if data else None
+
+def save_setting(key, value):
+    requests.patch(
+        f"{SUPABASE_URL}/rest/v1/settings?key=eq.{key}",
+        headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}", "Content-Type": "application/json"},
+        json={"value": value}
+    )
+
 def get_suggestion():
     try:
         r = requests.post(
             'https://api.groq.com/openai/v1/chat/completions',
             headers={'Authorization': f'Bearer {GROQ_KEY}'},
-            json={
-                'model': 'llama-3.3-70b-versatile',
-                'max_tokens': 200,
-                'messages': [{'role': 'user', 'content': 'Pakistani ghar ke liye aaj 2 dishes suggest karo. Sirf naam aur 1 line kyun. Roman Urdu mein.'}]
-            },
+            json={'model': 'llama-3.3-70b-versatile', 'max_tokens': 200,
+                  'messages': [{'role': 'user', 'content': 'Pakistani ghar ke liye aaj 2 dishes suggest karo. Sirf naam aur 1 line kyun. Roman Urdu mein.'}]},
             timeout=30
         )
         return r.json()['choices'][0]['message']['content']
@@ -38,51 +41,35 @@ def get_suggestion():
         return "Aaj: Chicken Karahi aur Daal Chawal"
 
 def send_whatsapp():
-    s = load_settings()
-    num = s['phone'].replace(' ', '')
-    if num.startswith('0'):
-        num = '92' + num[1:]
-
+    phone = get_setting('phone')
     suggestion = get_suggestion()
     msg = f"Dasturkhwan — Aaj Ka Khana\n\n{suggestion}\n\nAapka Pakistani Food AI"
-
     url = f"https://api.green-api.com/waInstance{ID_INSTANCE}/sendMessage/{API_TOKEN}"
-    requests.post(url, json={"chatId": f"{num}@c.us", "message": msg})
-    print(f"Message bheja: {num}")
+    requests.post(url, json={"chatId": f"{phone}@c.us", "message": msg})
+    print(f"Message bheja: {phone}")
 
-def run_schedule():
-    while True:
-        s = load_settings()
-        schedule.clear()
-        schedule.every().day.at(s['time']).do(send_whatsapp)
-        schedule.run_pending()
-        time.sleep(30)
-
-@app.route('/')return jsonify({'status': 'sent'})
-
-@app.route('/check', methods=['GET'])
-def check_and_send():
-    send_whatsapp()
-    return jsonify({'status': 'sent'})
+@app.route('/')
 def home():
     return send_file('index.html')
 
 @app.route('/save', methods=['POST'])
 def save():
     data = request.json
-    with open('settings.json', 'w') as f:
-        json.dump(data, f)
+    if 'phone' in data:
+        save_setting('phone', data['phone'])
+    if 'time' in data:
+        save_setting('time', data['time'])
     return jsonify({'status': 'saved'})
 
+@app.route('/test', methods=['GET'])
+def test():
+    send_whatsapp()
+    return jsonify({'status': 'sent'})
 
-    current_time = f"{now.hour:02d}:{now.minute:02d}"
-    if current_time == s.get('time', '08:00'):
-        send_whatsapp()
-        return jsonify({'status': 'sent', 'time': current_time})
-    return jsonify({'status': 'skipped', 'time': current_time})
+@app.route('/check', methods=['GET'])
+def check():
+    send_whatsapp()
+    return jsonify({'status': 'sent'})
 
 if __name__ == '__main__':
-    t = threading.Thread(target=run_schedule)
-    t.daemon = True
-    t.start()
     app.run(host='0.0.0.0', port=5000)
