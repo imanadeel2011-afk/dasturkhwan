@@ -12,14 +12,15 @@ app = Flask(__name__)
 GROQ_KEY = "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"
 ID_INSTANCE = "7107616198"
 API_TOKEN = "a8bd23b1c1c645ad8a565f055c341b31bdc535f268904fc095"
+DEFAULT_PHONE = "923054387261"
+DEFAULT_TIME = "08:00"
 
 def load_settings():
     try:
         with open('settings.json', 'r') as f:
             return json.load(f)
     except:
-        return {"phone": "923001234567", "time": "08:00"}
-
+        return {"phone": DEFAULT_PHONE, "time": DEFAULT_TIME}
 def get_suggestion():
     try:
         r = requests.post(
