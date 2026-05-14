@@ -40,7 +40,8 @@ def get_suggestion():
             json={
                 'model': 'llama-3.3-70b-versatile',
                 'max_tokens': 200,
-                'messages': [{'role': 'user', 'content': 'Pakistani ghar ke liye aaj 2 dishes suggest karo. Sirf naam aur 1 line kyun. Roman Urdu mein.'}]
+                'temperature': 0.9,
+                'messages': [{'role': 'user', 'content': f'Pakistani ghar ke liye aaj {datetime.now().strftime("%A %d %B")} ko 2 dishes suggest karo. Har roz alag suggestion do. Sirf naam aur 1 line kyun. Roman Urdu mein.'}]
             },
             timeout=30
         )
