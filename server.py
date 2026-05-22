@@ -4,7 +4,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-GROQ_KEY = "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"
+GROQ_KEY = "GROQ_KEY = "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"
 ID_INSTANCE = "7107616198"
 API_TOKEN = "a8bd23b1c1c645ad8a565f055c341b31bdc535f268904fc095"
 SUPABASE_URL = "https://mpoxvwvbpjoenidfjdee.supabase.co"
