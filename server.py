@@ -34,14 +34,17 @@ def get_all_users():
     return r.json()
 
 def add_user(name, phone, time):
+    # Check if phone already exists
     r = requests.get(f"{SUPABASE_URL}/rest/v1/users?phone=eq.{phone}&select=id",
         headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"})
     existing = r.json()
     if existing:
+        # Update existing
         requests.patch(f"{SUPABASE_URL}/rest/v1/users?phone=eq.{phone}",
             headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}", "Content-Type": "application/json"},
             json={"name": name, "time": time, "active": True})
     else:
+        # Insert new
         requests.post(f"{SUPABASE_URL}/rest/v1/users",
             headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}", "Content-Type": "application/json"},
             json={"name": name, "phone": phone, "time": time, "active": True})
@@ -49,6 +52,14 @@ def add_user(name, phone, time):
 @app.route('/')
 def home():
     return send_file('index.html')
+
+@app.route('/manifest.json')
+def manifest():
+    return send_file('manifest.json', mimetype='application/manifest+json')
+
+@app.route('/sw.js')
+def sw():
+    return send_file('sw.js', mimetype='application/javascript')
 
 @app.route('/ai', methods=['POST'])
 def ai():
