@@ -1,22 +1,51 @@
 {
-  "name": "Dasturkhwan — Aaj Kia Pakana Hai",
+  "name": "Dasturkhwan — Pakistani Khana",
   "short_name": "Dasturkhwan",
-  "description": "AI Pakistani Food Suggestion App",
+  "description": "175 Pakistani dishes — aaj kya banayein? Roz naye suggestions, poori recipes, bilkul free aur offline.",
+  "id": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0C0803",
-  "theme_color": "#E8A818",
+  "display_override": ["standalone", "minimal-ui"],
   "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0f7b3f",
+  "lang": "ur-PK",
+  "dir": "ltr",
+  "categories": ["food", "lifestyle", "utilities"],
+  "prefer_related_applications": false,
   "icons": [
     {
-      "src": "https://img.icons8.com/emoji/192/pot-of-food.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "https://img.icons8.com/emoji/512/pot-of-food.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Aaj kya banayein?",
+      "short_name": "Suggest",
+      "url": "/?action=suggest",
+      "description": "Foran ek dish suggest karein"
+    },
+    {
+      "name": "Chef se poochein",
+      "short_name": "Chef Chat",
+      "url": "/?action=chef",
+      "description": "Kisi bhi dish ki recipe poochein"
     }
   ]
 }

@@ -1,0 +1,4771 @@
+[
+  {
+    "id": 1,
+    "name": "Chicken Karahi",
+    "roman_urdu": "Chicken Karahi — Tamatar aur hari mirch ke saath masaledaar chicken",
+    "ingredients": [
+      "Chicken",
+      "Tamatar",
+      "Pyaz",
+      "Adrak",
+      "Lahsan",
+      "Hari Mirch"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chicken ko karahi mein dry roast karo. 2. Tamatar, adrak, lahsan daalo. 3. 30 min pakao. 4. Hari mirch aur dhania se garnish karo."
+  },
+  {
+    "id": 2,
+    "name": "Daal Mash",
+    "roman_urdu": "Daal Mash — Tadke wali safed daal",
+    "ingredients": [
+      "Daal Mash",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal ko 30 min ubaalein. 2. Pyaz, adrak, lahsan ka tadka lagaein. 3. Tamatar daalo. 4. 10 min pakao."
+  },
+  {
+    "id": 3,
+    "name": "Aalu Gosht",
+    "roman_urdu": "Aalu Gosht — Aalu aur mutton ka salan",
+    "ingredients": [
+      "Mutton",
+      "Aalu",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Mutton ko bhoon lein. 2. Aalu daalo. 3. Tamatar aur masalay daalo. 4. 45 min dum pe pakao."
+  },
+  {
+    "id": 4,
+    "name": "Bhindi Masala",
+    "roman_urdu": "Bhindi Masala — Pyaz aur tamatar ke saath bhindi",
+    "ingredients": [
+      "Bhindi",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 25,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Bhindi ko dry roast karo. 2. Pyaz golden karein. 3. Tamatar daalo. 4. Bhindi mila ke 15 min pakao."
+  },
+  {
+    "id": 5,
+    "name": "Chicken Biryani",
+    "roman_urdu": "Chicken Biryani — Khaas Pakistani dum biryani",
+    "ingredients": [
+      "Chicken",
+      "Basmati Chawal",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan",
+      "Dahi"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "sindh",
+    "recipe": "1. Chicken ka salan banaein. 2. Chawal aadhe ubaalein. 3. Dum pe rakhein 30 min. 4. Mix karke serve karein."
+  },
+  {
+    "id": 6,
+    "name": "Sarson Ka Saag",
+    "roman_urdu": "Sarson Ka Saag — Makki di roti ke saath",
+    "ingredients": [
+      "Sarson Ka Saag",
+      "Pyaz",
+      "Adrak",
+      "Lahsan",
+      "Ghee"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Sarson ko 1 ghanta ubaalein. 2. Maash ke saath blend karein. 3. Tadka lagaein. 4. Makki di roti ke saath serve karein."
+  },
+  {
+    "id": 7,
+    "name": "Keema Matar",
+    "roman_urdu": "Keema Matar — Matar ke saath keema",
+    "ingredients": [
+      "Keema",
+      "Matar",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Pyaz golden karein. 2. Keema bhoonein. 3. Matar aur tamatar daalo. 4. 20 min pakao."
+  },
+  {
+    "id": 8,
+    "name": "Daal Chawal",
+    "roman_urdu": "Daal Chawal — Simple aur mazedaar",
+    "ingredients": [
+      "Daal Masoor",
+      "Basmati Chawal",
+      "Pyaz",
+      "Tamatar"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal ubaalein. 2. Tadka lagaein. 3. Chawal alag pakao. 4. Saath serve karein."
+  },
+  {
+    "id": 9,
+    "name": "Palak Gosht",
+    "roman_urdu": "Palak Gosht — Palak aur mutton ka combination",
+    "ingredients": [
+      "Mutton",
+      "Palak",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Mutton bhoonein. 2. Palak blanch karein. 3. Dono mila ke pakao. 4. 30 min dum pe rakhein."
+  },
+  {
+    "id": 10,
+    "name": "Anday Ka Salan",
+    "roman_urdu": "Anday Ka Salan — Asan aur jaldi ready",
+    "ingredients": [
+      "Anday",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 20,
+    "meal_time": [
+      "nashta",
+      "lunch"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "anday",
+    "region": "punjab",
+    "recipe": "1. Pyaz golden karein. 2. Tamatar masala banaein. 3. Ublay anday daalo. 4. 10 min pakao."
+  },
+  {
+    "id": 11,
+    "name": "Beef Karahi",
+    "roman_urdu": "Beef Karahi — Lahori style tez masaledaar",
+    "ingredients": [
+      "Beef",
+      "Tamatar",
+      "Pyaz",
+      "Adrak",
+      "Lahsan",
+      "Hari Mirch"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Beef ko pressure cooker mein galao. 2. Karahi mein bhoonein. 3. Tamatar daalo. 4. Hari mirch se garnish karein."
+  },
+  {
+    "id": 12,
+    "name": "Rajma Chawal",
+    "roman_urdu": "Rajma Chawal — Laal lobya aur chawal",
+    "ingredients": [
+      "Rajma",
+      "Basmati Chawal",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Rajma raat bhar bhegoein. 2. Pressure cooker mein pakao. 3. Masala banaein. 4. Chawal ke saath serve karein."
+  },
+  {
+    "id": 13,
+    "name": "Mutton Qorma",
+    "roman_urdu": "Mutton Qorma — Khaas dawat wala qorma",
+    "ingredients": [
+      "Mutton",
+      "Pyaz",
+      "Adrak",
+      "Lahsan",
+      "Dahi",
+      "Garam Masala"
+    ],
+    "time": 90,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Pyaz brown karein. 2. Mutton bhoonein. 3. Dahi aur masalay daalo. 4. 1 ghanta dum pe pakao."
+  },
+  {
+    "id": 14,
+    "name": "Aalu ki Sabzi",
+    "roman_urdu": "Aalu ki Sabzi — Roz ka asan khana",
+    "ingredients": [
+      "Aalu",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 20,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Aalu cubes mein kaat lein. 2. Masala banaein. 3. Aalu daalo. 4. 15 min pakao."
+  },
+  {
+    "id": 15,
+    "name": "Kheer",
+    "roman_urdu": "Kheer — Meetha doodh chawal",
+    "ingredients": [
+      "Doodh",
+      "Basmati Chawal",
+      "Cheeni",
+      "Elaichi"
+    ],
+    "time": 45,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Doodh ubaalein. 2. Chawal daalo. 3. Cheeni mila ke gaadhaa karein. 4. Elaichi se garnish karein."
+  },
+  {
+    "id": 16,
+    "name": "Gajar Ka Halwa",
+    "roman_urdu": "Gajar Ka Halwa — Sardi ka khaas meetha",
+    "ingredients": [
+      "Gajar",
+      "Doodh",
+      "Cheeni",
+      "Ghee",
+      "Khoya"
+    ],
+    "time": 60,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Gajar kaddo kash karein. 2. Ghee mein bhoonein. 3. Doodh daalo. 4. Cheeni aur khoya mila ke pakao."
+  },
+  {
+    "id": 17,
+    "name": "Baingan Ka Bhurta",
+    "roman_urdu": "Baingan Ka Bhurta — Roasted baingan",
+    "ingredients": [
+      "Baingan",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Baingan ko roast karein. 2. Chheel ke mash karein. 3. Pyaz, tamatar ka tadka lagaein. 4. Mix karein."
+  },
+  {
+    "id": 18,
+    "name": "Channay",
+    "roman_urdu": "Channay — Nashte ke channay",
+    "ingredients": [
+      "Kabuli Chana",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Channay ubaalein. 2. Masala banaein. 3. Channay mila ke bhoonein. 4. Imli chutney ke saath serve karein."
+  },
+  {
+    "id": 19,
+    "name": "Machli Fry",
+    "roman_urdu": "Machli Fry — Karachi style fried fish",
+    "ingredients": [
+      "Machli",
+      "Adrak",
+      "Lahsan",
+      "Besan"
+    ],
+    "time": 25,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "machli",
+    "region": "sindh",
+    "recipe": "1. Machli marinate karein. 2. Besan batter banaein. 3. Deep fry karein. 4. Chutney ke saath serve karein."
+  },
+  {
+    "id": 20,
+    "name": "Lobia",
+    "roman_urdu": "Lobia — Kala lobia salan",
+    "ingredients": [
+      "Lobia",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Lobia ubaalein. 2. Masala banaein. 3. Lobia mila ke pakao. 4. Roti ke saath serve karein."
+  },
+  {
+    "id": 21,
+    "name": "Chicken Qorma",
+    "roman_urdu": "Chicken Qorma — Dawat wala shahi qorma",
+    "ingredients": [
+      "Chicken",
+      "Pyaz",
+      "Dahi",
+      "Adrak",
+      "Lahsan",
+      "Garam Masala"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Pyaz brown kar ke nikaal lein. 2. Chicken adrak-lahsan ke saath bhoonein. 3. Dahi aur pisa pyaz daalein. 4. Halki aanch par 25 min dum dein."
+  },
+  {
+    "id": 22,
+    "name": "Chicken Handi",
+    "roman_urdu": "Chicken Handi — Creamy handi restaurant style",
+    "ingredients": [
+      "Chicken",
+      "Cream",
+      "Dahi",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chicken ko adrak-lahsan mein bhoonein. 2. Tamatar aur dahi daal kar gaadha karein. 3. Cream aur makhan shamil karein. 4. 10 min dum de kar dhania se garnish karein."
+  },
+  {
+    "id": 23,
+    "name": "Butter Chicken",
+    "roman_urdu": "Butter Chicken — Makhni gravy wala narm chicken",
+    "ingredients": [
+      "Chicken",
+      "Makhan",
+      "Cream",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chicken ko dahi aur masalon mein marinate kar ke grill karein. 2. Tamatar ki gravy blend karein. 3. Makhan mein gravy pakayein. 4. Chicken aur cream daal kar 10 min pakayein."
+  },
+  {
+    "id": 24,
+    "name": "Chicken Achari",
+    "roman_urdu": "Chicken Achari — Achar ke masalon wala chatpata chicken",
+    "ingredients": [
+      "Chicken",
+      "Kalonji",
+      "Saunf",
+      "Rai",
+      "Dahi",
+      "Pyaz"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Kalonji, saunf, rai aur methi dana bhoon lein. 2. Pyaz golden kar ke chicken daalein. 3. Dahi aur achari masala shamil karein. 4. 25 min halki aanch par pakayein."
+  },
+  {
+    "id": 25,
+    "name": "Chicken Jalfrezi",
+    "roman_urdu": "Chicken Jalfrezi — Shimla mirch aur pyaz ke saath",
+    "ingredients": [
+      "Chicken",
+      "Shimla Mirch",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chicken ko tez aanch par bhoonein. 2. Tamatar ka masala banayein. 3. Shimla mirch aur pyaz ke moti qatlay daalein. 4. 5 min tez aanch par bhoon kar utaar lein."
+  },
+  {
+    "id": 26,
+    "name": "Chicken Do Pyaza",
+    "roman_urdu": "Chicken Do Pyaza — Dugna pyaz, dugna zaiqa",
+    "ingredients": [
+      "Chicken",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan",
+      "Dahi"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Aadha pyaz golden kar ke masala banayein. 2. Chicken bhoonein aur dahi daalein. 3. Baqi pyaz moti kaat kar shamil karein. 4. 10 min dum dein."
+  },
+  {
+    "id": 27,
+    "name": "Chicken Shorba",
+    "roman_urdu": "Chicken Shorba — Patla salan, roti ke saath behtareen",
+    "ingredients": [
+      "Chicken",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan",
+      "Aalu"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Pyaz golden kar ke masala bhoonein. 2. Chicken daal kar 10 min bhoonein. 3. Paani zyada daal kar aalu shamil karein. 4. 20 min pakayein, dhania daal kar serve karein."
+  },
+  {
+    "id": 28,
+    "name": "Chicken Nihari",
+    "roman_urdu": "Chicken Nihari — Nashte ki mashhoor nihari",
+    "ingredients": [
+      "Chicken",
+      "Nihari Masala",
+      "Atta",
+      "Adrak",
+      "Pyaz"
+    ],
+    "time": 90,
+    "meal_time": [
+      "nashta",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "chicken",
+    "region": "sindh",
+    "recipe": "1. Chicken ko masalon ke saath bhoonein. 2. Paani daal kar 45 min pakayein. 3. Atta ghol kar daalein aur gaadha karein. 4. Adrak, hari mirch aur limu se garnish karein."
+  },
+  {
+    "id": 29,
+    "name": "Chicken Kofta",
+    "roman_urdu": "Chicken Kofta — Narm koftay masaledaar gravy mein",
+    "ingredients": [
+      "Chicken Keema",
+      "Pyaz",
+      "Bread",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Keema, bread aur masalay mila kar goal koftay banayein. 2. Alag se tamatar-pyaz ki gravy banayein. 3. Koftay gravy mein daalein. 4. 25 min halki aanch par pakayein, hilayein nahi."
+  },
+  {
+    "id": 30,
+    "name": "Chicken Manchurian",
+    "roman_urdu": "Chicken Manchurian — Desi-Chinese bachon ka favourite",
+    "ingredients": [
+      "Chicken",
+      "Corn Flour",
+      "Anday",
+      "Soya Sauce",
+      "Shimla Mirch",
+      "Lahsan"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "karachi",
+    "recipe": "1. Chicken ko anda aur corn flour mein lapet kar fry karein. 2. Lahsan aur shimla mirch bhoonein. 3. Soya sauce, chilli sauce aur ketchup ki gravy banayein. 4. Chicken mila kar 5 min pakayein."
+  },
+  {
+    "id": 31,
+    "name": "Chicken Chow Mein",
+    "roman_urdu": "Chicken Chow Mein — Noodles aur sabziyon ke saath",
+    "ingredients": [
+      "Noodles",
+      "Chicken",
+      "Gajar",
+      "Band Gobi",
+      "Shimla Mirch",
+      "Soya Sauce"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner",
+      "chai"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "karachi",
+    "recipe": "1. Noodles ubaal kar thanday paani se dho lein. 2. Chicken ki patli qatlay bhoonein. 3. Sabziyan tez aanch par bhoonein. 4. Noodles aur sauces mila kar 3 min toss karein."
+  },
+  {
+    "id": 32,
+    "name": "Chicken Ginger",
+    "roman_urdu": "Chicken Ginger — Adrak ki tez khushbu wala chicken",
+    "ingredients": [
+      "Chicken",
+      "Adrak",
+      "Lahsan",
+      "Dahi",
+      "Hari Mirch"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chicken ko lahsan ke saath bhoonein. 2. Dahi daal kar gaadha karein. 3. Adrak ki julienne aur hari mirch shamil karein. 4. 10 min dum de kar serve karein."
+  },
+  {
+    "id": 33,
+    "name": "Murgh Chole",
+    "roman_urdu": "Murgh Chole — Chicken aur kabuli chana ka salan",
+    "ingredients": [
+      "Chicken",
+      "Kabuli Chana",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chana raat bhar bhigo kar ubaal lein. 2. Chicken ka masala bhoonein. 3. Chana shamil kar ke 15 min pakayein. 4. Chaat masala aur limu daal kar serve karein."
+  },
+  {
+    "id": 34,
+    "name": "Chicken Roast",
+    "roman_urdu": "Chicken Roast — Poora sabut roast chicken",
+    "ingredients": [
+      "Sabut Chicken",
+      "Dahi",
+      "Adrak",
+      "Lahsan",
+      "Makhan",
+      "Garam Masala"
+    ],
+    "time": 75,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chicken par cuts laga kar masale mein 2 ghante marinate karein. 2. Bhaap par 30 min pakayein. 3. Makhan laga kar oven ya tawe par golden karein. 4. Salad aur chutney ke saath serve karein."
+  },
+  {
+    "id": 35,
+    "name": "Chicken Pulao",
+    "roman_urdu": "Chicken Pulao — Yakhni wala halka pulao",
+    "ingredients": [
+      "Chicken",
+      "Basmati Chawal",
+      "Pyaz",
+      "Adrak",
+      "Lahsan",
+      "Sabut Garam Masala"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "punjab",
+    "recipe": "1. Chicken aur sabut masalon ki yakhni banayein. 2. Yakhni chaan lein. 3. Pyaz brown kar ke chicken bhoonein. 4. Chawal aur yakhni daal kar dum par 20 min pakayein."
+  },
+  {
+    "id": 36,
+    "name": "White Chicken Karahi",
+    "roman_urdu": "White Karahi — Bina tamatar, cream wali safed karahi",
+    "ingredients": [
+      "Chicken",
+      "Dahi",
+      "Cream",
+      "Adrak",
+      "Lahsan",
+      "Safed Mirch"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "punjab",
+    "recipe": "1. Chicken ko adrak-lahsan aur namak ke saath bhoonein. 2. Phenta hua dahi daalein, phatne na dein. 3. Safed mirch aur cream shamil karein. 4. 15 min dum de kar hari mirch se garnish karein."
+  },
+  {
+    "id": 37,
+    "name": "Peshawari Chicken Karahi",
+    "roman_urdu": "Peshawari Karahi — Sirf tamatar, namak aur gosht",
+    "ingredients": [
+      "Chicken",
+      "Tamatar",
+      "Namak",
+      "Hari Mirch",
+      "Ghee"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chicken",
+    "region": "kpk",
+    "recipe": "1. Ghee garam kar ke chicken daalein. 2. Sirf namak daal kar 15 min bhoonein. 3. Tamatar daal kar galne dein. 4. Hari mirch aur dhania daal kar 10 min dum dein."
+  },
+  {
+    "id": 38,
+    "name": "Beef Nihari",
+    "roman_urdu": "Beef Nihari — Raat bhar ki dum wali nihari",
+    "ingredients": [
+      "Beef Nalli",
+      "Nihari Masala",
+      "Atta",
+      "Adrak",
+      "Pyaz"
+    ],
+    "time": 150,
+    "meal_time": [
+      "nashta",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "sindh",
+    "recipe": "1. Beef ko masalon ke saath ghee mein bhoonein. 2. Paani daal kar 2 ghante halki aanch par galayein. 3. Atta ghol kar shorba gaadha karein. 4. Adrak, hari mirch, limu aur dhania se garnish karein."
+  },
+  {
+    "id": 39,
+    "name": "Mutton Paya",
+    "roman_urdu": "Mutton Paya — Sardi ki subah ka asal nashta",
+    "ingredients": [
+      "Paye",
+      "Pyaz",
+      "Adrak",
+      "Lahsan",
+      "Garam Masala",
+      "Atta"
+    ],
+    "time": 180,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Paye achi tarah saaf kar ke dho lein. 2. Pyaz aur masalon ke saath bhoonein. 3. 3 ghante halki aanch par galayein ya pressure cooker mein 1 ghanta. 4. Adrak aur limu daal kar naan ke saath serve karein."
+  },
+  {
+    "id": 40,
+    "name": "Beef Haleem",
+    "roman_urdu": "Haleem — Daalon aur gandum ka gaadha haleem",
+    "ingredients": [
+      "Beef",
+      "Gandum",
+      "Jau",
+      "Daal Chana",
+      "Daal Mash",
+      "Pyaz"
+    ],
+    "time": 150,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "sindh",
+    "recipe": "1. Gandum aur daalein raat bhar bhigo dein. 2. Beef alag se gala kar resha karein. 3. Daalein gala kar ghota lagayein. 4. Sab mila kar 1 ghanta pakayein, brown pyaz aur adrak se garnish karein."
+  },
+  {
+    "id": 41,
+    "name": "Mutton Handi",
+    "roman_urdu": "Mutton Handi — Dahi aur cream wali handi",
+    "ingredients": [
+      "Mutton",
+      "Dahi",
+      "Cream",
+      "Pyaz",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Mutton ko adrak-lahsan ke saath bhoonein. 2. Dahi daal kar gaadha karein. 3. Paani daal kar 40 min galayein. 4. Cream aur hari mirch daal kar 10 min dum dein."
+  },
+  {
+    "id": 42,
+    "name": "Mutton Kunna",
+    "roman_urdu": "Kunna — Chiniot ki mashhoor mitti ki handi",
+    "ingredients": [
+      "Mutton",
+      "Atta",
+      "Adrak",
+      "Lahsan",
+      "Garam Masala",
+      "Pyaz"
+    ],
+    "time": 100,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Mutton ko masalon ke saath bhoon kar galayein. 2. Atta paani mein ghol lein. 3. Ghol shorbe mein daal kar musalsal hilayein. 4. Gaadha ho jaye to adrak aur dhania daal kar serve karein."
+  },
+  {
+    "id": 43,
+    "name": "Beef Kofta",
+    "roman_urdu": "Beef Kofta — Masaledaar gravy mein narm koftay",
+    "ingredients": [
+      "Beef Keema",
+      "Pyaz",
+      "Besan",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Keema, besan aur masalay mila kar koftay bandhein. 2. Tamatar-pyaz ki gravy taiyar karein. 3. Koftay daal kar dhak dein. 4. 30 min halki aanch par pakayein."
+  },
+  {
+    "id": 44,
+    "name": "Mutton Do Pyaza",
+    "roman_urdu": "Mutton Do Pyaza — Pyaz ki dugni miqdar wala salan",
+    "ingredients": [
+      "Mutton",
+      "Pyaz",
+      "Dahi",
+      "Adrak",
+      "Lahsan",
+      "Tamatar"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Aadha pyaz brown kar ke masala banayein. 2. Mutton bhoon kar dahi daalein. 3. Gala lein phir baqi pyaz moti kaat kar daalein. 4. 15 min dum dein."
+  },
+  {
+    "id": 45,
+    "name": "Mutton Achari",
+    "roman_urdu": "Mutton Achari — Achar ke masalon wala mutton",
+    "ingredients": [
+      "Mutton",
+      "Kalonji",
+      "Saunf",
+      "Rai",
+      "Methi Dana",
+      "Dahi"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Achari masalay bhoon kar darda karein. 2. Mutton pyaz ke saath bhoonein. 3. Dahi aur achari masala daalein. 4. 45 min galayein aur hari mirch se garnish karein."
+  },
+  {
+    "id": 46,
+    "name": "Mutton Rogan Josh",
+    "roman_urdu": "Rogan Josh — Kashmiri surkh gravy wala mutton",
+    "ingredients": [
+      "Mutton",
+      "Kashmiri Mirch",
+      "Dahi",
+      "Saunf Powder",
+      "Adrak Powder",
+      "Ghee"
+    ],
+    "time": 80,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "kashmir",
+    "recipe": "1. Ghee mein mutton surkh karein. 2. Kashmiri mirch aur saunf powder daalein. 3. Dahi daal kar musalsal hilayein. 4. Halki aanch par 50 min galayein jab tak tel alag ho jaye."
+  },
+  {
+    "id": 47,
+    "name": "Namkeen Gosht",
+    "roman_urdu": "Namkeen Gosht — Sirf namak aur mirch, Peshawari style",
+    "ingredients": [
+      "Mutton",
+      "Namak",
+      "Kali Mirch",
+      "Hari Mirch",
+      "Ghee"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "kpk",
+    "recipe": "1. Ghee mein gosht daal kar dhak dein. 2. Sirf namak daalein, apne paani mein galne dein. 3. Kali mirch aur hari mirch daalein. 4. Tez aanch par bhoon kar khushk karein."
+  },
+  {
+    "id": 48,
+    "name": "Aalu Keema",
+    "roman_urdu": "Aalu Keema — Roz ka asan aur mazedaar keema",
+    "ingredients": [
+      "Keema",
+      "Aalu",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Pyaz golden kar ke keema bhoonein. 2. Tamatar aur masalay daalein. 3. Aalu ke cubes shamil karein. 4. Dhak kar 20 min pakayein."
+  },
+  {
+    "id": 49,
+    "name": "Matar Gosht",
+    "roman_urdu": "Matar Gosht — Sardi ke matar aur mutton",
+    "ingredients": [
+      "Mutton",
+      "Matar",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Mutton pyaz ke saath bhoonein. 2. Tamatar aur masalay daal kar galayein. 3. Matar shamil karein. 4. 15 min pakayein, garam masala chirak dein."
+  },
+  {
+    "id": 50,
+    "name": "Gobi Gosht",
+    "roman_urdu": "Gobi Gosht — Phool gobi aur gosht ka salan",
+    "ingredients": [
+      "Mutton",
+      "Phool Gobi",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 55,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Gobi ke phool halke fry kar lein. 2. Gosht ka masala bhoon kar galayein. 3. Gobi shamil karein. 4. 10 min dum dein taake gobi galay nahi."
+  },
+  {
+    "id": 51,
+    "name": "Karela Gosht",
+    "roman_urdu": "Karela Gosht — Karwa karela, meetha zaiqa",
+    "ingredients": [
+      "Karela",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 55,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Karele chheel kar namak laga kar 30 min rakhein. 2. Dho kar fry karein. 3. Gosht ka masala bhoon kar galayein. 4. Karele mila kar 15 min pakayein."
+  },
+  {
+    "id": 52,
+    "name": "Lauki Gosht",
+    "roman_urdu": "Lauki Gosht — Halka aur sehat mand salan",
+    "ingredients": [
+      "Lauki",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Gosht bhoon kar aadha gala lein. 2. Lauki ke cubes daalein. 3. Tamatar aur masalay shamil karein. 4. 20 min dhak kar pakayein."
+  },
+  {
+    "id": 53,
+    "name": "Arvi Gosht",
+    "roman_urdu": "Arvi Gosht — Ajwain wali arvi aur gosht",
+    "ingredients": [
+      "Arvi",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Ajwain",
+      "Adrak"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Arvi chheel kar halka fry karein. 2. Gosht masalon ke saath bhoon kar galayein. 3. Arvi aur ajwain daalein. 4. 20 min halki aanch par pakayein."
+  },
+  {
+    "id": 54,
+    "name": "Shaljam Gosht",
+    "roman_urdu": "Shaljam Gosht — Sardi ki khaas sabzi gosht ke saath",
+    "ingredients": [
+      "Shaljam",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 65,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Gosht bhoon kar gala lein. 2. Shaljam ke cubes daalein. 3. Tamatar aur masalay shamil karein. 4. 25 min pakayein jab tak shaljam narm ho."
+  },
+  {
+    "id": 55,
+    "name": "Methi Gosht",
+    "roman_urdu": "Methi Gosht — Taazi methi ki khushbu",
+    "ingredients": [
+      "Methi",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Methi kaat kar namak laga kar nichor lein. 2. Gosht bhoon kar galayein. 3. Methi shamil karein. 4. Tez aanch par 15 min bhoon kar khushk karein."
+  },
+  {
+    "id": 56,
+    "name": "Chana Gosht",
+    "roman_urdu": "Chana Gosht — Kabuli chana aur mutton",
+    "ingredients": [
+      "Kabuli Chana",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Chana raat bhar bhigoein. 2. Gosht ka masala bhoonein. 3. Chana daal kar dono ko saath galayein. 4. 20 min dum de kar dhania daalein."
+  },
+  {
+    "id": 57,
+    "name": "Daal Gosht",
+    "roman_urdu": "Daal Gosht — Chana daal aur gosht ka mel",
+    "ingredients": [
+      "Daal Chana",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 65,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Daal 1 ghanta bhigo dein. 2. Gosht bhoon kar aadha galayein. 3. Daal daal kar saath pakayein. 4. Tadka laga kar 10 min dum dein."
+  },
+  {
+    "id": 58,
+    "name": "Tori Gosht",
+    "roman_urdu": "Tori Gosht — Garmiyon ki halki sabzi gosht ke saath",
+    "ingredients": [
+      "Tori",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Tori chheel kar kaat lein. 2. Gosht bhoon kar galayein. 3. Tori daalein, paani na daalein. 4. Apne paani mein 20 min pakayein."
+  },
+  {
+    "id": 59,
+    "name": "Bhindi Gosht",
+    "roman_urdu": "Bhindi Gosht — Bhindi aur mutton ka khushk salan",
+    "ingredients": [
+      "Bhindi",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Bhindi alag se fry kar lein taake lais na ho. 2. Gosht bhoon kar galayein. 3. Bhindi mila dein. 4. 10 min dum de kar utaar lein."
+  },
+  {
+    "id": 60,
+    "name": "Baingan Gosht",
+    "roman_urdu": "Baingan Gosht — Baingan aur gosht ka gaadha salan",
+    "ingredients": [
+      "Baingan",
+      "Mutton",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 55,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "punjab",
+    "recipe": "1. Baingan namak laga kar 15 min rakhein phir fry karein. 2. Gosht bhoon kar galayein. 3. Baingan shamil karein. 4. 15 min dum dein."
+  },
+  {
+    "id": 61,
+    "name": "Chicken Tikka",
+    "roman_urdu": "Chicken Tikka — Koelon par pakay masaledaar tukray",
+    "ingredients": [
+      "Chicken",
+      "Dahi",
+      "Adrak",
+      "Lahsan",
+      "Tikka Masala",
+      "Limu"
+    ],
+    "time": 40,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "punjab",
+    "recipe": "1. Chicken par cuts laga kar dahi aur masalon mein 2 ghante marinate karein. 2. Seekh par laga kar koelon par rakhein. 3. Ghee ya makhan baste karein. 4. Dhungar de kar chutney aur salad ke saath serve karein."
+  },
+  {
+    "id": 62,
+    "name": "Seekh Kebab",
+    "roman_urdu": "Seekh Kebab — Seekh par lipta hua keema",
+    "ingredients": [
+      "Beef Keema",
+      "Pyaz",
+      "Hari Mirch",
+      "Dhania",
+      "Papita",
+      "Garam Masala"
+    ],
+    "time": 40,
+    "meal_time": [
+      "dinner",
+      "chai"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "punjab",
+    "recipe": "1. Keema, pyaz aur masalay mila kar 1 ghanta rakhein. 2. Haath geela kar ke seekh par lapetein. 3. Koelon par ghumate hue senkein. 4. Limu nichor kar naan ke saath serve karein."
+  },
+  {
+    "id": 63,
+    "name": "Shami Kebab",
+    "roman_urdu": "Shami Kebab — Daal chana aur keema ki tikki",
+    "ingredients": [
+      "Beef Keema",
+      "Daal Chana",
+      "Anday",
+      "Pyaz",
+      "Hari Mirch",
+      "Garam Masala"
+    ],
+    "time": 50,
+    "meal_time": [
+      "nashta",
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "punjab",
+    "recipe": "1. Keema aur daal chana masalon ke saath gala lein. 2. Paani khushk kar ke pees lein. 3. Pyaz aur dhania mila kar tikkiyan banayein. 4. Anday mein dubo kar shallow fry karein."
+  },
+  {
+    "id": 64,
+    "name": "Chapli Kebab",
+    "roman_urdu": "Chapli Kebab — Peshawar ka mashhoor chaura kebab",
+    "ingredients": [
+      "Beef Keema",
+      "Tamatar",
+      "Pyaz",
+      "Makai ka Atta",
+      "Anda",
+      "Dhania Dana"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner",
+      "chai"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "kpk",
+    "recipe": "1. Keema, kata pyaz, tamatar aur darda dhania mila lein. 2. Makai ka atta aur anda shamil karein. 3. Chaure patlay kebab banayein. 4. Charbi ya ghee mein dono taraf se fry karein."
+  },
+  {
+    "id": 65,
+    "name": "Chicken Malai Boti",
+    "roman_urdu": "Malai Boti — Cream wali narm safed boti",
+    "ingredients": [
+      "Chicken",
+      "Cream",
+      "Cheese",
+      "Adrak",
+      "Lahsan",
+      "Safed Mirch"
+    ],
+    "time": 40,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "punjab",
+    "recipe": "1. Chicken ko cream, cheese aur safed mirch mein marinate karein. 2. 2 ghante fridge mein rakhein. 3. Seekh par laga kar halki aanch par senkein. 4. Makhan laga kar dhungar dein."
+  },
+  {
+    "id": 66,
+    "name": "Bihari Kebab",
+    "roman_urdu": "Bihari Kebab — Papite se galay hue patlay kebab",
+    "ingredients": [
+      "Beef",
+      "Papita",
+      "Pyaz",
+      "Dahi",
+      "Bihari Masala",
+      "Sarson ka Tel"
+    ],
+    "time": 50,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "sindh",
+    "recipe": "1. Beef ki patli qatlay kaat kar kootein. 2. Papita paste, dahi aur masalon mein 4 ghante marinate karein. 3. Seekh par laga kar koelon par senkein. 4. Paratha aur imli chutney ke saath serve karein."
+  },
+  {
+    "id": 67,
+    "name": "Chicken Reshmi Kebab",
+    "roman_urdu": "Reshmi Kebab — Reshem jaisa narm chicken kebab",
+    "ingredients": [
+      "Chicken Keema",
+      "Cream",
+      "Cheese",
+      "Anda",
+      "Adrak",
+      "Hari Mirch"
+    ],
+    "time": 40,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "punjab",
+    "recipe": "1. Chicken keema ko cream aur cheese ke saath blend karein. 2. Anda aur masalay mila kar 1 ghanta rakhein. 3. Seekh par lapet kar halki aanch par senkein. 4. Makhan laga kar utaar lein."
+  },
+  {
+    "id": 68,
+    "name": "Beef Boti Tikka",
+    "roman_urdu": "Beef Boti — Masaledaar beef ke tukray koelon par",
+    "ingredients": [
+      "Beef",
+      "Papita",
+      "Dahi",
+      "Adrak",
+      "Lahsan",
+      "Tikka Masala"
+    ],
+    "time": 50,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "punjab",
+    "recipe": "1. Beef ki botiyan papite aur dahi mein 3 ghante rakhein. 2. Tikka masala aur sarson ka tel mila dein. 3. Seekh par laga kar senkein. 4. Chaat masala aur limu chirak kar serve karein."
+  },
+  {
+    "id": 69,
+    "name": "Beef Biryani",
+    "roman_urdu": "Beef Biryani — Masaledaar dum biryani",
+    "ingredients": [
+      "Beef",
+      "Basmati Chawal",
+      "Dahi",
+      "Pyaz",
+      "Aalu",
+      "Biryani Masala"
+    ],
+    "time": 80,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "sindh",
+    "recipe": "1. Beef ko dahi aur masalon mein gala lein. 2. Aalu fry kar ke salan mein daalein. 3. Chawal 70% ubaalein. 4. Layer laga kar 25 min dum par rakhein."
+  },
+  {
+    "id": 70,
+    "name": "Sindhi Biryani",
+    "roman_urdu": "Sindhi Biryani — Aalu, aloo bukhara aur tez masala",
+    "ingredients": [
+      "Mutton",
+      "Basmati Chawal",
+      "Aalu",
+      "Aloo Bukhara",
+      "Dahi",
+      "Podina"
+    ],
+    "time": 85,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "sindh",
+    "recipe": "1. Gosht ko dahi, tamatar aur masalon mein galayein. 2. Aalu aur aloo bukhara shamil karein. 3. Chawal aadhe ubaal lein. 4. Podina, dhania aur zarday ka rang daal kar 30 min dum dein."
+  },
+  {
+    "id": 71,
+    "name": "Yakhni Pulao",
+    "roman_urdu": "Yakhni Pulao — Sabut masalon ki yakhni wala pulao",
+    "ingredients": [
+      "Mutton",
+      "Basmati Chawal",
+      "Sabut Garam Masala",
+      "Pyaz",
+      "Adrak",
+      "Dahi"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "punjab",
+    "recipe": "1. Gosht aur sabut masalay ubaal kar yakhni banayein. 2. Yakhni chaan lein. 3. Pyaz brown kar ke gosht bhoonein. 4. Chawal aur yakhni daal kar dum par 20 min pakayein."
+  },
+  {
+    "id": 72,
+    "name": "Kabuli Pulao",
+    "roman_urdu": "Kabuli Pulao — Gajar, kishmish aur mutton wala pulao",
+    "ingredients": [
+      "Mutton",
+      "Basmati Chawal",
+      "Gajar",
+      "Kishmish",
+      "Badam",
+      "Pyaz"
+    ],
+    "time": 80,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "kpk",
+    "recipe": "1. Gosht ki yakhni banayein. 2. Gajar ki julienne aur kishmish cheeni mein bhoonein. 3. Chawal yakhni mein pakayein. 4. Gajar, kishmish aur badam upar daal kar dum dein."
+  },
+  {
+    "id": 73,
+    "name": "Matar Pulao",
+    "roman_urdu": "Matar Pulao — Sada aur khushbudar matar chawal",
+    "ingredients": [
+      "Basmati Chawal",
+      "Matar",
+      "Pyaz",
+      "Zeera",
+      "Sabut Garam Masala"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "chawal",
+    "region": "punjab",
+    "recipe": "1. Pyaz golden karein. 2. Zeera aur sabut masalay daalein. 3. Matar aur bhigay chawal shamil karein. 4. Paani daal kar dum par 20 min pakayein."
+  },
+  {
+    "id": 74,
+    "name": "Tahiri",
+    "roman_urdu": "Tahiri — Aalu wale masaledaar peelay chawal",
+    "ingredients": [
+      "Basmati Chawal",
+      "Aalu",
+      "Pyaz",
+      "Haldi",
+      "Tamatar",
+      "Zeera"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "sindh",
+    "recipe": "1. Pyaz golden kar ke aalu bhoonein. 2. Tamatar aur haldi daalein. 3. Bhigay chawal shamil karein. 4. Paani daal kar dum par 20 min pakayein."
+  },
+  {
+    "id": 75,
+    "name": "Khushka",
+    "roman_urdu": "Khushka — Sada ubla chawal, har salan ke saath",
+    "ingredients": [
+      "Basmati Chawal",
+      "Namak",
+      "Zeera"
+    ],
+    "time": 25,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "sindh",
+    "recipe": "1. Chawal 30 min bhigo dein. 2. Zyada paani namak ke saath ubaalein. 3. 90% pakne par chaan lein. 4. Dum par 10 min rakhein taake khilay khilay ho."
+  },
+  {
+    "id": 76,
+    "name": "Aalu Biryani",
+    "roman_urdu": "Aalu Biryani — Bina gosht ki mazedaar biryani",
+    "ingredients": [
+      "Aalu",
+      "Basmati Chawal",
+      "Dahi",
+      "Pyaz",
+      "Tamatar",
+      "Biryani Masala"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "sindh",
+    "recipe": "1. Aalu ke barre tukray fry karein. 2. Dahi aur masalon ka salan banayein. 3. Aalu daal kar 10 min pakayein. 4. Chawal ki layer laga kar 20 min dum dein."
+  },
+  {
+    "id": 77,
+    "name": "Aalu Gobi",
+    "roman_urdu": "Aalu Gobi — Sardi ki sab se aam sabzi",
+    "ingredients": [
+      "Aalu",
+      "Phool Gobi",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Haldi"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Aalu aur gobi ke tukray kaat lein. 2. Pyaz aur tamatar ka masala bhoonein. 3. Sabzi daal kar dhak dein. 4. 20 min halki aanch par bina paani pakayein."
+  },
+  {
+    "id": 78,
+    "name": "Aalu Matar",
+    "roman_urdu": "Aalu Matar — Aalu aur matar ka salan",
+    "ingredients": [
+      "Aalu",
+      "Matar",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Pyaz golden kar ke masala bhoonein. 2. Aalu daal kar 5 min bhoonein. 3. Matar aur thora paani daalein. 4. 20 min dhak kar pakayein."
+  },
+  {
+    "id": 79,
+    "name": "Aalu Palak",
+    "roman_urdu": "Aalu Palak — Palak aur aalu ki sehat bhari sabzi",
+    "ingredients": [
+      "Palak",
+      "Aalu",
+      "Pyaz",
+      "Lahsan",
+      "Hari Mirch",
+      "Zeera"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Palak ubaal kar barik kaat lein. 2. Lahsan aur zeere ka tadka lagayein. 3. Aalu daal kar bhoonein. 4. Palak mila kar 15 min pakayein."
+  },
+  {
+    "id": 80,
+    "name": "Aalu Shimla Mirch",
+    "roman_urdu": "Aalu Shimla Mirch — Jaldi banne wali khushk sabzi",
+    "ingredients": [
+      "Aalu",
+      "Shimla Mirch",
+      "Pyaz",
+      "Zeera",
+      "Haldi",
+      "Lal Mirch"
+    ],
+    "time": 25,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Aalu patlay kaat kar bhoonein. 2. Zeera aur haldi daalein. 3. Shimla mirch shamil karein. 4. Tez aanch par 8 min bhoon kar utaar lein."
+  },
+  {
+    "id": 81,
+    "name": "Mix Sabzi",
+    "roman_urdu": "Mix Sabzi — Ghar ki sab sabziyan ek saath",
+    "ingredients": [
+      "Aalu",
+      "Gajar",
+      "Matar",
+      "Phool Gobi",
+      "Beans",
+      "Tamatar"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Sab sabziyan barabar kaat lein. 2. Pyaz-tamatar ka masala banayein. 3. Sakht sabzi pehle, narm baad mein daalein. 4. 20 min dhak kar pakayein."
+  },
+  {
+    "id": 82,
+    "name": "Kaddu ki Sabzi",
+    "roman_urdu": "Kaddu ki Sabzi — Meethi meethi halki sabzi",
+    "ingredients": [
+      "Kaddu",
+      "Pyaz",
+      "Tamatar",
+      "Methi Dana",
+      "Saunf",
+      "Haldi"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Kaddu chheel kar cubes banayein. 2. Methi dana aur saunf ka tadka lagayein. 3. Kaddu aur tamatar daalein. 4. 20 min galne tak pakayein."
+  },
+  {
+    "id": 83,
+    "name": "Karela Masala",
+    "roman_urdu": "Karela Masala — Bhare hue masaledaar karele",
+    "ingredients": [
+      "Karela",
+      "Pyaz",
+      "Amchoor",
+      "Saunf",
+      "Lal Mirch",
+      "Tel"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Karele chheel kar namak laga kar 30 min rakhein. 2. Pyaz aur masalon ka bharai masala banayein. 3. Karelon mein bhar kar dhaage bandhein. 4. Halki aanch par 20 min pakayein."
+  },
+  {
+    "id": 84,
+    "name": "Palak Paneer",
+    "roman_urdu": "Palak Paneer — Creamy palak aur paneer",
+    "ingredients": [
+      "Palak",
+      "Paneer",
+      "Cream",
+      "Lahsan",
+      "Hari Mirch",
+      "Makhan"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Palak blanch kar ke blend karein. 2. Paneer ke cubes halke fry karein. 3. Lahsan ka tadka laga kar palak daalein. 4. Paneer aur cream mila kar 10 min pakayein."
+  },
+  {
+    "id": 85,
+    "name": "Dum Aloo",
+    "roman_urdu": "Dum Aloo — Sabut chotay aalu masaledaar gravy mein",
+    "ingredients": [
+      "Chotay Aalu",
+      "Dahi",
+      "Kashmiri Mirch",
+      "Saunf",
+      "Adrak Powder",
+      "Tel"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "sabzi",
+    "region": "kashmir",
+    "recipe": "1. Aalu ubaal kar chheel lein aur kaante se cheed karein. 2. Deep fry kar ke nikaal lein. 3. Dahi aur masalon ki gravy banayein. 4. Aalu daal kar 20 min dum dein."
+  },
+  {
+    "id": 86,
+    "name": "Sai Bhaji",
+    "roman_urdu": "Sai Bhaji — Sindhi palak aur daal ki sabzi",
+    "ingredients": [
+      "Palak",
+      "Daal Chana",
+      "Aalu",
+      "Baingan",
+      "Tamatar",
+      "Adrak"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "sabzi",
+    "region": "sindh",
+    "recipe": "1. Daal chana 1 ghanta bhigo dein. 2. Palak, sabziyan aur daal ek saath ubaalein. 3. Ghota laga kar gaadha karein. 4. Lahsan aur zeere ka tadka laga kar chawal ke saath serve karein."
+  },
+  {
+    "id": 87,
+    "name": "Kadhi Pakora",
+    "roman_urdu": "Kadhi Pakora — Besan ki khatti kadhi aur pakoray",
+    "ingredients": [
+      "Besan",
+      "Dahi",
+      "Pyaz",
+      "Haldi",
+      "Kari Patta",
+      "Lal Mirch"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "sabzi",
+    "region": "punjab",
+    "recipe": "1. Besan aur khatta dahi phaint kar paani mila lein. 2. Halki aanch par 30 min musalsal hilate hue pakayein. 3. Besan aur pyaz ke pakoray tal lein. 4. Pakoray kadhi mein daal kar tadka lagayein."
+  },
+  {
+    "id": 88,
+    "name": "Sindhi Kadhi",
+    "roman_urdu": "Sindhi Kadhi — Imli aur sabziyon wali besan kadhi",
+    "ingredients": [
+      "Besan",
+      "Imli",
+      "Bhindi",
+      "Gajar",
+      "Aalu",
+      "Kari Patta"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "sabzi",
+    "region": "sindh",
+    "recipe": "1. Besan bhoon kar paani mein ghol lein. 2. Imli ka paani daalein. 3. Sabziyan fry kar ke shamil karein. 4. 25 min pakayein, khushka ke saath serve karein."
+  },
+  {
+    "id": 89,
+    "name": "Daal Makhni",
+    "roman_urdu": "Daal Makhni — Makhan aur cream wali kaali daal",
+    "ingredients": [
+      "Sabut Mash",
+      "Rajma",
+      "Makhan",
+      "Cream",
+      "Tamatar",
+      "Adrak"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal aur rajma raat bhar bhigo dein. 2. Narm hone tak ubaalein. 3. Tamatar, adrak aur makhan ka masala daalein. 4. 30 min halki aanch par pakayein, cream daal kar serve karein."
+  },
+  {
+    "id": 90,
+    "name": "Masoor Daal",
+    "roman_urdu": "Masoor Daal — Roz ki halki laal daal",
+    "ingredients": [
+      "Daal Masoor",
+      "Pyaz",
+      "Tamatar",
+      "Lahsan",
+      "Haldi",
+      "Zeera"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal haldi ke saath 20 min ubaalein. 2. Lahsan aur zeere ka tadka banayein. 3. Tamatar daal kar bhoonein. 4. Daal mein daal kar 5 min pakayein."
+  },
+  {
+    "id": 91,
+    "name": "Moong Daal",
+    "roman_urdu": "Moong Daal — Halki aur jaldi hazam hone wali daal",
+    "ingredients": [
+      "Daal Moong",
+      "Pyaz",
+      "Lahsan",
+      "Haldi",
+      "Hari Mirch",
+      "Zeera"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal dho kar haldi ke saath ubaalein. 2. Zeera aur lahsan bhoonein. 3. Hari mirch daalein. 4. Daal mein tadka daal kar dhania se garnish karein."
+  },
+  {
+    "id": 92,
+    "name": "Daal Chana",
+    "roman_urdu": "Daal Chana — Gaadhi aur zaiqedaar chana daal",
+    "ingredients": [
+      "Daal Chana",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Lahsan",
+      "Garam Masala"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal 1 ghanta bhigo dein. 2. 25 min ubaal kar narm karein. 3. Pyaz, tamatar aur masalon ka bhagar banayein. 4. Daal mila kar 10 min pakayein."
+  },
+  {
+    "id": 93,
+    "name": "Mix Daal",
+    "roman_urdu": "Mix Daal — Char daalon ka mel",
+    "ingredients": [
+      "Daal Masoor",
+      "Daal Moong",
+      "Daal Chana",
+      "Daal Mash",
+      "Pyaz",
+      "Lahsan"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Chaaron daalein mila kar dho lein. 2. Haldi ke saath 25 min ubaalein. 3. Ghota laga kar gaadha karein. 4. Lahsan aur lal mirch ka tadka lagayein."
+  },
+  {
+    "id": 94,
+    "name": "Chole Bhature",
+    "roman_urdu": "Chole Bhature — Masaledaar chole aur phulay bhature",
+    "ingredients": [
+      "Kabuli Chana",
+      "Maida",
+      "Dahi",
+      "Pyaz",
+      "Tamatar",
+      "Anardana"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Chana raat bhar bhigo kar ubaalein. 2. Anardana aur masalon ke saath bhoonein. 3. Maida aur dahi ka aata gundh kar 2 ghante rakhein. 4. Bhature tal kar cholon ke saath serve karein."
+  },
+  {
+    "id": 95,
+    "name": "Daal Palak",
+    "roman_urdu": "Daal Palak — Palak wali sehat mand daal",
+    "ingredients": [
+      "Daal Moong",
+      "Palak",
+      "Lahsan",
+      "Tamatar",
+      "Zeera",
+      "Haldi"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal haldi ke saath ubaalein. 2. Palak barik kaat kar daalein. 3. 10 min saath pakayein. 4. Lahsan aur zeere ka tadka lagayein."
+  },
+  {
+    "id": 96,
+    "name": "Lauki Chana",
+    "roman_urdu": "Lauki Chana — Lauki aur chana daal ka salan",
+    "ingredients": [
+      "Lauki",
+      "Daal Chana",
+      "Pyaz",
+      "Tamatar",
+      "Adrak",
+      "Haldi"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "daal",
+    "region": "punjab",
+    "recipe": "1. Daal chana 1 ghanta bhigo dein. 2. Daal aadhi gala lein. 3. Lauki ke cubes aur masala daalein. 4. 20 min saath pakayein."
+  },
+  {
+    "id": 97,
+    "name": "Chana Chaat",
+    "roman_urdu": "Chana Chaat — Chatpata chana chaat, Ramzan ka favourite",
+    "ingredients": [
+      "Kabuli Chana",
+      "Aalu",
+      "Pyaz",
+      "Imli",
+      "Dahi",
+      "Chaat Masala"
+    ],
+    "time": 25,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "punjab",
+    "recipe": "1. Chana ubaal kar thanda karein. 2. Ublay aalu, pyaz aur tamatar kaat kar milayein. 3. Imli chutney aur chaat masala daalein. 4. Dahi aur papri daal kar foran serve karein."
+  },
+  {
+    "id": 98,
+    "name": "Fish Karahi",
+    "roman_urdu": "Fish Karahi — Tamatar aur adrak wali machli karahi",
+    "ingredients": [
+      "Machli",
+      "Tamatar",
+      "Adrak",
+      "Lahsan",
+      "Hari Mirch",
+      "Ajwain"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "machli",
+    "region": "punjab",
+    "recipe": "1. Machli ko haldi aur namak laga kar 15 min rakhein. 2. Halka fry kar ke nikaal lein. 3. Tamatar aur adrak-lahsan ka masala banayein. 4. Machli daal kar 10 min dum dein."
+  },
+  {
+    "id": 99,
+    "name": "Lahori Fried Fish",
+    "roman_urdu": "Lahori Machli — Besan ke crispy coating wali machli",
+    "ingredients": [
+      "Machli",
+      "Besan",
+      "Ajwain",
+      "Anardana",
+      "Lal Mirch",
+      "Limu"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "machli",
+    "region": "punjab",
+    "recipe": "1. Machli ko limu aur namak se dho lein. 2. Besan, ajwain aur masalon ka gaadha ghol banayein. 3. Machli lapet kar 30 min rakhein. 4. Darmiyani aanch par crispy fry karein."
+  },
+  {
+    "id": 100,
+    "name": "Prawn Karahi",
+    "roman_urdu": "Jhinga Karahi — Jaldi banne wali jhinga karahi",
+    "ingredients": [
+      "Jhinga",
+      "Tamatar",
+      "Adrak",
+      "Lahsan",
+      "Hari Mirch",
+      "Kali Mirch"
+    ],
+    "time": 30,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "machli",
+    "region": "karachi",
+    "recipe": "1. Jhingay saaf kar ke limu laga lein. 2. Adrak-lahsan bhoon kar tamatar daalein. 3. Jhingay daal kar sirf 8 min pakayein. 4. Kali mirch aur dhania daal kar utaar lein."
+  },
+  {
+    "id": 101,
+    "name": "Fish Curry",
+    "roman_urdu": "Machli ka Salan — Shorbay wali machli",
+    "ingredients": [
+      "Machli",
+      "Pyaz",
+      "Tamatar",
+      "Imli",
+      "Haldi",
+      "Kari Patta"
+    ],
+    "time": 45,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "machli",
+    "region": "sindh",
+    "recipe": "1. Machli haldi laga kar halki fry karein. 2. Pyaz aur tamatar ka salan banayein. 3. Imli ka paani daalein. 4. Machli daal kar 12 min halki aanch par pakayein."
+  },
+  {
+    "id": 102,
+    "name": "Fish Tikka",
+    "roman_urdu": "Fish Tikka — Koelon par pakai masaledaar machli",
+    "ingredients": [
+      "Machli",
+      "Dahi",
+      "Ajwain",
+      "Adrak",
+      "Lahsan",
+      "Limu"
+    ],
+    "time": 40,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "machli",
+    "region": "punjab",
+    "recipe": "1. Machli par cuts laga kar masalon mein 1 ghanta rakhein. 2. Tar par rakh kar koelon par senkein. 3. Makhan baste karein. 4. Podina chutney ke saath serve karein."
+  },
+  {
+    "id": 103,
+    "name": "Desi Omelette",
+    "roman_urdu": "Desi Omelette — Pyaz, tamatar aur mirch wala anda",
+    "ingredients": [
+      "Anday",
+      "Pyaz",
+      "Tamatar",
+      "Hari Mirch",
+      "Dhania"
+    ],
+    "time": 10,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "anday",
+    "region": "punjab",
+    "recipe": "1. Anday phaint kar namak aur mirch daalein. 2. Pyaz, tamatar aur hari mirch barik kaat kar milayein. 3. Tawe par tel garam karein. 4. Ghol daal kar dono taraf se senkein."
+  },
+  {
+    "id": 104,
+    "name": "Anda Bhurji",
+    "roman_urdu": "Anda Bhurji — Bikhra hua masaledaar anda",
+    "ingredients": [
+      "Anday",
+      "Pyaz",
+      "Tamatar",
+      "Hari Mirch",
+      "Zeera",
+      "Haldi"
+    ],
+    "time": 15,
+    "meal_time": [
+      "nashta",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "anday",
+    "region": "punjab",
+    "recipe": "1. Pyaz golden kar ke tamatar daalein. 2. Masalay bhoonein. 3. Anday daal kar tez tez hilayein. 4. Dhania daal kar paratha ke saath serve karein."
+  },
+  {
+    "id": 105,
+    "name": "Anda Paratha",
+    "roman_urdu": "Anda Paratha — Nashte ka mukammal paratha",
+    "ingredients": [
+      "Atta",
+      "Anday",
+      "Pyaz",
+      "Hari Mirch",
+      "Ghee"
+    ],
+    "time": 20,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "nashta",
+    "region": "punjab",
+    "recipe": "1. Paratha bel kar tawe par rakhein. 2. Anda pyaz aur mirch ke saath phaint lein. 3. Paratha ke upar ghol phailayein aur palat dein. 4. Ghee laga kar crispy senkein."
+  },
+  {
+    "id": 106,
+    "name": "Anday Ki Bhujia",
+    "roman_urdu": "Anday Ki Bhujia — Khushk masaledaar anday",
+    "ingredients": [
+      "Anday",
+      "Pyaz",
+      "Tamatar",
+      "Lal Mirch",
+      "Haldi",
+      "Tel"
+    ],
+    "time": 15,
+    "meal_time": [
+      "nashta",
+      "lunch"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "anday",
+    "region": "punjab",
+    "recipe": "1. Pyaz bhoon kar masalay daalein. 2. Tamatar gala lein. 3. Phenta hua anda daal kar musalsal hilayein. 4. Khushk hone tak bhoonein."
+  },
+  {
+    "id": 107,
+    "name": "Halwa Puri",
+    "roman_urdu": "Halwa Puri — Itwar ki subah ka asal nashta",
+    "ingredients": [
+      "Maida",
+      "Suji",
+      "Kabuli Chana",
+      "Cheeni",
+      "Ghee",
+      "Aalu"
+    ],
+    "time": 60,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "nashta",
+    "region": "punjab",
+    "recipe": "1. Suji ghee mein bhoon kar cheeni ka sheera daal kar halwa banayein. 2. Chana aur aalu ka salan taiyar karein. 3. Maide ka sakht aata gundh kar puriyan belein. 4. Garam tel mein phula kar teenon saath serve karein."
+  },
+  {
+    "id": 108,
+    "name": "Siri Paye",
+    "roman_urdu": "Siri Paye — Sardi ki subah ka shahi nashta",
+    "ingredients": [
+      "Siri",
+      "Paye",
+      "Pyaz",
+      "Adrak",
+      "Lahsan",
+      "Garam Masala"
+    ],
+    "time": 180,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "nashta",
+    "region": "punjab",
+    "recipe": "1. Siri paye ko atte se ragad kar saaf karein. 2. Masalon ke saath bhoonein. 3. 3 ghante halki aanch par galayein. 4. Adrak, hari mirch aur limu daal kar naan ke saath serve karein."
+  },
+  {
+    "id": 109,
+    "name": "Keema Paratha",
+    "roman_urdu": "Keema Paratha — Bhare hue keeme ka paratha",
+    "ingredients": [
+      "Atta",
+      "Keema",
+      "Pyaz",
+      "Hari Mirch",
+      "Dhania",
+      "Ghee"
+    ],
+    "time": 35,
+    "meal_time": [
+      "nashta",
+      "lunch"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "nashta",
+    "region": "punjab",
+    "recipe": "1. Keema masalon ke saath khushk bhoon lein. 2. Aate ke pairay mein keema bhar dein. 3. Halka halka bel lein. 4. Tawe par ghee laga kar dono taraf senkein."
+  },
+  {
+    "id": 110,
+    "name": "Aloo Bhujia",
+    "roman_urdu": "Aalu Bhujia — Puri ke saath nashte wali aalu bhujia",
+    "ingredients": [
+      "Aalu",
+      "Pyaz",
+      "Tamatar",
+      "Zeera",
+      "Haldi",
+      "Hari Mirch"
+    ],
+    "time": 25,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "nashta",
+    "region": "punjab",
+    "recipe": "1. Aalu ubaal kar tor lein. 2. Zeera aur pyaz ka tadka lagayein. 3. Haldi aur tamatar daalein. 4. Aalu mila kar shorbay wali bhujia banayein."
+  },
+  {
+    "id": 111,
+    "name": "Suji ka Halwa",
+    "roman_urdu": "Suji ka Halwa — 20 minute mein taiyar meetha",
+    "ingredients": [
+      "Suji",
+      "Cheeni",
+      "Ghee",
+      "Elaichi",
+      "Badam"
+    ],
+    "time": 25,
+    "meal_time": [
+      "nashta",
+      "chai"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Ghee mein suji sunehri hone tak bhoonein. 2. Alag se cheeni aur paani ka sheera banayein. 3. Sheera suji mein daal kar tez hilayein. 4. Elaichi aur badam daal kar 5 min dum dein."
+  },
+  {
+    "id": 112,
+    "name": "Aloo Paratha",
+    "roman_urdu": "Aalu Paratha — Bharay hue aalu ka nashta",
+    "ingredients": [
+      "Atta",
+      "Aalu",
+      "Hari Mirch",
+      "Dhania",
+      "Anardana",
+      "Ghee"
+    ],
+    "time": 30,
+    "meal_time": [
+      "nashta",
+      "lunch"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Ublay aalu mein masalay mila kar bharai taiyar karein. 2. Aate ke pairay mein bhar kar band karein. 3. Halka halka bel lein. 4. Tawe par ghee laga kar dono taraf crispy senkein."
+  },
+  {
+    "id": 113,
+    "name": "Tandoori Roti",
+    "roman_urdu": "Tandoori Roti — Har salan ki sathi",
+    "ingredients": [
+      "Atta",
+      "Namak",
+      "Paani"
+    ],
+    "time": 20,
+    "meal_time": [
+      "nashta",
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Atta narm gundh kar 20 min rakhein. 2. Motay pairay bana kar belein. 3. Tandoor ya garam tawe par lagayein. 4. Chittiyan aane par utaar lein."
+  },
+  {
+    "id": 114,
+    "name": "Naan",
+    "roman_urdu": "Naan — Narm aur phula hua naan",
+    "ingredients": [
+      "Maida",
+      "Dahi",
+      "Khameer",
+      "Cheeni",
+      "Doodh",
+      "Kalonji"
+    ],
+    "time": 90,
+    "meal_time": [
+      "nashta",
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Maida, khameer, dahi aur doodh se aata gundhein. 2. Garam jagah par 1 ghanta rakhein. 3. Pairay bana kar haath se phailayein. 4. Kalonji chirak kar tandoor ya tawe par lagayein."
+  },
+  {
+    "id": 115,
+    "name": "Makki di Roti",
+    "roman_urdu": "Makki di Roti — Saag ki asal sathi",
+    "ingredients": [
+      "Makai ka Atta",
+      "Namak",
+      "Garam Paani",
+      "Makhan"
+    ],
+    "time": 30,
+    "meal_time": [
+      "nashta",
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Makai ka atta garam paani se gundhein. 2. Haath ya plastic sheet par thap kar phailayein. 3. Tawe par halki aanch par senkein. 4. Makhan laga kar saag ke saath serve karein."
+  },
+  {
+    "id": 116,
+    "name": "Missi Roti",
+    "roman_urdu": "Missi Roti — Besan aur atte ki masaledaar roti",
+    "ingredients": [
+      "Atta",
+      "Besan",
+      "Pyaz",
+      "Ajwain",
+      "Hari Mirch",
+      "Dhania"
+    ],
+    "time": 30,
+    "meal_time": [
+      "nashta",
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Atta aur besan barabar mila lein. 2. Pyaz, ajwain aur mirch shamil karein. 3. Narm aata gundh kar belein. 4. Ghee laga kar tawe par senkein."
+  },
+  {
+    "id": 117,
+    "name": "Mooli Paratha",
+    "roman_urdu": "Mooli Paratha — Sardi ka chatpata paratha",
+    "ingredients": [
+      "Atta",
+      "Mooli",
+      "Hari Mirch",
+      "Dhania",
+      "Ajwain",
+      "Ghee"
+    ],
+    "time": 30,
+    "meal_time": [
+      "nashta",
+      "lunch"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Mooli kaddo kash kar ke namak laga kar nichor lein. 2. Masalay mila kar bharai banayein. 3. Aate mein bhar kar ehtiyat se belein. 4. Ghee laga kar dono taraf senkein."
+  },
+  {
+    "id": 118,
+    "name": "Puri",
+    "roman_urdu": "Puri — Phuli hui garam puri",
+    "ingredients": [
+      "Atta",
+      "Namak",
+      "Tel"
+    ],
+    "time": 25,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Sakht aata gundh kar 15 min rakhein. 2. Chotay pairay bana kar patla belein. 3. Tez garam tel mein daalein. 4. Karchi se dabayein taake phool jaye, palat kar nikaal lein."
+  },
+  {
+    "id": 119,
+    "name": "Laccha Paratha",
+    "roman_urdu": "Laccha Paratha — Parat dar crispy paratha",
+    "ingredients": [
+      "Atta",
+      "Ghee",
+      "Namak",
+      "Doodh"
+    ],
+    "time": 35,
+    "meal_time": [
+      "nashta",
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "roti",
+    "region": "punjab",
+    "recipe": "1. Doodh se narm aata gundhein. 2. Patla bel kar ghee laga kar plait banayein. 3. Goal lapet kar 10 min rakhein. 4. Halka bel kar tawe par ghee ke saath senkein."
+  },
+  {
+    "id": 120,
+    "name": "Samosa",
+    "roman_urdu": "Samosa — Chai ka sab se bara sathi",
+    "ingredients": [
+      "Maida",
+      "Aalu",
+      "Matar",
+      "Zeera",
+      "Dhania",
+      "Hari Mirch"
+    ],
+    "time": 50,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "punjab",
+    "recipe": "1. Aalu aur matar masalon ke saath bhoon lein. 2. Maide ki patli pattiyan bana lein. 3. Cone bana kar bharai bharein aur band karein. 4. Darmiyani aanch par crispy tal lein."
+  },
+  {
+    "id": 121,
+    "name": "Pakora",
+    "roman_urdu": "Pakoray — Baarish aur chai ka perfect jorra",
+    "ingredients": [
+      "Besan",
+      "Aalu",
+      "Pyaz",
+      "Palak",
+      "Hari Mirch",
+      "Ajwain"
+    ],
+    "time": 25,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "punjab",
+    "recipe": "1. Besan ka gaadha ghol banayein. 2. Ajwain, mirch aur masalay milayein. 3. Kati hui sabziyan shamil karein. 4. Garam tel mein sunehri hone tak talein."
+  },
+  {
+    "id": 122,
+    "name": "Aloo Tikki",
+    "roman_urdu": "Aalu Tikki — Crispy bahar, narm andar",
+    "ingredients": [
+      "Aalu",
+      "Corn Flour",
+      "Hari Mirch",
+      "Dhania",
+      "Chaat Masala",
+      "Tel"
+    ],
+    "time": 30,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "punjab",
+    "recipe": "1. Ublay aalu mash kar ke masalay milayein. 2. Corn flour daal kar tikkiyan banayein. 3. 15 min fridge mein rakhein. 4. Shallow fry kar ke chutney ke saath serve karein."
+  },
+  {
+    "id": 123,
+    "name": "Dahi Bhalla",
+    "roman_urdu": "Dahi Bhalay — Thanda aur chatpata Ramzan special",
+    "ingredients": [
+      "Daal Mash",
+      "Dahi",
+      "Imli",
+      "Aalu",
+      "Chana",
+      "Chaat Masala"
+    ],
+    "time": 60,
+    "meal_time": [
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "snacks",
+    "region": "punjab",
+    "recipe": "1. Daal bhigo kar pees lein aur phaint kar halka karein. 2. Bhalay tal kar garam paani mein 10 min bhigoein. 3. Nichor kar dahi mein rakhein. 4. Imli chutney, chana aur chaat masala daal kar thanda serve karein."
+  },
+  {
+    "id": 124,
+    "name": "Bun Kebab",
+    "roman_urdu": "Bun Kebab — Karachi ki gali ka mashhoor bun kebab",
+    "ingredients": [
+      "Bun",
+      "Aalu",
+      "Daal Chana",
+      "Anday",
+      "Pyaz",
+      "Imli Chutney"
+    ],
+    "time": 40,
+    "meal_time": [
+      "chai",
+      "dinner",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "karachi",
+    "recipe": "1. Aalu aur daal chana ki tikki banayein. 2. Tikki ko anday mein dubo kar tawe par senkein. 3. Bun ko makhan laga kar toast karein. 4. Chutney, pyaz aur tikki laga kar serve karein."
+  },
+  {
+    "id": 125,
+    "name": "Chicken Roll",
+    "roman_urdu": "Chicken Paratha Roll — Paratha, chicken aur chutney",
+    "ingredients": [
+      "Paratha",
+      "Chicken",
+      "Pyaz",
+      "Dahi Chutney",
+      "Limu",
+      "Chaat Masala"
+    ],
+    "time": 35,
+    "meal_time": [
+      "chai",
+      "dinner",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "karachi",
+    "recipe": "1. Chicken ko tikka masalon mein bhoon lein. 2. Paratha crispy sekh lein. 3. Chicken, pyaz aur chutney rakh kar lapetein. 4. Chaat masala aur limu chirak kar serve karein."
+  },
+  {
+    "id": 126,
+    "name": "Gol Gappay",
+    "roman_urdu": "Gol Gappay — Teekha imli wala paani",
+    "ingredients": [
+      "Suji",
+      "Imli",
+      "Podina",
+      "Chana",
+      "Aalu",
+      "Kala Namak"
+    ],
+    "time": 60,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "snacks",
+    "region": "punjab",
+    "recipe": "1. Suji ka sakht aata gundh kar chotay goal bel lein. 2. Tez tel mein phula kar tal lein. 3. Imli, podina aur kala namak ka paani banayein. 4. Chana aalu bhar kar paani ke saath serve karein."
+  },
+  {
+    "id": 127,
+    "name": "Fruit Chaat",
+    "roman_urdu": "Fruit Chaat — Iftar ki pehli plate",
+    "ingredients": [
+      "Kela",
+      "Seb",
+      "Anar",
+      "Aam",
+      "Chaat Masala",
+      "Cheeni"
+    ],
+    "time": 15,
+    "meal_time": [
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "snacks",
+    "region": "punjab",
+    "recipe": "1. Sab phal barabar cubes mein kaat lein. 2. Chaat masala aur namak chirak dein. 3. Cheeni aur orange juice daalein. 4. 30 min thanda kar ke serve karein."
+  },
+  {
+    "id": 128,
+    "name": "Masala Fries",
+    "roman_urdu": "Masala Fries — Bachon ka pasandeeda snack",
+    "ingredients": [
+      "Aalu",
+      "Corn Flour",
+      "Chaat Masala",
+      "Lal Mirch",
+      "Tel"
+    ],
+    "time": 25,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "karachi",
+    "recipe": "1. Aalu ki fingers kaat kar thanday paani mein rakhein. 2. Sukha kar corn flour lagayein. 3. Do baar fry karein taake crispy ho. 4. Chaat masala aur lal mirch chirak dein."
+  },
+  {
+    "id": 129,
+    "name": "Spring Roll",
+    "roman_urdu": "Spring Roll — Chicken aur sabziyon wale crispy rolls",
+    "ingredients": [
+      "Spring Roll Patti",
+      "Chicken",
+      "Band Gobi",
+      "Gajar",
+      "Soya Sauce",
+      "Kali Mirch"
+    ],
+    "time": 40,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "karachi",
+    "recipe": "1. Chicken aur sabziyan tez aanch par bhoon lein. 2. Thanda kar ke patti par rakhein. 3. Lapet kar maide ke ghol se band karein. 4. Sunehri hone tak deep fry karein."
+  },
+  {
+    "id": 130,
+    "name": "Shawarma",
+    "roman_urdu": "Shawarma — Chicken aur garlic mayo ka roll",
+    "ingredients": [
+      "Pita Bread",
+      "Chicken",
+      "Mayo",
+      "Lahsan",
+      "Band Gobi",
+      "Pickle"
+    ],
+    "time": 40,
+    "meal_time": [
+      "chai",
+      "dinner",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "snacks",
+    "region": "karachi",
+    "recipe": "1. Chicken ko shawarma masalon mein marinate kar ke bhoonein. 2. Garlic mayo sauce banayein. 3. Pita bread par chicken, gobi aur sauce rakhein. 4. Lapet kar tawe par halka press kar ke senkein."
+  },
+  {
+    "id": 131,
+    "name": "Gulab Jamun",
+    "roman_urdu": "Gulab Jamun — Sheere mein doobay narm gulab jamun",
+    "ingredients": [
+      "Khoya",
+      "Maida",
+      "Cheeni",
+      "Elaichi",
+      "Ghee",
+      "Baking Powder"
+    ],
+    "time": 50,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Khoya aur maida mila kar narm aata banayein. 2. Chikni goliyan bana lein. 3. Halki aanch par sunehri talein. 4. Garam sheere mein 2 ghante bhigo dein."
+  },
+  {
+    "id": 132,
+    "name": "Jalebi",
+    "roman_urdu": "Jalebi — Garam garam rasdaar jalebi",
+    "ingredients": [
+      "Maida",
+      "Dahi",
+      "Cheeni",
+      "Zarda Rang",
+      "Elaichi"
+    ],
+    "time": 45,
+    "meal_time": [
+      "nashta",
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Maida aur dahi ka ghol bana kar 6 ghante khameer uthne dein. 2. Ek taar ka sheera banayein. 3. Ghol ko koan se tel mein goal ghumate hue daalein. 4. Crispy hone par nikaal kar sheere mein 1 min dubo dein."
+  },
+  {
+    "id": 133,
+    "name": "Firni",
+    "roman_urdu": "Firni — Mitti ke pyalay mein thandi firni",
+    "ingredients": [
+      "Doodh",
+      "Pisa Chawal",
+      "Cheeni",
+      "Elaichi",
+      "Pista"
+    ],
+    "time": 40,
+    "meal_time": [
+      "dinner",
+      "iftar"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "meetha",
+    "region": "sindh",
+    "recipe": "1. Chawal bhigo kar barik pees lein. 2. Doodh ubaal kar chawal ka paste daalein. 3. Musalsal hilate hue gaadha karein. 4. Pyalon mein daal kar pista se sajayein aur thanda karein."
+  },
+  {
+    "id": 134,
+    "name": "Zarda",
+    "roman_urdu": "Zarda — Shadi wale meethay peelay chawal",
+    "ingredients": [
+      "Basmati Chawal",
+      "Cheeni",
+      "Zarda Rang",
+      "Khoya",
+      "Kishmish",
+      "Ghee"
+    ],
+    "time": 50,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Chawal rang ke saath 70% ubaal lein. 2. Ghee mein cheeni ka sheera banayein. 3. Chawal, khoya aur mewa jat daalein. 4. Dum par 20 min rakhein."
+  },
+  {
+    "id": 135,
+    "name": "Shahi Tukray",
+    "roman_urdu": "Shahi Tukray — Rabri mein doobay bread ke tukray",
+    "ingredients": [
+      "Bread",
+      "Doodh",
+      "Cheeni",
+      "Khoya",
+      "Badam",
+      "Elaichi"
+    ],
+    "time": 35,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "sindh",
+    "recipe": "1. Bread ke tukray ghee mein sunehri talein. 2. Doodh aur cheeni gaadha kar ke rabri banayein. 3. Bread par rabri daalein. 4. Badam pista chirak kar thanda serve karein."
+  },
+  {
+    "id": 136,
+    "name": "Ras Malai",
+    "roman_urdu": "Ras Malai — Doodh mein terti narm chenay ki tikki",
+    "ingredients": [
+      "Doodh",
+      "Sirka",
+      "Cheeni",
+      "Elaichi",
+      "Pista",
+      "Cream"
+    ],
+    "time": 60,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Doodh phaar kar chena banayein aur achi tarah masal lein. 2. Chapti tikkiyan bana kar cheeni ke paani mein 15 min ubaalein. 3. Gaadha meetha doodh taiyar karein. 4. Tikkiyan doodh mein daal kar thanda karein."
+  },
+  {
+    "id": 137,
+    "name": "Kulfi",
+    "roman_urdu": "Kulfi — Garmi ki asal thandak",
+    "ingredients": [
+      "Doodh",
+      "Cheeni",
+      "Khoya",
+      "Badam",
+      "Elaichi"
+    ],
+    "time": 40,
+    "meal_time": [
+      "chai",
+      "dinner",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Doodh ko aadha hone tak ubaalein. 2. Cheeni aur khoya daal kar gaadha karein. 3. Badam aur elaichi shamil karein. 4. Molds mein daal kar 6 ghante jamayein."
+  },
+  {
+    "id": 138,
+    "name": "Sheer Khurma",
+    "roman_urdu": "Sheer Khurma — Eid ki subah ki pehchan",
+    "ingredients": [
+      "Seviyan",
+      "Doodh",
+      "Khajoor",
+      "Cheeni",
+      "Badam",
+      "Pista"
+    ],
+    "time": 45,
+    "meal_time": [
+      "nashta",
+      "chai"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "sindh",
+    "recipe": "1. Seviyan ghee mein sunehri bhoonein. 2. Doodh ubaal kar gaadha karein. 3. Seviyan, khajoor aur cheeni daalein. 4. 15 min pakayein aur mewa jat daal kar serve karein."
+  },
+  {
+    "id": 139,
+    "name": "Besan ka Halwa",
+    "roman_urdu": "Besan ka Halwa — Sardi ka taqat wala halwa",
+    "ingredients": [
+      "Besan",
+      "Ghee",
+      "Cheeni",
+      "Doodh",
+      "Elaichi",
+      "Badam"
+    ],
+    "time": 40,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Ghee mein besan halki aanch par 20 min bhoonein. 2. Khushbu aane par doodh daalein. 3. Cheeni mila kar gaadha karein. 4. Elaichi aur badam daal kar serve karein."
+  },
+  {
+    "id": 140,
+    "name": "Anday ka Halwa",
+    "roman_urdu": "Anday ka Halwa — Sardi ki raat ka garam halwa",
+    "ingredients": [
+      "Anday",
+      "Doodh",
+      "Cheeni",
+      "Ghee",
+      "Khoya",
+      "Elaichi"
+    ],
+    "time": 45,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Anday, doodh aur cheeni phaint lein. 2. Ghee garam kar ke ghol daalein. 3. Musalsal hilate hue pakayein. 4. Khoya daal kar danedar hone tak bhoonein."
+  },
+  {
+    "id": 141,
+    "name": "Moong Daal Halwa",
+    "roman_urdu": "Moong Daal ka Halwa — Mehnat wala magar lajawab",
+    "ingredients": [
+      "Daal Moong",
+      "Ghee",
+      "Cheeni",
+      "Doodh",
+      "Khoya",
+      "Elaichi"
+    ],
+    "time": 70,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Daal bhigo kar darda pees lein. 2. Ghee mein 40 min halki aanch par bhoonein. 3. Doodh aur cheeni daal kar pakayein. 4. Khoya aur mewa daal kar utaar lein."
+  },
+  {
+    "id": 142,
+    "name": "Gajrela",
+    "roman_urdu": "Gajrela — Gajar aur chawal ki meethi kheer",
+    "ingredients": [
+      "Gajar",
+      "Doodh",
+      "Basmati Chawal",
+      "Cheeni",
+      "Khoya",
+      "Elaichi"
+    ],
+    "time": 60,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Gajar kaddo kash kar ke doodh mein pakayein. 2. Chawal daal kar galne dein. 3. Cheeni aur khoya shamil karein. 4. Gaadha hone tak pakayein aur mewa daalein."
+  },
+  {
+    "id": 143,
+    "name": "Sohan Halwa",
+    "roman_urdu": "Sohan Halwa — Multan ka mashhoor tohfa",
+    "ingredients": [
+      "Gandum",
+      "Cheeni",
+      "Ghee",
+      "Badam",
+      "Pista",
+      "Doodh"
+    ],
+    "time": 90,
+    "meal_time": [
+      "chai"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Gandum bhigo kar uska paani nikaal lein. 2. Cheeni ka gaadha sheera banayein. 3. Gandum ka paani daal kar musalsal hilayein. 4. Ghee daal kar gaadha karein, mewa daal kar thali mein phailayein."
+  },
+  {
+    "id": 144,
+    "name": "Besan Ladoo",
+    "roman_urdu": "Besan Ladoo — Ghar ki mithai",
+    "ingredients": [
+      "Besan",
+      "Ghee",
+      "Pisi Cheeni",
+      "Elaichi",
+      "Badam"
+    ],
+    "time": 40,
+    "meal_time": [
+      "chai"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Besan ghee mein 25 min bhoonein. 2. Thanda hone dein. 3. Pisi cheeni aur elaichi milayein. 4. Haath se goal ladoo bandh lein."
+  },
+  {
+    "id": 145,
+    "name": "Meethi Seviyan",
+    "roman_urdu": "Meethi Seviyan — Eid ka jhat pat meetha",
+    "ingredients": [
+      "Seviyan",
+      "Ghee",
+      "Cheeni",
+      "Elaichi",
+      "Nariyal",
+      "Kishmish"
+    ],
+    "time": 25,
+    "meal_time": [
+      "nashta",
+      "chai"
+    ],
+    "occasion": [
+      "ghar",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "meetha",
+    "region": "punjab",
+    "recipe": "1. Seviyan ghee mein sunehri bhoonein. 2. Paani aur cheeni daalein. 3. Dhak kar 10 min pakayein. 4. Nariyal aur kishmish daal kar dum dein."
+  },
+  {
+    "id": 146,
+    "name": "Lassi",
+    "roman_urdu": "Lassi — Punjab ki thandi meethi lassi",
+    "ingredients": [
+      "Dahi",
+      "Cheeni",
+      "Barf",
+      "Doodh"
+    ],
+    "time": 10,
+    "meal_time": [
+      "nashta",
+      "lunch",
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "mashroob",
+    "region": "punjab",
+    "recipe": "1. Thanda dahi blender mein daalein. 2. Cheeni aur thora doodh milayein. 3. Barf ke saath 2 min blend karein. 4. Malai daal kar barre glass mein serve karein."
+  },
+  {
+    "id": 147,
+    "name": "Namkeen Lassi",
+    "roman_urdu": "Namkeen Lassi — Bhuna zeera aur podine wali lassi",
+    "ingredients": [
+      "Dahi",
+      "Namak",
+      "Bhuna Zeera",
+      "Podina",
+      "Barf"
+    ],
+    "time": 10,
+    "meal_time": [
+      "lunch",
+      "chai"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "mashroob",
+    "region": "punjab",
+    "recipe": "1. Dahi ko paani ke saath phaint lein. 2. Namak aur bhuna zeera daalein. 3. Podine ke patay shamil karein. 4. Barf daal kar thanda serve karein."
+  },
+  {
+    "id": 148,
+    "name": "Mango Lassi",
+    "roman_urdu": "Aam wali Lassi — Garmiyon ka best combo",
+    "ingredients": [
+      "Aam",
+      "Dahi",
+      "Doodh",
+      "Cheeni",
+      "Barf"
+    ],
+    "time": 10,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "mashroob",
+    "region": "punjab",
+    "recipe": "1. Pakay aam ka gooda nikaal lein. 2. Dahi aur doodh ke saath blend karein. 3. Cheeni haisiyat se daalein. 4. Barf daal kar foran serve karein."
+  },
+  {
+    "id": 149,
+    "name": "Kashmiri Chai",
+    "roman_urdu": "Gulabi Chai — Sardi ki gulabi Kashmiri chai",
+    "ingredients": [
+      "Kashmiri Patti",
+      "Doodh",
+      "Meetha Soda",
+      "Namak",
+      "Pista",
+      "Badam"
+    ],
+    "time": 45,
+    "meal_time": [
+      "chai"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "mashroob",
+    "region": "kashmir",
+    "recipe": "1. Patti ko meethay soday ke saath 20 min ubaalein. 2. Thanda paani daal kar rang gehra karein. 3. Garam doodh mila kar phentein. 4. Pista badam daal kar garam serve karein."
+  },
+  {
+    "id": 150,
+    "name": "Doodh Patti",
+    "roman_urdu": "Doodh Patti — Sirf doodh ki gaadhi chai",
+    "ingredients": [
+      "Doodh",
+      "Chai Patti",
+      "Cheeni",
+      "Elaichi"
+    ],
+    "time": 15,
+    "meal_time": [
+      "nashta",
+      "chai"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "mashroob",
+    "region": "karachi",
+    "recipe": "1. Doodh ubaalein, paani bilkul na daalein. 2. Patti aur elaichi daal kar 8 min pakayein. 3. Cheeni mila kar 2 min aur ubaalein. 4. Chaan kar garam serve karein."
+  },
+  {
+    "id": 151,
+    "name": "Masala Chai",
+    "roman_urdu": "Masala Chai — Adrak elaichi wali desi chai",
+    "ingredients": [
+      "Chai Patti",
+      "Doodh",
+      "Adrak",
+      "Elaichi",
+      "Laung",
+      "Cheeni"
+    ],
+    "time": 15,
+    "meal_time": [
+      "nashta",
+      "chai"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "mashroob",
+    "region": "punjab",
+    "recipe": "1. Paani mein adrak, elaichi aur laung ubaalein. 2. Chai patti daal kar 3 min pakayein. 3. Doodh aur cheeni daalein. 4. Ubaal aane par chaan kar serve karein."
+  },
+  {
+    "id": 152,
+    "name": "Qahwa",
+    "roman_urdu": "Qahwa — Khaane ke baad hazam wali sabz chai",
+    "ingredients": [
+      "Sabz Patti",
+      "Elaichi",
+      "Zafran",
+      "Shehad",
+      "Badam"
+    ],
+    "time": 10,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "mashroob",
+    "region": "kpk",
+    "recipe": "1. Paani ubaal kar sabz patti daalein. 2. Elaichi aur zafran shamil karein. 3. 5 min dam dein. 4. Shehad aur badam daal kar chaan lein."
+  },
+  {
+    "id": 153,
+    "name": "Sattu",
+    "roman_urdu": "Sattu — Garmi ka thanda taqatwar sharbat",
+    "ingredients": [
+      "Sattu Powder",
+      "Cheeni",
+      "Doodh",
+      "Barf",
+      "Elaichi"
+    ],
+    "time": 10,
+    "meal_time": [
+      "chai",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "summer"
+    ],
+    "category": "mashroob",
+    "region": "punjab",
+    "recipe": "1. Sattu ko thanday doodh mein ghol lein. 2. Cheeni mila kar achi tarah phentein. 3. Elaichi powder daalein. 4. Barf daal kar foran piyein."
+  },
+  {
+    "id": 154,
+    "name": "Badam Milk",
+    "roman_urdu": "Badam Doodh — Sardi mein taqat ka doodh",
+    "ingredients": [
+      "Doodh",
+      "Badam",
+      "Pista",
+      "Cheeni",
+      "Zafran",
+      "Elaichi"
+    ],
+    "time": 20,
+    "meal_time": [
+      "nashta",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "mashroob",
+    "region": "punjab",
+    "recipe": "1. Badam bhigo kar chheel lein. 2. Thoray doodh ke saath pees lein. 3. Baqi doodh mein daal kar ubaalein. 4. Zafran aur cheeni daal kar garam serve karein."
+  },
+  {
+    "id": 155,
+    "name": "Chapshoro",
+    "roman_urdu": "Chapshoro — Hunza ka gosht bhara pizza jaisa bread",
+    "ingredients": [
+      "Atta",
+      "Beef Keema",
+      "Pyaz",
+      "Hari Mirch",
+      "Tamatar",
+      "Namak"
+    ],
+    "time": 60,
+    "meal_time": [
+      "chai",
+      "dinner",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "roti",
+    "region": "gilgit",
+    "recipe": "1. Keema, pyaz aur mirch kacha hi mila lein. 2. Aate ki do roti bel lein. 3. Ek par keema rakh kar doosri se dhak kar kinare band karein. 4. Tawe par halki aanch par dono taraf 20 min senkein."
+  },
+  {
+    "id": 156,
+    "name": "Mamtu",
+    "roman_urdu": "Mamtu — Bhaap par pakay keeme ke dumplings",
+    "ingredients": [
+      "Maida",
+      "Beef Keema",
+      "Pyaz",
+      "Lahsan",
+      "Kali Mirch",
+      "Namak"
+    ],
+    "time": 50,
+    "meal_time": [
+      "chai",
+      "dinner",
+      "iftar"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "snacks",
+    "region": "gilgit",
+    "recipe": "1. Maide ki patli goal pattiyan bel lein. 2. Keema aur pyaz ka masala bharein. 3. Potli ki tarah band karein. 4. Steamer mein 25 min bhaap dein, dahi sauce ke saath serve karein."
+  },
+  {
+    "id": 157,
+    "name": "Balochi Sajji",
+    "roman_urdu": "Sajji — Namak aur koelon par pakka poora chicken",
+    "ingredients": [
+      "Sabut Chicken",
+      "Namak",
+      "Papita",
+      "Limu",
+      "Chawal"
+    ],
+    "time": 100,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "balochistan",
+    "recipe": "1. Chicken par cuts laga kar sirf namak aur papita lagayein. 2. 3 ghante rakhein. 3. Seekh par laga kar koelon ke gird ahista ghumayein. 4. Chatni aur sajji chawal ke saath serve karein."
+  },
+  {
+    "id": 158,
+    "name": "Rosh",
+    "roman_urdu": "Balochi Rosh — Apni charbi mein paka gosht",
+    "ingredients": [
+      "Mutton",
+      "Namak",
+      "Charbi",
+      "Paani"
+    ],
+    "time": 120,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "balochistan",
+    "recipe": "1. Gosht ko barre tukron mein kaat lein. 2. Degchi mein charbi aur namak ke saath rakhein. 3. Dhak kar 2 ghante halki aanch par galayein. 4. Koi masala na daalein, kaak ke saath serve karein."
+  },
+  {
+    "id": 159,
+    "name": "Koki",
+    "roman_urdu": "Koki — Sindhi nashte ki motti roti",
+    "ingredients": [
+      "Atta",
+      "Pyaz",
+      "Hari Mirch",
+      "Dhania",
+      "Anardana",
+      "Ghee"
+    ],
+    "time": 30,
+    "meal_time": [
+      "nashta",
+      "chai"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "nashta",
+    "region": "sindh",
+    "recipe": "1. Atte mein pyaz, mirch aur masalay mila kar gundhein. 2. Motti roti bel kar halka sekh lein. 3. Dobara masal kar phir se belein. 4. Ghee laga kar dono taraf crispy senkein."
+  },
+  {
+    "id": 160,
+    "name": "Dal Pakwan",
+    "roman_urdu": "Dal Pakwan — Sindhi nashta, chana daal aur crispy pakwan",
+    "ingredients": [
+      "Daal Chana",
+      "Maida",
+      "Zeera",
+      "Imli",
+      "Hari Mirch",
+      "Tel"
+    ],
+    "time": 50,
+    "meal_time": [
+      "nashta"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "nashta",
+    "region": "sindh",
+    "recipe": "1. Daal chana masalon ke saath gala lein. 2. Maide ki sakht roti bel kar kaante se cheed karein. 3. Crispy pakwan tal lein. 4. Daal upar daal kar imli chutney ke saath serve karein."
+  },
+  {
+    "id": 161,
+    "name": "Shinwari Karahi",
+    "roman_urdu": "Shinwari Karahi — Sirf gosht, namak aur tamatar",
+    "ingredients": [
+      "Mutton",
+      "Tamatar",
+      "Namak",
+      "Hari Mirch",
+      "Charbi"
+    ],
+    "time": 50,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "kpk",
+    "recipe": "1. Charbi pighla kar gosht daalein. 2. Sirf namak daal kar apne paani mein galayein. 3. Tamatar daal kar dhak dein. 4. Hari mirch daal kar tez aanch par bhoonein."
+  },
+  {
+    "id": 162,
+    "name": "Kashmiri Yakhni",
+    "roman_urdu": "Yakhni — Dahi aur saunf wala safed shorba",
+    "ingredients": [
+      "Mutton",
+      "Dahi",
+      "Saunf Powder",
+      "Adrak Powder",
+      "Elaichi",
+      "Ghee"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "kashmir",
+    "recipe": "1. Gosht ko ghee aur elaichi ke saath bhoonein. 2. Phenta hua dahi ahista daalein. 3. Saunf aur adrak powder shamil karein. 4. 45 min halki aanch par galayein, rang safed rakhein."
+  },
+  {
+    "id": 163,
+    "name": "Seyal Mani",
+    "roman_urdu": "Seyal Mani — Sindhi bachi hui roti ka lajawab istemal",
+    "ingredients": [
+      "Baasi Roti",
+      "Tamatar",
+      "Pyaz",
+      "Hari Mirch",
+      "Dhania",
+      "Haldi"
+    ],
+    "time": 30,
+    "meal_time": [
+      "nashta",
+      "lunch"
+    ],
+    "occasion": [
+      "ghar"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "nashta",
+    "region": "sindh",
+    "recipe": "1. Roti ke chotay tukray kar lein. 2. Pyaz, tamatar aur haldi ka masala bhoonein. 3. Roti daal kar mila dein. 4. Thora paani chirak kar 10 min dum dein."
+  },
+  {
+    "id": 164,
+    "name": "Charsi Karahi",
+    "roman_urdu": "Charsi Karahi — Peshawar ki mashhoor charbi wali karahi",
+    "ingredients": [
+      "Mutton",
+      "Tamatar",
+      "Namak",
+      "Hari Mirch",
+      "Dumbay ki Charbi",
+      "Kali Mirch"
+    ],
+    "time": 55,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "kpk",
+    "recipe": "1. Dumbay ki charbi pighlayein. 2. Gosht daal kar namak ke saath bhoonein. 3. Tamatar daal kar dhak dein aur galne dein. 4. Kali mirch aur hari mirch daal kar bhoon kar utaar lein."
+  },
+  {
+    "id": 165,
+    "name": "Dampukht",
+    "roman_urdu": "Dampukht — Band degchi mein apne rus mein paka gosht",
+    "ingredients": [
+      "Mutton",
+      "Pyaz",
+      "Dahi",
+      "Sabut Garam Masala",
+      "Ghee",
+      "Atta"
+    ],
+    "time": 90,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "kpk",
+    "recipe": "1. Gosht, pyaz, dahi aur sabut masalay degchi mein rakhein. 2. Dhakkan atte se seal kar dein. 3. Bohat halki aanch par 75 min pakayein. 4. Seal khol kar naan ke saath serve karein."
+  },
+  {
+    "id": 166,
+    "name": "Kaak",
+    "roman_urdu": "Kaak — Pathar par paki Balochi sakht roti",
+    "ingredients": [
+      "Atta",
+      "Namak",
+      "Paani",
+      "Ghee"
+    ],
+    "time": 60,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "roti",
+    "region": "balochistan",
+    "recipe": "1. Atta sakht gundh kar 30 min rakhein. 2. Garam pathar ya matke ke upar aata lapetein. 3. Koelon ki aanch par ahista pakayein. 4. Sakht aur crispy hone par utaar kar sajji ya rosh ke saath torein."
+  },
+  {
+    "id": 167,
+    "name": "Landhi",
+    "roman_urdu": "Landhi — Sardi ke liye sukhaya hua poora gosht",
+    "ingredients": [
+      "Dumba Gosht",
+      "Namak",
+      "Paani"
+    ],
+    "time": 120,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "balochistan",
+    "recipe": "1. Poore dumbay ko namak laga kar 20 din khushk hawa mein latka dein. 2. Sukhay gosht ke tukray kaat lein. 3. Degchi mein paani ke saath 90 min galayein. 4. Kaak ke saath garam serve karein, masala bilkul na daalein."
+  },
+  {
+    "id": 168,
+    "name": "Khaddi Kebab",
+    "roman_urdu": "Khaddi Kebab — Zameen ke gaddhe mein paka bhara hua dumba",
+    "ingredients": [
+      "Sabut Dumba",
+      "Basmati Chawal",
+      "Namak",
+      "Kali Mirch",
+      "Badam",
+      "Kishmish"
+    ],
+    "time": 240,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "bbq",
+    "region": "balochistan",
+    "recipe": "1. Dumbay ke pet mein chawal, mewa aur namak bhar kar silai kar dein. 2. Zameen mein gaddha khod kar koelay bharein. 3. Dumba latka kar dhak dein aur 3 ghante pakne dein. 4. Nikaal kar kaak ke saath serve karein."
+  },
+  {
+    "id": 169,
+    "name": "Balochi Pulao",
+    "roman_urdu": "Balochi Pulao — Halka, khushbudar dumbay ka pulao",
+    "ingredients": [
+      "Dumba Gosht",
+      "Basmati Chawal",
+      "Pyaz",
+      "Sabut Garam Masala",
+      "Namak",
+      "Ghee"
+    ],
+    "time": 75,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "balochistan",
+    "recipe": "1. Gosht aur sabut masalon ki yakhni banayein. 2. Yakhni chaan kar gosht alag rakhein. 3. Pyaz halka golden kar ke chawal bhoonein. 4. Yakhni daal kar dum par 25 min pakayein, masala kam rakhein."
+  },
+  {
+    "id": 170,
+    "name": "Sohbat",
+    "roman_urdu": "Sohbat — Shorbay mein bhigi roti aur gosht, mil kar khane wali dish",
+    "ingredients": [
+      "Mutton",
+      "Roti",
+      "Pyaz",
+      "Namak",
+      "Kali Mirch",
+      "Ghee"
+    ],
+    "time": 90,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "balochistan",
+    "recipe": "1. Gosht ko namak aur pyaz ke saath 1 ghanta galayein. 2. Roti ke tukray bara thaal mein bichayein. 3. Garam shorba upar daal kar bhignay dein. 4. Gosht upar rakh kar sab mil kar ek thaal se khayein."
+  },
+  {
+    "id": 171,
+    "name": "Balochi Tikka",
+    "roman_urdu": "Balochi Tikka — Sirf namak aur koelay, koi masala nahi",
+    "ingredients": [
+      "Mutton",
+      "Namak",
+      "Charbi",
+      "Kali Mirch"
+    ],
+    "time": 45,
+    "meal_time": [
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "bbq",
+    "region": "balochistan",
+    "recipe": "1. Gosht ke tukray seekh par charbi ke saath lagayein. 2. Sirf namak chirak dein. 3. Koelon par ahista ghumate hue senkein. 4. Kali mirch daal kar kaak ke saath garam serve karein."
+  },
+  {
+    "id": 172,
+    "name": "Sajji Chawal",
+    "roman_urdu": "Sajji Chawal — Sajji ke saath milnay wale khushbudar chawal",
+    "ingredients": [
+      "Basmati Chawal",
+      "Ghee",
+      "Namak",
+      "Sabut Zeera",
+      "Kali Mirch"
+    ],
+    "time": 35,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "chawal",
+    "region": "balochistan",
+    "recipe": "1. Chawal 30 min bhigo dein. 2. Ghee mein sabut zeera aur kali mirch bhoonein. 3. Chawal daal kar halka bhoonein. 4. Namak wala paani daal kar dum par 20 min pakayein."
+  },
+  {
+    "id": 173,
+    "name": "Tabahag",
+    "roman_urdu": "Tabahag — Apni charbi mein bhuna hua khushk gosht",
+    "ingredients": [
+      "Mutton",
+      "Charbi",
+      "Namak",
+      "Kali Mirch",
+      "Hari Mirch"
+    ],
+    "time": 70,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "winter"
+    ],
+    "category": "gosht",
+    "region": "balochistan",
+    "recipe": "1. Charbi degchi mein pighlayein. 2. Gosht ke tukray daal kar namak chirak dein. 3. Dhak kar apne paani mein 45 min galayein. 4. Paani khushk hone par tez aanch par bhoon kar surkh karein."
+  },
+  {
+    "id": 174,
+    "name": "Balochi Kurma",
+    "roman_urdu": "Balochi Kurma — Pyaz aur dahi wala sada qorma",
+    "ingredients": [
+      "Mutton",
+      "Pyaz",
+      "Dahi",
+      "Adrak",
+      "Namak",
+      "Ghee"
+    ],
+    "time": 80,
+    "meal_time": [
+      "lunch",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman",
+      "khaas"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "gosht",
+    "region": "balochistan",
+    "recipe": "1. Pyaz ghee mein golden karein. 2. Gosht daal kar namak ke saath bhoonein. 3. Phenta hua dahi ahista daalein. 4. Halki aanch par 50 min galayein, garam masala bilkul na daalein."
+  },
+  {
+    "id": 175,
+    "name": "Quetta Sabz Chai",
+    "roman_urdu": "Quetta Sabz Chai — Elaichi wali sabz chai, khane ke baad",
+    "ingredients": [
+      "Sabz Patti",
+      "Elaichi",
+      "Cheeni",
+      "Paani"
+    ],
+    "time": 10,
+    "meal_time": [
+      "chai",
+      "dinner"
+    ],
+    "occasion": [
+      "ghar",
+      "mehman"
+    ],
+    "season": [
+      "all"
+    ],
+    "category": "mashroob",
+    "region": "balochistan",
+    "recipe": "1. Paani ubaalein aur sabz patti daalein. 2. Elaichi kootkar shamil karein. 3. Dhak kar 5 min dam dein. 4. Cheeni mila kar chotay pyalon mein chaan kar piyein."
+  }
+]

@@ -134,13 +134,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);mi
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}.toast.err{background:var(--red)}
 @media(max-width:480px){.hero{padding:48px 14px 40px}.wrap{padding:0 13px}.card{padding:16px}}
 </style>
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#E8A818">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Dasturkhwan">
-<link rel="apple-touch-icon" href="https://img.icons8.com/emoji/192/pot-of-food.png">
 </head>
 <body>
 <nav class="nav">
@@ -358,6 +351,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);mi
       <label class="lbl">WhatsApp Number</label>
       <input class="fi" id="regPhone" placeholder="03xxxxxxxxx" type="tel">
     </div>
+    <div class="fgrp">
+      <label class="lbl">Kitne Baje Message Aaye</label>
+      <input class="fi" type="time" id="regTime" value="08:00">
+    </div>
     <button class="btn btn-gold" onclick="registerUser()" id="regBtn">Register Karo</button>
     <div id="regStatus" style="margin-top:10px;font-size:13px;text-align:center;color:var(--green);display:none"></div>
   </div>
@@ -374,7 +371,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--cream);mi
 
   <div class="card">
     <div class="clabel">Registered Users</div>
-    <div id="usersList" style="font-size:13px;color:var(--green)"></div>
+    <div id="usersList" style="font-size:13px;color:var(--muted)">Load ho raha hai...</div>
   </div>
 
 </div>
@@ -584,7 +581,7 @@ function renderWA(){
 async function registerUser(){
   const name=document.getElementById('regName').value.trim();
   const phone=document.getElementById('regPhone').value.trim();
-  const time='08:00';
+  const time=document.getElementById('regTime').value;
   if(!phone){toast('Number daalo!',true);return;}
   const btn=document.getElementById('regBtn');
   btn.disabled=true;btn.textContent='Register ho raha hai...';
@@ -612,7 +609,7 @@ async function loadUsers(){
     const r=await fetch('https://dasturkhwan.onrender.com/users');
     const users=await r.json();
     if(!users.length){el.innerHTML='Koi user registered nahi abhi';return;}
-    el.innerHTML='✅ '+users.length+' log registered hain';
+    el.innerHTML=users.map(u=>`<div class="mr"><div class="mn">${u.name||'User'}</div><div class="md">${u.time} baje</div></div>`).join('');
   }catch(e){el.textContent='Load nahi ho saka';}
 }
 async function enableNotif(){if(!('Notification'in window)){toast('Support nahi',true);return;}const per=await Notification.requestPermission();if(per==='granted'){toast('Enabled!');}else toast('Permission nahi mili',true);renderWA();}
@@ -623,12 +620,6 @@ window.onload=function(){
   const wn=document.getElementById('waNum');if(wn&&p.wa)wn.value=p.wa;
   renderHome();updateSeason();
 };
-</script>
-
-<script>
-if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js');
-}
 </script>
 </body>
 </html>
