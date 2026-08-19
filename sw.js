@@ -1,5 +1,5 @@
 /* Dasturkhwan Service Worker v3 — offline-first */
-const CACHE = 'dasturkhwan-v3';
+const CACHE = 'dasturkhwan-v4';
 const FILES = [
   '/', '/index.html', '/engine.js', '/dishes.json',
   '/manifest.json', '/icon-192.png', '/icon-512.png'
@@ -24,14 +24,6 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
-
-  // Backend routes always go to network — never serve stale user data
-  if (['/register', '/users', '/check', '/test'].some(p => url.pathname.startsWith(p))) {
-    e.respondWith(fetch(e.request).catch(() =>
-      new Response(JSON.stringify({ error: 'offline' }),
-        { headers: { 'Content-Type': 'application/json' } })));
-    return;
-  }
 
   // dishes.json: network-first so updates land, cache as fallback
   if (url.pathname.endsWith('dishes.json')) {
