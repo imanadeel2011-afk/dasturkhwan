@@ -9,7 +9,7 @@ Unlimited users, free forever.
 
 import os
 import json
-from flask import Flask, jsonify, send_file, send_from_directory
+from flask import Flask, jsonify, request, send_file, send_from_directory
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -46,6 +46,18 @@ def health():
 @app.route('/<path:filename>')
 def serve_any_file(filename):
     return send_from_directory(HERE, filename)
+
+
+@app.after_request
+def no_cache(resp):
+    """Browsers were serving a stale copy of the app. Tell them not to
+    cache the HTML/JS/JSON so an update always lands immediately."""
+    p = (request.path or '')
+    if p == '/' or p.endswith(('.html', '.js', '.json')):
+        resp.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+        resp.headers['Pragma'] = 'no-cache'
+        resp.headers['Expires'] = '0'
+    return resp
 
 
 if __name__ == '__main__':
