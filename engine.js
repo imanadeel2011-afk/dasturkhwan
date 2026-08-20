@@ -71,16 +71,44 @@ const ING_ALIAS = {
   'tinda':['tinda'], 'arvi':['arvi'], 'methi':['methi'],
 };
 
+/* Words too generic to identify an ingredient on their own.
+   "Shimla Mirch" must not match "Lal Mirch" just because both say mirch. */
+const WEAK_ING_WORDS = new Set(['mirch','masala','atta','daal','powder','ka','ki','sabut','pisa','pisi']);
+
 function ingMatch(userIng, dishIng) {
   const u = norm(userIng), di = norm(dishIng);
   if (!u || !di) return false;
+
+  if (di === u) return true;
+
+  /* A bare weak word ("Atta") must match exactly — otherwise every
+     Atta dish matches "Makai ka Atta", which is a different thing. */
+  const diBare = di.split(' ').length === 1 && WEAK_ING_WORDS.has(di);
+  const uBare  = u.split(' ').length === 1 && WEAK_ING_WORDS.has(u);
+  if (diBare || uBare) {
+    if (di !== u) {
+      const alts0 = ING_ALIAS[u] || [];
+      if (alts0.indexOf(di) === -1) return false;
+      return true;
+    }
+  }
+
   if (di.includes(u) || u.includes(di)) return true;
+
   const alts = ING_ALIAS[u] || [];
-  for (const a of alts) if (di.includes(a) || a.includes(di)) return true;
-  const ut = u.split(' '), dt = di.split(' ');
-  for (const x of ut) for (const y of dt)
-    if (x.length >= 4 && y.length >= 4 && lev(x, y) <= 1) return true;
-  return false;
+  for (const a of alts) if (di === a || di.includes(a) || a.includes(di)) return true;
+
+  const ut = u.split(' ').filter(function (w) { return w.length >= 3; });
+  const dt = di.split(' ').filter(function (w) { return w.length >= 3; });
+  if (!ut.length || !dt.length) return false;
+
+  /* every distinctive word in the user's ingredient must be present */
+  const strong = ut.filter(function (w) { return !WEAK_ING_WORDS.has(w); });
+  const need = strong.length ? strong : ut;
+
+  return need.every(function (x) {
+    return dt.some(function (y) { return x === y || (x.length >= 5 && lev(x, y) <= 1); });
+  });
 }
 
 /* ---------------- LOAD ---------------- */
@@ -200,8 +228,20 @@ function suggestMulti(opts, count) {
   const slot   = opts.mealTime || currentSlot();
   const seen   = recent();
 
+  /* If what the user has is mostly baking/dessert items, desserts must
+     be allowed — otherwise "Doodh + Cheeni + Elaichi" returns a paratha. */
+  const SWEET_ING = ['cheeni','khoya','doodh','elaichi','badam','pista','kishmish',
+                     'nariyal','khajoor','seviyan','suji','gur','bread','zarda rang'];
+  const picked = (opts.ingredients || []).map(norm);
+  const sweetHits = picked.filter(function (x) { return SWEET_ING.indexOf(x) > -1; }).length;
+  const sweetMode = picked.length > 0 && sweetHits >= Math.ceil(picked.length * 0.6);
+
   const scored = DISHES
-    .filter(function (d) { return d.category !== 'meetha' && d.category !== 'mashroob'; })
+    .filter(function (d) {
+      if (d.category === 'mashroob') return false;
+      if (d.category === 'meetha')   return sweetMode;   // desserts only when asked for
+      return !sweetMode;                                  // sweet mode = sweet answers
+    })
     .map(function (d) { return { d: d, s: scoreDish(d, opts, season, slot, seen, opts.avoid) }; })
     .sort(function (a,b) { return b.s - a.s; });
 
@@ -608,4 +648,438 @@ function stripWhatsAppUI() {
 document.addEventListener('DOMContentLoaded', function () {
   stripWhatsAppUI();
   setTimeout(stripWhatsAppUI, 400);   // catch anything rendered late
+});
+
+/* ============================================================
+   INGREDIENT EXPANSION + USABILITY  (v6)
+   Adds the ingredients that actually appear in dishes.json but
+   had no checkbox — Dahi alone is in 34 dishes. Plus a selection
+   counter, quick-picks and a Clear button.
+   All injected here so index.html needs no editing.
+   ============================================================ */
+
+/* New aliases for the ingredients being added */
+Object.assign(ING_ALIAS, {
+  'makai ka atta': ['makai', 'makki'],
+  'jhinga':        ['jhinga'],
+  'band gobi':     ['band gobi'],
+  'shimla mirch':  ['shimla'],
+  'dahi':          ['dahi', 'yogurt'],
+  'makhan':        ['makhan', 'butter'],
+  'seviyan':       ['seviyan'],
+  'suji':          ['suji', 'sooji'],
+  'maida':         ['maida'],
+  'nariyal':       ['nariyal', 'coconut'],
+  'khajoor':       ['khajoor', 'dates'],
+  'elaichi':       ['elaichi'],
+  'badam':         ['badam'],
+  'pista':         ['pista'],
+  'kishmish':      ['kishmish'],
+  'hari mirch':    ['hari mirch'],
+  'podina':        ['podina'],
+  'dhania':        ['dhania'],
+  'imli':          ['imli'],
+  'paneer':        ['paneer'],
+  'cream':         ['cream'],
+  'gandum':        ['gandum'],
+  'bread':         ['bread'],
+  'paye':          ['paye', 'siri']
+});
+
+/* [id, label, value] — value must match dishes.json spelling */
+const NEW_INGREDIENTS = {
+  'gosht': [
+    ['i_jh', 'Jhinga',  'Jhinga'],
+    ['i_py2','Paye',    'Paye']
+  ],
+  'sabzi': [
+    ['i_sm', 'Shimla Mirch', 'Shimla Mirch'],
+    ['i_bgb','Band Gobi',    'Band Gobi']
+  ],
+  'anaj': [
+    ['i_mka','Makai ka Atta', 'Makai ka Atta'],
+    ['i_md', 'Maida',         'Maida'],
+    ['i_sj', 'Suji',          'Suji'],
+    ['i_gnd','Gandum',        'Gandum']
+  ],
+  'meetha': [
+    ['i_el', 'Elaichi',  'Elaichi'],
+    ['i_bd', 'Badam',    'Badam'],
+    ['i_ps', 'Pista',    'Pista'],
+    ['i_ksh','Kishmish', 'Kishmish'],
+    ['i_nry','Nariyal',  'Nariyal'],
+    ['i_khj','Khajoor',  'Khajoor'],
+    ['i_svy','Seviyan',  'Seviyan'],
+    ['i_brd','Bread',    'Bread']
+  ]
+};
+
+/* Two brand-new sections */
+const NEW_SECTIONS = [
+  { title: 'Dairy', after: 'meetha', items: [
+    ['i_dh', 'Dahi',   'Dahi'],
+    ['i_crm','Cream',  'Cream'],
+    ['i_mkn','Makhan', 'Makhan'],
+    ['i_pnr','Paneer', 'Paneer']
+  ]},
+  { title: 'Masalay aur Herbs', after: 'dairy', items: [
+    ['i_hm', 'Hari Mirch', 'Hari Mirch'],
+    ['i_dhn','Dhania',     'Dhania'],
+    ['i_pod','Podina',     'Podina'],
+    ['i_iml','Imli',       'Imli'],
+    ['i_lmu','Limu',       'Limu'],
+    ['i_ajw','Ajwain',     'Ajwain'],
+    ['i_kln','Kalonji',    'Kalonji'],
+    ['i_sf', 'Saunf',      'Saunf']
+  ]}
+];
+
+function makeCheckbox(id, label, value) {
+  const inp = document.createElement('input');
+  inp.className = 'ci'; inp.type = 'checkbox';
+  inp.name = 'ing'; inp.id = id; inp.value = value;
+  const lab = document.createElement('label');
+  lab.className = 'cl'; lab.setAttribute('for', id);
+  lab.textContent = label;
+  return [inp, lab];
+}
+
+/* Find a section's .ig grid by the heading text above it */
+function gridAfterHeading(match) {
+  const heads = document.querySelectorAll('#pg-suggest .sh');
+  for (const h of heads) {
+    if ((h.textContent || '').toLowerCase().indexOf(match) > -1) {
+      let el = h.nextElementSibling;
+      while (el && !el.classList.contains('ig')) el = el.nextElementSibling;
+      return el;
+    }
+  }
+  return null;
+}
+
+function expandIngredients() {
+  const suggest = document.getElementById('pg-suggest');
+  if (!suggest || document.getElementById('i_dh')) return;   // already done
+
+  /* 1. Add to existing sections */
+  const map = {
+    gosht:  gridAfterHeading('gosht'),
+    sabzi:  gridAfterHeading('sabziyan'),
+    anaj:   gridAfterHeading('anaj'),
+    meetha: gridAfterHeading('meetha')
+  };
+  Object.keys(NEW_INGREDIENTS).forEach(function (key) {
+    const grid = map[key];
+    if (!grid) return;
+    NEW_INGREDIENTS[key].forEach(function (row) {
+      if (document.getElementById(row[0])) return;
+      const parts = makeCheckbox(row[0], row[1], row[2]);
+      grid.appendChild(parts[0]); grid.appendChild(parts[1]);
+    });
+  });
+
+  /* 2. Add the two new sections after Meetha */
+  const meethaGrid = map.meetha;
+  if (meethaGrid) {
+    let anchor = meethaGrid;
+    NEW_SECTIONS.forEach(function (sec) {
+      const h = document.createElement('div');
+      h.className = 'sh';
+      h.textContent = sec.title;
+      const g = document.createElement('div');
+      g.className = 'ig';
+      sec.items.forEach(function (row) {
+        if (document.getElementById(row[0])) return;
+        const parts = makeCheckbox(row[0], row[1], row[2]);
+        g.appendChild(parts[0]); g.appendChild(parts[1]);
+      });
+      anchor.parentNode.insertBefore(h, anchor.nextSibling);
+      anchor.parentNode.insertBefore(g, h.nextSibling);
+      anchor = g;
+    });
+  }
+
+  addIngredientControls();
+  wireCounter();
+}
+
+/* Quick-picks, counter, clear */
+function addIngredientControls() {
+  const card = document.querySelector('#pg-suggest .card:nth-of-type(3)');
+  const firstHead = document.querySelector('#pg-suggest .sh');
+  if (!firstHead || document.getElementById('ingTools')) return;
+
+  const bar = document.createElement('div');
+  bar.id = 'ingTools';
+  bar.style.cssText = 'display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:4px';
+  bar.innerHTML =
+    '<button class="qc" onclick="quickPick(\'basics\')">Ghar ki aam cheezein</button>' +
+    '<button class="qc" onclick="quickPick(\'chicken\')">Chicken set</button>' +
+    '<button class="qc" onclick="quickPick(\'sweet\')">Meethay ka saman</button>' +
+    '<button class="qc" onclick="quickPick(\'clear\')">Sab clear</button>' +
+    '<span id="ingCount" style="margin-left:auto;font-size:11px;color:var(--muted);font-weight:700"></span>';
+  firstHead.parentNode.insertBefore(bar, firstHead);
+}
+
+window.quickPick = function (kind) {
+  const sets = {
+    basics:  ['Pyaz','Tamatar','Adrak','Lahsan','Aalu','Hari Mirch'],
+    chicken: ['Chicken','Pyaz','Tamatar','Adrak','Lahsan','Dahi','Hari Mirch'],
+    sweet:   ['Doodh','Cheeni','Ghee','Elaichi','Badam','Khoya'],
+    clear:   []
+  };
+  const want = sets[kind] || [];
+  document.querySelectorAll('input[name="ing"]').forEach(function (i) {
+    i.checked = want.indexOf(i.value) > -1;
+  });
+  updateIngCount();
+  if (kind !== 'clear') toast(want.length + ' ingredients select ho gaye');
+};
+
+function updateIngCount() {
+  const n = document.querySelectorAll('input[name="ing"]:checked').length;
+  const el = document.getElementById('ingCount');
+  if (el) el.textContent = n ? n + ' selected' : '';
+  const btn = document.getElementById('sugBtn');
+  if (btn) btn.textContent = n
+    ? 'Aaj Ka Khana Suggest Karo (' + n + ')'
+    : 'Aaj Ka Khana Suggest Karo';
+}
+
+function wireCounter() {
+  document.querySelectorAll('input[name="ing"]').forEach(function (i) {
+    i.addEventListener('change', updateIngCount);
+  });
+  updateIngCount();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  expandIngredients();
+  setTimeout(expandIngredients, 500);
+});
+
+/* ============================================================
+   USABILITY PACK  (v7)
+   1. Ingredient search — 70+ checkboxes need filtering
+   2. "Khanay" browse tab — all 175 dishes, searchable/filterable
+   3. Favourites (saved on the phone)
+   4. Sticky suggest button
+   5. Chef Chat chips that reflect the real dish range
+   ============================================================ */
+
+/* ---------------- FAVOURITES ---------------- */
+function favs() {
+  try { return JSON.parse(localStorage.getItem('dk_fav') || '[]'); } catch (e) { return []; }
+}
+function isFav(id) { return favs().indexOf(id) > -1; }
+window.toggleFav = function (id, btn) {
+  const f = favs();
+  const i = f.indexOf(id);
+  if (i > -1) { f.splice(i, 1); toast('Favourites se hata diya'); }
+  else { f.push(id); toast('Favourites mein save ho gaya'); }
+  try { localStorage.setItem('dk_fav', JSON.stringify(f)); } catch (e) {}
+  if (btn) { btn.textContent = isFav(id) ? '♥' : '♡'; btn.style.color = isFav(id) ? 'var(--red)' : 'var(--muted)'; }
+  const badge = document.getElementById('favCount');
+  if (badge) badge.textContent = favs().length ? '(' + favs().length + ')' : '';
+};
+
+/* ---------------- 1. INGREDIENT SEARCH ---------------- */
+function addIngredientSearch() {
+  const tools = document.getElementById('ingTools');
+  if (!tools || document.getElementById('ingSearch')) return;
+
+  const wrap = document.createElement('div');
+  wrap.style.cssText = 'margin-bottom:10px';
+  wrap.innerHTML =
+    '<input class="fi" id="ingSearch" placeholder="Ingredient dhoondein — jaise dahi, gajar, elaichi..." ' +
+    'oninput="filterIngredients(this.value)">';
+  tools.parentNode.insertBefore(wrap, tools);
+}
+
+window.filterIngredients = function (q) {
+  const term = norm(q);
+  document.querySelectorAll('#pg-suggest .ig').forEach(function (grid) {
+    let shown = 0;
+    grid.querySelectorAll('label.cl').forEach(function (lab) {
+      const input = document.getElementById(lab.getAttribute('for'));
+      const txt = norm(lab.textContent + ' ' + (input ? input.value : ''));
+      const hit = !term || txt.indexOf(term) > -1;
+      lab.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    /* hide the section heading too when nothing in it matches */
+    let head = grid.previousElementSibling;
+    while (head && !head.classList.contains('sh')) head = head.previousElementSibling;
+    if (head) head.style.display = shown ? '' : 'none';
+    grid.style.display = shown ? '' : 'none';
+  });
+};
+
+/* ---------------- 2. BROWSE TAB ---------------- */
+let BROWSE_FILTER = { q: '', cat: 'all', region: 'all', fav: false };
+
+const CAT_LABEL = {
+  all:'Sab', chicken:'Chicken', gosht:'Gosht', sabzi:'Sabzi', daal:'Daal',
+  chawal:'Chawal', bbq:'BBQ', machli:'Machli', anday:'Anday', roti:'Roti',
+  nashta:'Nashta', snacks:'Snacks', meetha:'Meetha', mashroob:'Mashroob'
+};
+
+function buildBrowseTab() {
+  if (document.getElementById('pg-browse')) return;
+  const nav = document.querySelector('.nav');
+  const chefTab = document.getElementById('nt-chat');
+  if (!nav || !chefTab) return;
+
+  const btn = document.createElement('button');
+  btn.className = 'ntab';
+  btn.id = 'nt-browse';
+  btn.innerHTML = 'Khanay <span id="favCount" style="font-size:10px;opacity:.7"></span>';
+  btn.onclick = function () { goTab('browse', btn); setTimeout(renderBrowse, 30); };
+  nav.insertBefore(btn, chefTab.nextSibling);
+
+  const page = document.createElement('div');
+  page.className = 'pg';
+  page.id = 'pg-browse';
+  page.innerHTML =
+    '<div class="wrap">' +
+      '<div class="pgh"><h2>Saray Khanay</h2><p>175 Pakistani dishes — dhoondein ya browse karein</p></div>' +
+      '<div class="div"><div class="divl"></div><div class="divd">&#10022;</div><div class="divl"></div></div>' +
+      '<input class="fi" id="browseSearch" placeholder="Dish ya ingredient dhoondein..." ' +
+        'oninput="browseSet(\'q\', this.value)" style="margin-bottom:10px">' +
+      '<div class="qcs" id="browseCats"></div>' +
+      '<div class="qcs" id="browseRegions"></div>' +
+      '<div id="browseCount" style="font-size:11px;color:var(--muted);font-weight:700;margin:4px 0 10px"></div>' +
+      '<div id="browseList"></div>' +
+    '</div>';
+  document.body.appendChild(page);
+
+  /* category chips */
+  const cats = ['all'].concat(Object.keys(CAT_LABEL).filter(function (k) {
+    return k !== 'all' && DISHES.some(function (d) { return d.category === k; });
+  }));
+  document.getElementById('browseCats').innerHTML =
+    cats.map(function (c) {
+      return '<button class="qc" data-cat="' + c + '" onclick="browseSet(\'cat\',\'' + c + '\')">' +
+             (CAT_LABEL[c] || c) + '</button>';
+    }).join('') +
+    '<button class="qc" data-fav="1" onclick="browseSet(\'fav\')">&#9825; Favourites</button>';
+
+  /* region chips */
+  const regions = ['all'].concat(Object.keys(REGION_LABEL).filter(function (r) {
+    return DISHES.some(function (d) { return d.region === r; });
+  }));
+  document.getElementById('browseRegions').innerHTML =
+    regions.map(function (r) {
+      return '<button class="qc" data-region="' + r + '" onclick="browseSet(\'region\',\'' + r + '\')">' +
+             (r === 'all' ? 'Har ilaqa' : REGION_LABEL[r]) + '</button>';
+    }).join('');
+
+  const badge = document.getElementById('favCount');
+  if (badge) badge.textContent = favs().length ? '(' + favs().length + ')' : '';
+}
+
+window.browseSet = function (key, val) {
+  if (key === 'fav') BROWSE_FILTER.fav = !BROWSE_FILTER.fav;
+  else BROWSE_FILTER[key] = val;
+  renderBrowse();
+};
+
+function renderBrowse() {
+  const list = document.getElementById('browseList');
+  if (!list || !DISHES.length) return;
+
+  const q = norm(BROWSE_FILTER.q);
+  const favList = favs();
+
+  let out = DISHES.filter(function (d) {
+    if (BROWSE_FILTER.fav && favList.indexOf(d.id) === -1) return false;
+    if (BROWSE_FILTER.cat !== 'all' && d.category !== BROWSE_FILTER.cat) return false;
+    if (BROWSE_FILTER.region !== 'all' && d.region !== BROWSE_FILTER.region) return false;
+    if (!q) return true;
+    return norm(d.name + ' ' + d.roman_urdu + ' ' + d.ingredients.join(' ')).indexOf(q) > -1;
+  });
+
+  out.sort(function (a, b) { return a.name.localeCompare(b.name); });
+
+  /* highlight active chips */
+  document.querySelectorAll('#browseCats .qc, #browseRegions .qc').forEach(function (b) {
+    const on = (b.dataset.cat === BROWSE_FILTER.cat) ||
+               (b.dataset.region === BROWSE_FILTER.region) ||
+               (b.dataset.fav && BROWSE_FILTER.fav);
+    b.style.background = on ? 'var(--gold2)' : '';
+    b.style.color = on ? '#0C0803' : '';
+    b.style.fontWeight = on ? '800' : '600';
+  });
+
+  document.getElementById('browseCount').textContent =
+    out.length + (out.length === 1 ? ' dish' : ' dishes');
+
+  if (!out.length) {
+    list.innerHTML = '<div style="text-align:center;color:var(--muted);padding:30px;font-size:13px">' +
+      'Koi dish nahi mili — filter badal kar dekhein</div>';
+    return;
+  }
+
+  list.innerHTML = out.map(function (d) {
+    const fav = isFav(d.id);
+    const steps = recipeSteps(d).map(function (s) { return '<li style="margin-bottom:5px">' + s + '</li>'; }).join('');
+    return '<div class="dcard" style="padding:15px">' +
+      '<button onclick="toggleFav(' + d.id + ',this)" ' +
+        'style="position:absolute;top:12px;right:14px;background:none;border:none;cursor:pointer;' +
+        'font-size:20px;line-height:1;color:' + (fav ? 'var(--red)' : 'var(--muted)') + '">' +
+        (fav ? '&#9829;' : '&#9825;') + '</button>' +
+      '<div class="dname" style="font-size:21px;padding-right:30px">' + d.name + '</div>' +
+      '<div class="dwhy" style="font-size:12px">' + d.roman_urdu.split('—').slice(1).join('—').trim() + '</div>' +
+      '<div class="dtags">' + dishTags(d).map(function (t) {
+        return '<span class="dtag">' + t + '</span>'; }).join('') + '</div>' +
+      '<button class="btn btn-ghost" style="width:100%;margin-top:10px" ' +
+        'onclick="toggleRec(\'br' + d.id + '\',this)">Recipe Dekhein</button>' +
+      '<div id="br' + d.id + '" style="display:none;margin-top:12px;' +
+        'border-top:1px solid rgba(200,140,8,0.13);padding-top:12px">' +
+        '<div class="lbl">Ajza</div>' +
+        '<div style="font-size:12.5px;color:var(--parch);line-height:1.9;margin-bottom:12px">' +
+          d.ingredients.join(' &nbsp;&#8226;&nbsp; ') + '</div>' +
+        '<div class="lbl">Tarika</div>' +
+        '<ol style="font-size:12.5px;color:var(--cream);line-height:1.75;padding-left:18px;margin-top:6px">' +
+          steps + '</ol>' +
+      '</div></div>';
+  }).join('');
+}
+
+/* ---------------- 3. STICKY SUGGEST BUTTON ---------------- */
+function stickySuggest() {
+  const btn = document.getElementById('sugBtn');
+  if (!btn || btn.dataset.sticky) return;
+  btn.dataset.sticky = '1';
+  btn.style.position = 'sticky';
+  btn.style.bottom = '14px';
+  btn.style.zIndex = '150';
+  btn.style.boxShadow = '0 6px 26px rgba(0,0,0,0.55), 0 5px 22px rgba(200,140,8,0.32)';
+}
+
+/* ---------------- 4. BETTER CHEF CHIPS ---------------- */
+function refreshChefChips() {
+  const box = document.querySelector('#pg-chat .qcs');
+  if (!box || box.dataset.done) return;
+  box.dataset.done = '1';
+  const picks = ['Chicken Karahi','Chicken Biryani','Nihari','Chapli Kebab','Balochi Sajji',
+                 'Halwa Puri','Sarson Ka Saag','Haleem','Kheer','Gulab Jamun','Chapshoro','Sohbat'];
+  box.innerHTML = picks.map(function (p) {
+    return '<button class="qc" onclick="qAsk(\'' + p + '\')">' + p + '</button>';
+  }).join('') +
+  '<button class="qc" onclick="qAsk(\'aaj kya banao\')">Aaj kya banao?</button>' +
+  '<button class="qc" onclick="qAsk(\'nashte mein kya banao\')">Nashta</button>' +
+  '<button class="qc" onclick="qAsk(\'iftar mein kya banao\')">Iftar</button>';
+}
+
+/* ---------------- BOOT ---------------- */
+function usabilityPack() {
+  if (!DISHES.length) { setTimeout(usabilityPack, 300); return; }
+  addIngredientSearch();
+  buildBrowseTab();
+  stickySuggest();
+  refreshChefChips();
+}
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(usabilityPack, 600);
 });
