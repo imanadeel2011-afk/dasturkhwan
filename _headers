@@ -1,0 +1,23 @@
+# Cloudflare Pages header rules
+
+/index.html
+  Cache-Control: no-cache, must-revalidate
+
+/engine.js
+  Cache-Control: no-cache, must-revalidate
+
+/dishes.json
+  Cache-Control: no-cache, must-revalidate
+
+/sw.js
+  Cache-Control: no-cache, must-revalidate
+
+/manifest.json
+  Cache-Control: no-cache, must-revalidate
+
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
